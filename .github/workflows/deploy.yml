@@ -68,8 +68,8 @@ jobs:
           sf org display --target-org targetOrg
 
       - name: Deploy Source
-        run: |
-          sf project deploy start \
-            --target-org targetOrg \
-            --source-dir force-app \
-            --test-level NoTestRun
+  run: |
+    sf project deploy start \
+      --target-org targetOrg \
+      --manifest manifest/package.xml \
+      --test-level NoTestRun
