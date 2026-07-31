@@ -21,9 +21,15 @@ jobs:
           node-version: 20
 
       - name: Install Salesforce CLI
-        run: |
-          npm install --global @salesforce/cli
-          sf --version
+  run: |
+    wget https://developer.salesforce.com/media/salesforce-cli/sf/channels/stable/sf-linux-x64.tar.xz
+    mkdir ~/sf
+    tar xJf sf-linux-x64.tar.xz -C ~/sf --strip-components=1
+    echo "$HOME/sf/bin" >> $GITHUB_PATH
+
+- name: Verify Salesforce CLI
+  run: |
+    sf --version
 
       - name: Set Environment Variables
         shell: bash
