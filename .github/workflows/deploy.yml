@@ -15,21 +15,17 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
+      - name: Install Salesforce CLI (Official Binary)
+        run: |
+          wget https://developer.salesforce.com/media/salesforce-cli/sf/channels/stable/sf-linux-x64.tar.xz
+          mkdir -p $HOME/sf
+          tar xJf sf-linux-x64.tar.xz -C $HOME/sf --strip-components=1
+          echo "$HOME/sf/bin" >> $GITHUB_PATH
 
-      - name: Install Salesforce CLI
-  run: |
-    wget https://developer.salesforce.com/media/salesforce-cli/sf/channels/stable/sf-linux-x64.tar.xz
-    mkdir ~/sf
-    tar xJf sf-linux-x64.tar.xz -C ~/sf --strip-components=1
-    echo "$HOME/sf/bin" >> $GITHUB_PATH
-
-- name: Verify Salesforce CLI
-  run: |
-    sf --version
+      - name: Verify Salesforce CLI
+        run: |
+          sf --version
+          which sf
 
       - name: Set Environment Variables
         shell: bash
@@ -51,6 +47,9 @@ jobs:
             echo "SF_USERNAME=${{ secrets.UAT_SF_USERNAME }}" >> $GITHUB_ENV
             echo "SF_INSTANCE_URL=${{ secrets.UAT_SF_INSTANCE_URL }}" >> $GITHUB_ENV
             printf "%s" "${{ secrets.UAT_SF_JWT_KEY }}" > server.key
+          else
+            echo "Unsupported branch: ${GITHUB_REF_NAME}"
+            exit 1
           fi
 
           chmod 600 server.key
@@ -64,11 +63,11 @@ jobs:
             --instance-url "$SF_INSTANCE_URL" \
             --alias targetOrg
 
-      - name: Display Org
+      - name: Verify Org Login
         run: |
           sf org display --target-org targetOrg
 
-      - name: Deploy to Salesforce
+      - name: Deploy Source
         run: |
           sf project deploy start \
             --target-org targetOrg \
