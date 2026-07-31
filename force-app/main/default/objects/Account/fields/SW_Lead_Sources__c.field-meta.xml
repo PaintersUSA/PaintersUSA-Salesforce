@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SW_Lead_Sources__c</fullName>
+    <label>Lead Source</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Abstrakt</fullName>
+                <default>false</default>
+                <label>Abstrakt</label>
+            </value>
+            <value>
+                <fullName>AI</fullName>
+                <default>false</default>
+                <label>AI</label>
+            </value>
+            <value>
+                <fullName>Architects</fullName>
+                <default>false</default>
+                <label>Architects</label>
+            </value>
+            <value>
+                <fullName>Avetta</fullName>
+                <default>false</default>
+                <label>Avetta</label>
+            </value>
+            <value>
+                <fullName>Battery Expo</fullName>
+                <default>false</default>
+                <label>Battery Expo</label>
+            </value>
+            <value>
+                <fullName>Better Business Bureau</fullName>
+                <default>false</default>
+                <label>Better Business Bureau</label>
+            </value>
+            <value>
+                <fullName>Bidder/SqFt</fullName>
+                <default>false</default>
+                <label>Bidder/SqFt</label>
+            </value>
+            <value>
+                <fullName>BOMA/Dallas</fullName>
+                <default>false</default>
+                <label>BOMA/Dallas</label>
+            </value>
+            <value>
+                <fullName>BOMA/Houston</fullName>
+                <default>false</default>
+                <label>BOMA/Houston</label>
+            </value>
+            <value>
+                <fullName>BOMA/Houston 2021</fullName>
+                <default>false</default>
+                <label>BOMA/Houston 2021</label>
+            </value>
+            <value>
+                <fullName>BOMA/Indy</fullName>
+                <default>false</default>
+                <label>BOMA/Indy</label>
+            </value>
+            <value>
+                <fullName>CAI Directory</fullName>
+                <default>false</default>
+                <label>CAI Directory</label>
+            </value>
+            <value>
+                <fullName>CalRail</fullName>
+                <default>false</default>
+                <label>CalRail</label>
+            </value>
+            <value>
+                <fullName>Carboline</fullName>
+                <default>false</default>
+                <label>Carboline</label>
+            </value>
+            <value>
+                <fullName>Casto Creative</fullName>
+                <default>false</default>
+                <label>Casto Creative</label>
+            </value>
+            <value>
+                <fullName>CBOF Trade Show</fullName>
+                <default>false</default>
+                <label>CBOF Trade Show</label>
+            </value>
+            <value>
+                <fullName>Chat</fullName>
+                <default>false</default>
+                <label>Chat</label>
+            </value>
+            <value>
+                <fullName>Chicago Build</fullName>
+                <default>false</default>
+                <label>Chicago Build</label>
+            </value>
+            <value>
+                <fullName>Chicago Real Estate Conference 2015</fullName>
+                <default>false</default>
+                <label>Chicago Real Estate Conference 2015</label>
+            </value>
+            <value>
+                <fullName>Clean</fullName>
+                <default>false</default>
+                <label>Clean</label>
+            </value>
+            <value>
+                <fullName>Concrete Network</fullName>
+                <default>false</default>
+                <label>Concrete Network</label>
+            </value>
+            <value>
+                <fullName>Dallas Facility Mgmt Show</fullName>
+                <default>false</default>
+                <label>Dallas Facility Mgmt Show</label>
+            </value>
+            <value>
+                <fullName>Danville - National Data Group email list</fullName>
+                <default>false</default>
+                <label>Danville - National Data Group email list</label>
+            </value>
+            <value>
+                <fullName>Danville past customers</fullName>
+                <default>false</default>
+                <label>Danville past customers</label>
+            </value>
+            <value>
+                <fullName>Data.com</fullName>
+                <default>false</default>
+                <label>Data.com</label>
+            </value>
+            <value>
+                <fullName>Davids TX leads</fullName>
+                <default>false</default>
+                <label>Davids TX leads</label>
+            </value>
+            <value>
+                <fullName>DBE website</fullName>
+                <default>false</default>
+                <label>DBE website</label>
+            </value>
+            <value>
+                <fullName>Employee Research</fullName>
+                <default>false</default>
+                <label>Employee Research</label>
+            </value>
+            <value>
+                <fullName>Exact Data</fullName>
+                <default>false</default>
+                <label>Exact Data</label>
+            </value>
+            <value>
+                <fullName>EZ Select List</fullName>
+                <default>false</default>
+                <label>EZ Select List</label>
+            </value>
+            <value>
+                <fullName>FIND LEAD SOURCE</fullName>
+                <default>false</default>
+                <label>FIND LEAD SOURCE</label>
+            </value>
+            <value>
+                <fullName>Food &amp; Ag Research</fullName>
+                <default>false</default>
+                <label>Food &amp; Ag Research</label>
+            </value>
+            <value>
+                <fullName>Food Safety Summit</fullName>
+                <default>false</default>
+                <label>Food Safety Summit</label>
+            </value>
+            <value>
+                <fullName>Fuel &amp; Ethanol Workshop</fullName>
+                <default>false</default>
+                <label>Fuel &amp; Ethanol Workshop</label>
+            </value>
+            <value>
+                <fullName>GEAPS</fullName>
+                <default>false</default>
+                <label>GEAPS</label>
+            </value>
+            <value>
+                <fullName>GFAI ad</fullName>
+                <default>false</default>
+                <label>GFAI ad</label>
+            </value>
+            <value>
+                <fullName>Grain base</fullName>
+                <default>false</default>
+                <label>Grain base</label>
+            </value>
+            <value>
+                <fullName>Grain Journal ad</fullName>
+                <default>false</default>
+                <label>Grain Journal ad</label>
+            </value>
+            <value>
+                <fullName>Great Lakes</fullName>
+                <default>false</default>
+                <label>Great Lakes</label>
+            </value>
+            <value>
+                <fullName>Houston Channel</fullName>
+                <default>false</default>
+                <label>Houston Channel</label>
+            </value>
+            <value>
+                <fullName>IAOM</fullName>
+                <default>false</default>
+                <label>IAOM</label>
+            </value>
+            <value>
+                <fullName>IFCA ShowOuting</fullName>
+                <default>false</default>
+                <label>IFCA ShowOuting</label>
+            </value>
+            <value>
+                <fullName>IFMA</fullName>
+                <default>false</default>
+                <label>IFMA</label>
+            </value>
+            <value>
+                <fullName>IADA Directory</fullName>
+                <default>false</default>
+                <label>IADA Directory</label>
+            </value>
+            <value>
+                <fullName>IR SW</fullName>
+                <default>false</default>
+                <label>IR SW</label>
+            </value>
+            <value>
+                <fullName>Infogroup</fullName>
+                <default>false</default>
+                <label>Infogroup</label>
+            </value>
+            <value>
+                <fullName>InfoUSA Houston</fullName>
+                <default>false</default>
+                <label>InfoUSA Houston</label>
+            </value>
+            <value>
+                <fullName>IREM Golf Outing</fullName>
+                <default>false</default>
+                <label>IREM Golf Outing</label>
+            </value>
+            <value>
+                <fullName>IREM List 2019</fullName>
+                <default>false</default>
+                <label>IREM List 2019</label>
+            </value>
+            <value>
+                <fullName>IRR</fullName>
+                <default>false</default>
+                <label>IRR</label>
+            </value>
+            <value>
+                <fullName>ISN</fullName>
+                <default>false</default>
+                <label>ISN</label>
+            </value>
+            <value>
+                <fullName>Jason D LinkedIn</fullName>
+                <default>false</default>
+                <label>Jason D LinkedIn</label>
+            </value>
+            <value>
+                <fullName>JC Licht</fullName>
+                <default>false</default>
+                <label>JC Licht</label>
+            </value>
+            <value>
+                <fullName>Jeff Tokar List</fullName>
+                <default>false</default>
+                <label>Jeff Tokar List</label>
+            </value>
+            <value>
+                <fullName>Jigsaw</fullName>
+                <default>false</default>
+                <label>Jigsaw</label>
+            </value>
+            <value>
+                <fullName>KGFA</fullName>
+                <default>false</default>
+                <label>KGFA</label>
+            </value>
+            <value>
+                <fullName>LinkedIn Sales Navigator</fullName>
+                <default>false</default>
+                <label>LinkedIn Sales Navigator</label>
+            </value>
+            <value>
+                <fullName>Live Chat</fullName>
+                <default>false</default>
+                <label>Live Chat</label>
+            </value>
+            <value>
+                <fullName>Mike SW</fullName>
+                <default>false</default>
+                <label>Mike SW</label>
+            </value>
+            <value>
+                <fullName>Motion Group</fullName>
+                <default>false</default>
+                <label>Motion Group</label>
+            </value>
+            <value>
+                <fullName>MWFPA 2014 Attendee List</fullName>
+                <default>false</default>
+                <label>MWFPA 2014 Attendee List</label>
+            </value>
+            <value>
+                <fullName>MWFPA Directory 2018</fullName>
+                <default>false</default>
+                <label>MWFPA Directory 2018</label>
+            </value>
+            <value>
+                <fullName>MWFPA Trade Show</fullName>
+                <default>false</default>
+                <label>MWFPA Trade Show</label>
+            </value>
+            <value>
+                <fullName>Neil’s Email Contacts</fullName>
+                <default>false</default>
+                <label>Neil’s Email Contacts</label>
+            </value>
+            <value>
+                <fullName>Neil’s past customers</fullName>
+                <default>false</default>
+                <label>Neil’s past customers</label>
+            </value>
+            <value>
+                <fullName>Neil - BNI Group</fullName>
+                <default>false</default>
+                <label>Neil - BNI Group</label>
+            </value>
+            <value>
+                <fullName>Network Group</fullName>
+                <default>false</default>
+                <label>Network Group</label>
+            </value>
+            <value>
+                <fullName>NGFA Membership Directory</fullName>
+                <default>false</default>
+                <label>NGFA Membership Directory</label>
+            </value>
+            <value>
+                <fullName>NITSM 2015</fullName>
+                <default>false</default>
+                <label>NITSM 2015</label>
+            </value>
+            <value>
+                <fullName>NWAW Houston</fullName>
+                <default>false</default>
+                <label>NWAW Houston</label>
+            </value>
+            <value>
+                <fullName>Paint vendors</fullName>
+                <default>false</default>
+                <label>Paint vendors</label>
+            </value>
+            <value>
+                <fullName>PFMA</fullName>
+                <default>false</default>
+                <label>PFMA</label>
+            </value>
+            <value>
+                <fullName>PIP</fullName>
+                <default>false</default>
+                <label>PIP</label>
+            </value>
+            <value>
+                <fullName>Powder &amp; Bulk</fullName>
+                <default>false</default>
+                <label>Powder &amp; Bulk</label>
+            </value>
+            <value>
+                <fullName>PPC</fullName>
+                <default>false</default>
+                <label>PPC</label>
+            </value>
+            <value>
+                <fullName>ReachLocal</fullName>
+                <default>false</default>
+                <label>ReachLocal</label>
+            </value>
+            <value>
+                <fullName>Referral - Designer</fullName>
+                <default>false</default>
+                <label>Referral - Designer</label>
+            </value>
+            <value>
+                <fullName>Referral - Employee</fullName>
+                <default>false</default>
+                <label>Referral - Employee</label>
+            </value>
+            <value>
+                <fullName>Referral - Partner</fullName>
+                <default>false</default>
+                <label>Referral - Partner</label>
+            </value>
+            <value>
+                <fullName>Referral - Previous Customer</fullName>
+                <default>false</default>
+                <label>Referral - Previous Customer</label>
+            </value>
+            <value>
+                <fullName>Referral - Unknown</fullName>
+                <default>false</default>
+                <label>Referral - Unknown</label>
+            </value>
+            <value>
+                <fullName>Referral - Vendor</fullName>
+                <default>false</default>
+                <label>Referral - Vendor</label>
+            </value>
+            <value>
+                <fullName>Rich Schutt List</fullName>
+                <default>false</default>
+                <label>Rich Schutt List</label>
+            </value>
+            <value>
+                <fullName>Ryans leads</fullName>
+                <default>false</default>
+                <label>Ryans leads</label>
+            </value>
+            <value>
+                <fullName>Sapper</fullName>
+                <default>false</default>
+                <label>Sapper</label>
+            </value>
+            <value>
+                <fullName>SEO</fullName>
+                <default>false</default>
+                <label>SEO</label>
+            </value>
+            <value>
+                <fullName>Sherwin Williams Canvassing</fullName>
+                <default>false</default>
+                <label>Sherwin Williams Canvassing</label>
+            </value>
+            <value>
+                <fullName>Sherwin Williams Cargill</fullName>
+                <default>false</default>
+                <label>Sherwin Williams Cargill</label>
+            </value>
+            <value>
+                <fullName>SIC List</fullName>
+                <default>false</default>
+                <label>SIC List</label>
+            </value>
+            <value>
+                <fullName>Southwest Meat Association</fullName>
+                <default>false</default>
+                <label>Southwest Meat Association</label>
+            </value>
+            <value>
+                <fullName>SW Texas</fullName>
+                <default>false</default>
+                <label>SW Texas</label>
+            </value>
+            <value>
+                <fullName>Telemarketing - Reference USA</fullName>
+                <default>false</default>
+                <label>Telemarketing - Reference USA</label>
+            </value>
+            <value>
+                <fullName>Telemarketing - Salesgenie</fullName>
+                <default>false</default>
+                <label>Telemarketing - Salesgenie</label>
+            </value>
+            <value>
+                <fullName>Telemarketing - Selectory List</fullName>
+                <default>false</default>
+                <label>Telemarketing - Selectory List</label>
+            </value>
+            <value>
+                <fullName>Telemarketing - Zoom Info</fullName>
+                <default>false</default>
+                <label>Telemarketing - Zoom Info</label>
+            </value>
+            <value>
+                <fullName>Texpro Customers</fullName>
+                <default>false</default>
+                <label>Texpro Customers</label>
+            </value>
+            <value>
+                <fullName>TGFA</fullName>
+                <default>false</default>
+                <label>TGFA</label>
+            </value>
+            <value>
+                <fullName>Three Rivers Directory</fullName>
+                <default>false</default>
+                <label>Three Rivers Directory</label>
+            </value>
+            <value>
+                <fullName>Tom Mickey Leads</fullName>
+                <default>false</default>
+                <label>Tom Mickey Leads</label>
+            </value>
+            <value>
+                <fullName>Toyota Exchange 2015</fullName>
+                <default>false</default>
+                <label>Toyota Exchange 2015</label>
+            </value>
+            <value>
+                <fullName>Trade Show AIA 2013</fullName>
+                <default>false</default>
+                <label>Trade Show AIA 2013</label>
+            </value>
+            <value>
+                <fullName>Trade Show ACTHA</fullName>
+                <default>false</default>
+                <label>Trade Show ACTHA</label>
+            </value>
+            <value>
+                <fullName>Trade Show BOMA</fullName>
+                <default>false</default>
+                <label>Trade Show BOMA</label>
+            </value>
+            <value>
+                <fullName>Trade Show CAI</fullName>
+                <default>false</default>
+                <label>Trade Show CAI</label>
+            </value>
+            <value>
+                <fullName>Trade Show GEAPS 2013</fullName>
+                <default>false</default>
+                <label>Trade Show GEAPS 2013</label>
+            </value>
+            <value>
+                <fullName>Trade Show GFAI 2013</fullName>
+                <default>false</default>
+                <label>Trade Show GFAI 2013</label>
+            </value>
+            <value>
+                <fullName>Trade Show VIA</fullName>
+                <default>false</default>
+                <label>Trade Show VIA</label>
+            </value>
+            <value>
+                <fullName>Trade Show WABA</fullName>
+                <default>false</default>
+                <label>Trade Show WABA</label>
+            </value>
+            <value>
+                <fullName>Trade Show W Safety</fullName>
+                <default>false</default>
+                <label>Trade Show W Safety</label>
+            </value>
+            <value>
+                <fullName>TruckSign</fullName>
+                <default>false</default>
+                <label>TruckSign</label>
+            </value>
+            <value>
+                <fullName>TX Craig Research</fullName>
+                <default>false</default>
+                <label>TX Craig Research</label>
+            </value>
+            <value>
+                <fullName>Unbounce</fullName>
+                <default>false</default>
+                <label>Unbounce</label>
+            </value>
+            <value>
+                <fullName>USFCR</fullName>
+                <default>false</default>
+                <label>USFCR</label>
+            </value>
+            <value>
+                <fullName>Vermilion Danville</fullName>
+                <default>false</default>
+                <label>Vermilion Danville</label>
+            </value>
+            <value>
+                <fullName>WBENC</fullName>
+                <default>false</default>
+                <label>WBENC</label>
+            </value>
+            <value>
+                <fullName>Web Search - Google</fullName>
+                <default>false</default>
+                <label>Web Search - Google</label>
+            </value>
+            <value>
+                <fullName>Web Search - Yelp</fullName>
+                <default>false</default>
+                <label>Web Search - Yelp</label>
+            </value>
+            <value>
+                <fullName>Website - Painters USA</fullName>
+                <default>false</default>
+                <label>Website - Painters USA</label>
+            </value>
+            <value>
+                <fullName>Website - Texpro</fullName>
+                <default>false</default>
+                <label>Website - Texpro</label>
+            </value>
+            <value>
+                <fullName>Winter South</fullName>
+                <default>false</default>
+                <label>Winter South</label>
+            </value>
+            <value>
+                <fullName>World of Concrete</fullName>
+                <default>false</default>
+                <label>World of Concrete</label>
+            </value>
+            <value>
+                <fullName>Campaign</fullName>
+                <default>false</default>
+                <label>Campaign</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

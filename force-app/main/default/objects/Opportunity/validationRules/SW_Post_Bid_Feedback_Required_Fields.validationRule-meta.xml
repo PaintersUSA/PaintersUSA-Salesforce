@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SW_Post_Bid_Feedback_Required_Fields</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    NOT($Permission.SW_Bypass_Validation_Rules),
+				ISCHANGED(StageName),
+    ISPICKVAL(StageName, &quot;Proposal&quot;),
+    OR(
+        ISBLANK(SW_Post_Bid_Feedback__c)  
+    )
+)</errorConditionFormula>
+    <errorDisplayField>SW_Post_Bid_Feedback__c</errorDisplayField>
+    <errorMessage>Please fill Post-Bid Feedback before moving the stage to Proposal.</errorMessage>
+</ValidationRule>

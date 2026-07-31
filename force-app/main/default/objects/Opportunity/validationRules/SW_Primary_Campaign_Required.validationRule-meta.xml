@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SW_Primary_Campaign_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    NOT($Permission.SW_Bypass_Validation_Rules),
+    ISPICKVAL(PRIORVALUE(StageName), &quot;Qualification&quot;),
+    NOT(ISPICKVAL(StageName, &quot;Qualification&quot;)),
+    ISPICKVAL(LeadSource, &quot;Campaign&quot;),
+    ISBLANK( CampaignId )
+)</errorConditionFormula>
+    <errorMessage>Primary Campaign is mandatory when Lead Source is Campaign</errorMessage>
+</ValidationRule>

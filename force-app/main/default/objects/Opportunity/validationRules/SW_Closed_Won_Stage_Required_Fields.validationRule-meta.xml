@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SW_Closed_Won_Stage_Required_Fields</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    NOT($Permission.SW_Bypass_Validation_Rules),
+    ISCHANGED(StageName),
+    ISPICKVAL(StageName,&quot;Closed Won&quot;),
+    OR(
+        ISBLANK(SW_Operations_Contact__c),
+        ISBLANK(TEXT(SW_Contract_Type__c)),
+        ISBLANK(SW_PO_Number__c),
+        ISBLANK(TEXT(Type))
+    )
+)</errorConditionFormula>
+    <errorMessage>Operations Contact, Contract Type, PO Number and Business Type are required before moving to Closed Won.</errorMessage>
+</ValidationRule>

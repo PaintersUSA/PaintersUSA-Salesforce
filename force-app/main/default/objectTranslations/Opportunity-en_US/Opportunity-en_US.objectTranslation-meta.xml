@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>Opportunity Layout</layout>
+        <sections>
+            <label><!-- Campaign Information --></label>
+            <section>Campaign Information</section>
+        </sections>
+        <sections>
+            <label><!-- Project Information --></label>
+            <section>Project Information</section>
+        </sections>
+        <sections>
+            <label><!-- Unqualified Information --></label>
+            <section>Unqualified Information</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Close Opportunity --></label>
+        <name>Close_Opportunity</name>
+    </quickActions>
+    <validationRules>
+        <errorMessage><!-- Estimating Tool is required before moving to Need Analysis stage. --></errorMessage>
+        <name>Estimating_Tool_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please use the Close Opportunity button and complete the Agreement Type before marking the Opportunity as Closed Won. --></errorMessage>
+        <name>Prevent_Direct_Closed_Won</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill Loss Reason and Loss Reason Notes before moving the stage to Closed Lost. --></errorMessage>
+        <name>SW_Closed_Lost_Required_Fields</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Operations Contact, Contract Type, PO Number and Business Type are required before moving to Closed Won. --></errorMessage>
+        <name>SW_Closed_Won_Stage_Required_Fields</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Close Date, Work Type, Type of Work, Job Site Address, and Forecast Category are required before moving to Needs Analysis. --></errorMessage>
+        <name>SW_Needs_Analysis_Stage_Required_Fields</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Job Number, Amount, Forecast Category, Close Date, and Type of Work are required before moving to Negotiation. --></errorMessage>
+        <name>SW_Negotiation_Stage_Required_Fields</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill Post-Bid Feedback before moving the stage to Proposal. --></errorMessage>
+        <name>SW_Post_Bid_Feedback_Required_Fields</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Primary Campaign is mandatory when Lead Source is Campaign --></errorMessage>
+        <name>SW_Primary_Campaign_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Close Date, Type of Work, and Job Site Address are required before moving to Qualification. --></errorMessage>
+        <name>SW_Qualification_Stage_Required_Fields</name>
+    </validationRules>
+</CustomObjectTranslation>

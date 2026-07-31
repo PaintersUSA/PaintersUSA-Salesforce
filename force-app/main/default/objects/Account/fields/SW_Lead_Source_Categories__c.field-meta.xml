@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SW_Lead_Source_Categories__c</fullName>
+    <label>Lead Source Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Food and Beverage</fullName>
+                <default>false</default>
+                <label>Food and Beverage</label>
+            </value>
+            <value>
+                <fullName>Marketing Team Generated</fullName>
+                <default>false</default>
+                <label>Marketing Team Generated</label>
+            </value>
+            <value>
+                <fullName>PPC</fullName>
+                <default>false</default>
+                <label>PPC</label>
+            </value>
+            <value>
+                <fullName>Purchased List</fullName>
+                <default>false</default>
+                <label>Purchased List</label>
+            </value>
+            <value>
+                <fullName>Referral</fullName>
+                <default>false</default>
+                <label>Referral</label>
+            </value>
+            <value>
+                <fullName>Sales Rep Generated</fullName>
+                <default>false</default>
+                <label>Sales Rep Generated</label>
+            </value>
+            <value>
+                <fullName>Trade Shows and Memberships</fullName>
+                <default>false</default>
+                <label>Trade Shows and Memberships</label>
+            </value>
+            <value>
+                <fullName>Truck/Sign</fullName>
+                <default>false</default>
+                <label>Truck/Sign</label>
+            </value>
+            <value>
+                <fullName>Vendor List</fullName>
+                <default>false</default>
+                <label>Vendor List</label>
+            </value>
+            <value>
+                <fullName>Web</fullName>
+                <default>false</default>
+                <label>Web</label>
+            </value>
+            <value>
+                <fullName>FIND CATEGORY</fullName>
+                <default>false</default>
+                <label>FIND CATEGORY</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

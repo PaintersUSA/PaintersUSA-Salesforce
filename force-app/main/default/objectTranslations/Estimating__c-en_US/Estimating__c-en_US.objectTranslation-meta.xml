@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Estimating</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Estimatings</value>
+    </caseValues>
+    <layouts>
+        <layout>Estimating Shell Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Edit Estimating Shell --></label>
+        <name>Edit_Estimating_Shell</name>
+    </quickActions>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Estimate data cannot be edited when Estimating Tool is Procore. --></errorMessage>
+        <name>Prevent_Edit_for_Procore_Estimate</name>
+    </validationRules>
+</CustomObjectTranslation>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SW_Closed_Lost_Required_Fields</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    NOT($Permission.SW_Bypass_Validation_Rules),
+    ISPICKVAL(StageName, &quot;Closed Lost&quot;),
+    OR(
+        ISBLANK(TEXT(SW_Loss_Reason__c)),
+        ISBLANK(SW_Loss_Reason_Notes__c)
+    )
+)</errorConditionFormula>
+    <errorMessage>Please fill Loss Reason and Loss Reason Notes before moving the stage to Closed Lost.</errorMessage>
+</ValidationRule>

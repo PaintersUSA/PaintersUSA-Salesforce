@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Agreement Type --></label>
+    <name>Agreement_Type__c</name>
+    <picklistValues>
+        <masterLabel>Customer Contract</masterLabel>
+        <translation><!-- Customer Contract --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MSA</masterLabel>
+        <translation><!-- MSA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PUSA Contract</masterLabel>
+        <translation><!-- PUSA Contract --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Purchase Order</masterLabel>
+        <translation><!-- Purchase Order --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

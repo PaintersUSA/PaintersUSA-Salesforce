@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SW_Converted_Required_Fields</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    NOT($Permission.SW_Bypass_Validation_Rules),
+    ISCHANGED(Status),
+    ISPICKVAL(Status, &quot;Converted&quot;),
+    OR(
+        ISBLANK(Email),
+        ISBLANK(Phone),
+        NOT(
+            OR(
+                INCLUDES(SW_Type_of_Work__c, &quot;Blasting and Coating&quot;),
+                INCLUDES(SW_Type_of_Work__c, &quot;Ceiling / Walls&quot;),
+                INCLUDES(SW_Type_of_Work__c, &quot;Cleaning&quot;),
+                INCLUDES(SW_Type_of_Work__c, &quot;Commercial Exterior Repaint&quot;),
+                INCLUDES(SW_Type_of_Work__c, &quot;Commercial Office Repaint&quot;),
+                INCLUDES(SW_Type_of_Work__c, &quot;Floor Cleaning/Repair&quot;),
+                INCLUDES(SW_Type_of_Work__c, &quot;Floor Epoxy&quot;),
+                INCLUDES(SW_Type_of_Work__c, &quot;Floor Joint Filling&quot;),
+                INCLUDES(SW_Type_of_Work__c, &quot;Floor Line Striping&quot;),
+                INCLUDES(SW_Type_of_Work__c, &quot;Floor Polish&quot;),
+                INCLUDES(SW_Type_of_Work__c, &quot;Floor Power Trowel&quot;),
+                INCLUDES(SW_Type_of_Work__c, &quot;Floor Urethane Cement&quot;),
+                INCLUDES(SW_Type_of_Work__c, &quot;Industrial Exterior Repaint&quot;),
+                INCLUDES(SW_Type_of_Work__c, &quot;Industrial Interior Repaint&quot;),
+                INCLUDES(SW_Type_of_Work__c, &quot;New Construction Exterior&quot;),
+                INCLUDES(SW_Type_of_Work__c, &quot;New Construction Interior&quot;),
+                INCLUDES(SW_Type_of_Work__c, &quot;Other&quot;),
+                INCLUDES(SW_Type_of_Work__c, &quot;Residential Exterior Repaint&quot;),
+                INCLUDES(SW_Type_of_Work__c, &quot;Residential Interior Repaint&quot;),
+                INCLUDES(SW_Type_of_Work__c, &quot;Tape &amp; Bed&quot;),
+                INCLUDES(SW_Type_of_Work__c, &quot;Warranty - Ceiling / Walls&quot;),
+                INCLUDES(SW_Type_of_Work__c, &quot;Warranty - Commercial Exterior&quot;),
+                INCLUDES(SW_Type_of_Work__c, &quot;Warranty - Commercial Interior&quot;),
+                INCLUDES(SW_Type_of_Work__c, &quot;Warranty - Flooring&quot;),
+                INCLUDES(SW_Type_of_Work__c, &quot;Warranty - Industrial Exterior&quot;),
+                INCLUDES(SW_Type_of_Work__c, &quot;Warranty - Industrial Interior&quot;),
+                INCLUDES(SW_Type_of_Work__c, &quot;Warranty - New Construction Exterior&quot;),
+                INCLUDES(SW_Type_of_Work__c, &quot;Warranty - New Construction Interior&quot;)
+            )
+        )
+    )
+)</errorConditionFormula>
+    <errorMessage>Cannot convert this Lead. Please provide the Email, Phone, and Type of Work before proceeding.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SW_Contract_Type__c</fullName>
+    <label>Contract Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Fixed Price</fullName>
+                <default>false</default>
+                <label>Fixed Price</label>
+            </value>
+            <value>
+                <fullName>Time &amp; Material</fullName>
+                <default>false</default>
+                <label>Time &amp; Material</label>
+            </value>
+            <value>
+                <fullName>Cost Reimbursable</fullName>
+                <default>false</default>
+                <label>Cost Reimbursable</label>
+            </value>
+            <value>
+                <fullName>Retainer</fullName>
+                <default>false</default>
+                <label>Retainer</label>
+            </value>
+            <value>
+                <fullName>Unit Priced</fullName>
+                <default>false</default>
+                <label>Unit Priced</label>
+            </value>
+            <value>
+                <fullName>Milestone-Based</fullName>
+                <default>false</default>
+                <label>Milestone-Based</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

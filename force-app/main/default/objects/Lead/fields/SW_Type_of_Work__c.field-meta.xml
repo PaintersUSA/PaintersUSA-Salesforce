@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SW_Type_of_Work__c</fullName>
+    <label>Type of Work</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Blasting and Coating</fullName>
+                <default>false</default>
+                <label>Blasting and Coating</label>
+            </value>
+            <value>
+                <fullName>Ceiling / Walls</fullName>
+                <default>false</default>
+                <label>Ceiling / Walls</label>
+            </value>
+            <value>
+                <fullName>Cleaning</fullName>
+                <default>false</default>
+                <label>Cleaning</label>
+            </value>
+            <value>
+                <fullName>Commercial Exterior Repaint</fullName>
+                <default>false</default>
+                <label>Commercial Exterior Repaint</label>
+            </value>
+            <value>
+                <fullName>Commercial Office Repaint</fullName>
+                <default>false</default>
+                <label>Commercial Office Repaint</label>
+            </value>
+            <value>
+                <fullName>Floor Cleaning/Repair</fullName>
+                <default>false</default>
+                <label>Floor Cleaning/Repair</label>
+            </value>
+            <value>
+                <fullName>Floor Epoxy</fullName>
+                <default>false</default>
+                <label>Floor Epoxy</label>
+            </value>
+            <value>
+                <fullName>Floor Joint Filling</fullName>
+                <default>false</default>
+                <label>Floor Joint Filling</label>
+            </value>
+            <value>
+                <fullName>Floor Line Striping</fullName>
+                <default>false</default>
+                <label>Floor Line Striping</label>
+            </value>
+            <value>
+                <fullName>Floor Polish</fullName>
+                <default>false</default>
+                <label>Floor Polish</label>
+            </value>
+            <value>
+                <fullName>Floor Power Trowel</fullName>
+                <default>false</default>
+                <label>Floor Power Trowel</label>
+            </value>
+            <value>
+                <fullName>Floor Urethane Cement</fullName>
+                <default>false</default>
+                <label>Floor Urethane Cement</label>
+            </value>
+            <value>
+                <fullName>Industrial Exterior Repaint</fullName>
+                <default>false</default>
+                <label>Industrial Exterior Repaint</label>
+            </value>
+            <value>
+                <fullName>Industrial Interior Repaint</fullName>
+                <default>false</default>
+                <label>Industrial Interior Repaint</label>
+            </value>
+            <value>
+                <fullName>New Construction Exterior</fullName>
+                <default>false</default>
+                <label>New Construction Exterior</label>
+            </value>
+            <value>
+                <fullName>New Construction Interior</fullName>
+                <default>false</default>
+                <label>New Construction Interior</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Residential Exterior Repaint</fullName>
+                <default>false</default>
+                <label>Residential Exterior Repaint</label>
+            </value>
+            <value>
+                <fullName>Residential Interior Repaint</fullName>
+                <default>false</default>
+                <label>Residential Interior Repaint</label>
+            </value>
+            <value>
+                <fullName>Tape &amp; Bed</fullName>
+                <default>false</default>
+                <label>Tape &amp; Bed</label>
+            </value>
+            <value>
+                <fullName>Warranty - Ceiling / Walls</fullName>
+                <default>false</default>
+                <label>Warranty - Ceiling / Walls</label>
+            </value>
+            <value>
+                <fullName>Warranty - Commercial Exterior</fullName>
+                <default>false</default>
+                <label>Warranty - Commercial Exterior</label>
+            </value>
+            <value>
+                <fullName>Warranty - Commercial Interior</fullName>
+                <default>false</default>
+                <label>Warranty - Commercial Interior</label>
+            </value>
+            <value>
+                <fullName>Warranty - Flooring</fullName>
+                <default>false</default>
+                <label>Warranty - Flooring</label>
+            </value>
+            <value>
+                <fullName>Warranty - Industrial Exterior</fullName>
+                <default>false</default>
+                <label>Warranty - Industrial Exterior</label>
+            </value>
+            <value>
+                <fullName>Warranty - Industrial Interior</fullName>
+                <default>false</default>
+                <label>Warranty - Industrial Interior</label>
+            </value>
+            <value>
+                <fullName>Warranty - New Construction Exterior</fullName>
+                <default>false</default>
+                <label>Warranty - New Construction Exterior</label>
+            </value>
+            <value>
+                <fullName>Warranty - New Construction Interior</fullName>
+                <default>false</default>
+                <label>Warranty - New Construction Interior</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>7</visibleLines>
+</CustomField>

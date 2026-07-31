@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Contract Type --></label>
+    <name>SW_Contract_Type__c</name>
+    <picklistValues>
+        <masterLabel>Cost Reimbursable</masterLabel>
+        <translation><!-- Cost Reimbursable --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fixed Price</masterLabel>
+        <translation><!-- Fixed Price --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Milestone-Based</masterLabel>
+        <translation><!-- Milestone-Based --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Retainer</masterLabel>
+        <translation><!-- Retainer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Time &amp; Material</masterLabel>
+        <translation><!-- Time &amp; Material --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unit Priced</masterLabel>
+        <translation><!-- Unit Priced --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

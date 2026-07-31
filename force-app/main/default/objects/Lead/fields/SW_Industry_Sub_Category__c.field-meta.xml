@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SW_Industry_Sub_Category__c</fullName>
+    <label>Industry Sub Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>SW_Industry_Category__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Automotive</fullName>
+                <default>false</default>
+                <label>Automotive</label>
+            </value>
+            <value>
+                <fullName>Manufacturing</fullName>
+                <default>false</default>
+                <label>Manufacturing</label>
+            </value>
+            <value>
+                <fullName>Transportation</fullName>
+                <default>false</default>
+                <label>Transportation</label>
+            </value>
+            <value>
+                <fullName>Transportation and Logistics</fullName>
+                <default>false</default>
+                <label>Transportation and Logistics</label>
+            </value>
+            <value>
+                <fullName>Ethanol</fullName>
+                <default>false</default>
+                <label>Ethanol</label>
+            </value>
+            <value>
+                <fullName>Feed &amp; Grain</fullName>
+                <default>false</default>
+                <label>Feed &amp; Grain</label>
+            </value>
+            <value>
+                <fullName>Fertilizer &amp; Chemical</fullName>
+                <default>false</default>
+                <label>Fertilizer &amp; Chemical</label>
+            </value>
+            <value>
+                <fullName>Auto Dealership</fullName>
+                <default>false</default>
+                <label>Auto Dealership</label>
+            </value>
+            <value>
+                <fullName>Business Commercial</fullName>
+                <default>false</default>
+                <label>Business Commercial</label>
+            </value>
+            <value>
+                <fullName>Condominium Association</fullName>
+                <default>false</default>
+                <label>Condominium Association</label>
+            </value>
+            <value>
+                <fullName>Finance and Insurance</fullName>
+                <default>false</default>
+                <label>Finance and Insurance</label>
+            </value>
+            <value>
+                <fullName>Financial Services</fullName>
+                <default>false</default>
+                <label>Financial Services</label>
+            </value>
+            <value>
+                <fullName>Hospitality</fullName>
+                <default>false</default>
+                <label>Hospitality</label>
+            </value>
+            <value>
+                <fullName>Non-Profit</fullName>
+                <default>false</default>
+                <label>Non-Profit</label>
+            </value>
+            <value>
+                <fullName>Property Management</fullName>
+                <default>false</default>
+                <label>Property Management</label>
+            </value>
+            <value>
+                <fullName>Real Estate</fullName>
+                <default>false</default>
+                <label>Real Estate</label>
+            </value>
+            <value>
+                <fullName>Religious Organizations</fullName>
+                <default>false</default>
+                <label>Religious Organizations</label>
+            </value>
+            <value>
+                <fullName>Residential</fullName>
+                <default>false</default>
+                <label>Residential</label>
+            </value>
+            <value>
+                <fullName>Retail</fullName>
+                <default>false</default>
+                <label>Retail</label>
+            </value>
+            <value>
+                <fullName>Data Center</fullName>
+                <default>false</default>
+                <label>Data Center</label>
+            </value>
+            <value>
+                <fullName>Education</fullName>
+                <default>false</default>
+                <label>Education</label>
+            </value>
+            <value>
+                <fullName>EV / Battery</fullName>
+                <default>false</default>
+                <label>EV / Battery</label>
+            </value>
+            <value>
+                <fullName>Food &amp; Beverage</fullName>
+                <default>false</default>
+                <label>Food &amp; Beverage</label>
+            </value>
+            <value>
+                <fullName>Food Processing</fullName>
+                <default>false</default>
+                <label>Food Processing</label>
+            </value>
+            <value>
+                <fullName>Food Service</fullName>
+                <default>false</default>
+                <label>Food Service</label>
+            </value>
+            <value>
+                <fullName>Government and Public Administration</fullName>
+                <default>false</default>
+                <label>Government and Public Administration</label>
+            </value>
+            <value>
+                <fullName>Municipal</fullName>
+                <default>false</default>
+                <label>Municipal</label>
+            </value>
+            <value>
+                <fullName>Healthcare</fullName>
+                <default>false</default>
+                <label>Healthcare</label>
+            </value>
+            <value>
+                <fullName>Mining and Quarrying</fullName>
+                <default>false</default>
+                <label>Mining and Quarrying</label>
+            </value>
+            <value>
+                <fullName>Oil and Gas</fullName>
+                <default>false</default>
+                <label>Oil and Gas</label>
+            </value>
+            <value>
+                <fullName>Renewable Energy</fullName>
+                <default>false</default>
+                <label>Renewable Energy</label>
+            </value>
+            <value>
+                <fullName>Laboratory</fullName>
+                <default>false</default>
+                <label>Laboratory</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Pharmaceuticals</fullName>
+                <default>false</default>
+                <label>Pharmaceuticals</label>
+            </value>
+            <value>
+                <fullName>Science and Research</fullName>
+                <default>false</default>
+                <label>Science and Research</label>
+            </value>
+            <value>
+                <fullName>Semiconductor / Fab</fullName>
+                <default>false</default>
+                <label>Semiconductor / Fab</label>
+            </value>
+            <value>
+                <fullName>Media and Entertainment</fullName>
+                <default>false</default>
+                <label>Media and Entertainment</label>
+            </value>
+            <value>
+                <fullName>Recreational</fullName>
+                <default>false</default>
+                <label>Recreational</label>
+            </value>
+            <value>
+                <fullName>Sports and Recreation</fullName>
+                <default>false</default>
+                <label>Sports and Recreation</label>
+            </value>
+            <value>
+                <fullName>Water / Waste Water</fullName>
+                <default>false</default>
+                <label>Water / Waste Water</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Pharmaceutical</controllingFieldValue>
+            <valueName>Laboratory</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pharmaceutical</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pharmaceutical</controllingFieldValue>
+            <valueName>Pharmaceuticals</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pharmaceutical</controllingFieldValue>
+            <valueName>Science and Research</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Semiconductor / Fab</controllingFieldValue>
+            <valueName>Semiconductor / Fab</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Theme Parks</controllingFieldValue>
+            <valueName>Media and Entertainment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Theme Parks</controllingFieldValue>
+            <valueName>Recreational</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Theme Parks</controllingFieldValue>
+            <valueName>Sports and Recreation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Water / Waste Water</controllingFieldValue>
+            <valueName>Water / Waste Water</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Advanced Manufacturing</controllingFieldValue>
+            <valueName>Automotive</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Advanced Manufacturing</controllingFieldValue>
+            <valueName>Manufacturing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Advanced Manufacturing</controllingFieldValue>
+            <valueName>Transportation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Advanced Manufacturing</controllingFieldValue>
+            <valueName>Transportation and Logistics</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agriculture</controllingFieldValue>
+            <valueName>Ethanol</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agriculture</controllingFieldValue>
+            <valueName>Feed &amp; Grain</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agriculture</controllingFieldValue>
+            <valueName>Fertilizer &amp; Chemical</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commercial Real Estate &amp; Property</controllingFieldValue>
+            <valueName>Auto Dealership</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commercial Real Estate &amp; Property</controllingFieldValue>
+            <valueName>Business Commercial</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commercial Real Estate &amp; Property</controllingFieldValue>
+            <valueName>Condominium Association</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commercial Real Estate &amp; Property</controllingFieldValue>
+            <valueName>Finance and Insurance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commercial Real Estate &amp; Property</controllingFieldValue>
+            <valueName>Financial Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commercial Real Estate &amp; Property</controllingFieldValue>
+            <valueName>Hospitality</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commercial Real Estate &amp; Property</controllingFieldValue>
+            <valueName>Non-Profit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commercial Real Estate &amp; Property</controllingFieldValue>
+            <valueName>Property Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commercial Real Estate &amp; Property</controllingFieldValue>
+            <valueName>Real Estate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commercial Real Estate &amp; Property</controllingFieldValue>
+            <valueName>Religious Organizations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commercial Real Estate &amp; Property</controllingFieldValue>
+            <valueName>Residential</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commercial Real Estate &amp; Property</controllingFieldValue>
+            <valueName>Retail</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Data Center</controllingFieldValue>
+            <valueName>Data Center</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Education &amp; Civic</controllingFieldValue>
+            <valueName>Education</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EV / Battery</controllingFieldValue>
+            <valueName>EV / Battery</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Food &amp; Beverage</controllingFieldValue>
+            <valueName>Food &amp; Beverage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Food &amp; Beverage</controllingFieldValue>
+            <valueName>Food Processing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Food &amp; Beverage</controllingFieldValue>
+            <valueName>Food Service</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Government / Military</controllingFieldValue>
+            <valueName>Government and Public Administration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Government / Military</controllingFieldValue>
+            <valueName>Municipal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Healthcare</controllingFieldValue>
+            <valueName>Healthcare</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Petrochemical</controllingFieldValue>
+            <valueName>Mining and Quarrying</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Petrochemical</controllingFieldValue>
+            <valueName>Oil and Gas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Petrochemical</controllingFieldValue>
+            <valueName>Renewable Energy</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

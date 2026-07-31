@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Type of Work --></label>
+    <name>SW_Type_of_Work__c</name>
+    <picklistValues>
+        <masterLabel>Blasting and Coating</masterLabel>
+        <translation><!-- Blasting and Coating --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ceiling / Walls</masterLabel>
+        <translation><!-- Ceiling / Walls --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cleaning</masterLabel>
+        <translation><!-- Cleaning --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Commercial Exterior Repaint</masterLabel>
+        <translation><!-- Commercial Exterior Repaint --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Commercial Office Repaint</masterLabel>
+        <translation><!-- Commercial Office Repaint --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Data Management</masterLabel>
+        <translation><!-- Data Management --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Floor Cleaning/Repair</masterLabel>
+        <translation><!-- Floor Cleaning/Repair --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Floor Epoxy</masterLabel>
+        <translation><!-- Floor Epoxy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Floor Joint Filling</masterLabel>
+        <translation><!-- Floor Joint Filling --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Floor Line Striping</masterLabel>
+        <translation><!-- Floor Line Striping --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Floor Polish</masterLabel>
+        <translation><!-- Floor Polish --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Floor Power Trowel</masterLabel>
+        <translation><!-- Floor Power Trowel --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Floor Urethane Cement</masterLabel>
+        <translation><!-- Floor Urethane Cement --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Industrial Exterior Repaint</masterLabel>
+        <translation><!-- Industrial Exterior Repaint --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Industrial Interior Repaint</masterLabel>
+        <translation><!-- Industrial Interior Repaint --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New Construction Exterior</masterLabel>
+        <translation><!-- New Construction Exterior --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New Construction Interior</masterLabel>
+        <translation><!-- New Construction Interior --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Residential Exterior Repaint</masterLabel>
+        <translation><!-- Residential Exterior Repaint --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Residential Interior Repaint</masterLabel>
+        <translation><!-- Residential Interior Repaint --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tape &amp; Bed</masterLabel>
+        <translation><!-- Tape &amp; Bed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Warranty - Ceiling / Walls</masterLabel>
+        <translation><!-- Warranty - Ceiling / Walls --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Warranty - Commercial Exterior</masterLabel>
+        <translation><!-- Warranty - Commercial Exterior --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Warranty - Commercial Interior</masterLabel>
+        <translation><!-- Warranty - Commercial Interior --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Warranty - Flooring</masterLabel>
+        <translation><!-- Warranty - Flooring --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Warranty - Industrial Exterior</masterLabel>
+        <translation><!-- Warranty - Industrial Exterior --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Warranty - Industrial Interior</masterLabel>
+        <translation><!-- Warranty - Industrial Interior --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Warranty - New Construction Exterior</masterLabel>
+        <translation><!-- Warranty - New Construction Exterior --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Warranty - New Construction Interior</masterLabel>
+        <translation><!-- Warranty - New Construction Interior --></translation>
+    </picklistValues>
+</CustomFieldTranslation>
