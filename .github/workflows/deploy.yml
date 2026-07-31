@@ -1,0 +1,60 @@
+name: Salesforce CI/CD
+
+on:
+  push:
+    branches:
+      - dev
+      - qa
+      - uat
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Salesforce CLI
+        run: npm install -g @salesforce/cli
+
+      - name: Set Environment Variables
+        run: |
+          if [ "${GITHUB_REF_NAME}" = "dev" ]; then
+            echo "SF_CLIENT_ID=${{ secrets.DEV_SF_CLIENT_ID }}" >> $GITHUB_ENV
+            echo "SF_USERNAME=${{ secrets.DEV_SF_USERNAME }}" >> $GITHUB_ENV
+            echo "SF_INSTANCE_URL=${{ secrets.DEV_SF_INSTANCE_URL }}" >> $GITHUB_ENV
+            echo "${{ secrets.DEV_SF_JWT_KEY }}" > server.key
+
+          elif [ "${GITHUB_REF_NAME}" = "qa" ]; then
+            echo "SF_CLIENT_ID=${{ secrets.QA_SF_CLIENT_ID }}" >> $GITHUB_ENV
+            echo "SF_USERNAME=${{ secrets.QA_SF_USERNAME }}" >> $GITHUB_ENV
+            echo "SF_INSTANCE_URL=${{ secrets.QA_SF_INSTANCE_URL }}" >> $GITHUB_ENV
+            echo "${{ secrets.QA_SF_JWT_KEY }}" > server.key
+
+          elif [ "${GITHUB_REF_NAME}" = "uat" ]; then
+            echo "SF_CLIENT_ID=${{ secrets.UAT_SF_CLIENT_ID }}" >> $GITHUB_ENV
+            echo "SF_USERNAME=${{ secrets.UAT_SF_USERNAME }}" >> $GITHUB_ENV
+            echo "SF_INSTANCE_URL=${{ secrets.UAT_SF_INSTANCE_URL }}" >> $GITHUB_ENV
+            echo "${{ secrets.UAT_SF_JWT_KEY }}" > server.key
+          fi
+
+      - name: Authenticate to Salesforce
+        run: |
+          sf org login jwt \
+            --client-id "$SF_CLIENT_ID" \
+            --jwt-key-file server.key \
+            --username "$SF_USERNAME" \
+            --instance-url "$SF_INSTANCE_URL"
+
+      - name: Deploy to Salesforce
+        run: |
+          sf project deploy start \
+            --source-dir force-app \
+            --target-org "$SF_USERNAME" \
+            --test-level NoTestRun
