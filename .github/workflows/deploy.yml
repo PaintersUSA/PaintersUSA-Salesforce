@@ -15,34 +15,39 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
       - name: Install Salesforce CLI
-        run: npm install -g @salesforce/cli
+        run: |
+          npm install --global @salesforce/cli
+          sf --version
 
       - name: Set Environment Variables
+        shell: bash
         run: |
           if [ "${GITHUB_REF_NAME}" = "dev" ]; then
             echo "SF_CLIENT_ID=${{ secrets.DEV_SF_CLIENT_ID }}" >> $GITHUB_ENV
             echo "SF_USERNAME=${{ secrets.DEV_SF_USERNAME }}" >> $GITHUB_ENV
             echo "SF_INSTANCE_URL=${{ secrets.DEV_SF_INSTANCE_URL }}" >> $GITHUB_ENV
-            echo "${{ secrets.DEV_SF_JWT_KEY }}" > server.key
+            printf "%s" "${{ secrets.DEV_SF_JWT_KEY }}" > server.key
 
           elif [ "${GITHUB_REF_NAME}" = "qa" ]; then
             echo "SF_CLIENT_ID=${{ secrets.QA_SF_CLIENT_ID }}" >> $GITHUB_ENV
             echo "SF_USERNAME=${{ secrets.QA_SF_USERNAME }}" >> $GITHUB_ENV
             echo "SF_INSTANCE_URL=${{ secrets.QA_SF_INSTANCE_URL }}" >> $GITHUB_ENV
-            echo "${{ secrets.QA_SF_JWT_KEY }}" > server.key
+            printf "%s" "${{ secrets.QA_SF_JWT_KEY }}" > server.key
 
           elif [ "${GITHUB_REF_NAME}" = "uat" ]; then
             echo "SF_CLIENT_ID=${{ secrets.UAT_SF_CLIENT_ID }}" >> $GITHUB_ENV
             echo "SF_USERNAME=${{ secrets.UAT_SF_USERNAME }}" >> $GITHUB_ENV
             echo "SF_INSTANCE_URL=${{ secrets.UAT_SF_INSTANCE_URL }}" >> $GITHUB_ENV
-            echo "${{ secrets.UAT_SF_JWT_KEY }}" > server.key
+            printf "%s" "${{ secrets.UAT_SF_JWT_KEY }}" > server.key
           fi
+
+          chmod 600 server.key
 
       - name: Authenticate to Salesforce
         run: |
@@ -50,11 +55,16 @@ jobs:
             --client-id "$SF_CLIENT_ID" \
             --jwt-key-file server.key \
             --username "$SF_USERNAME" \
-            --instance-url "$SF_INSTANCE_URL"
+            --instance-url "$SF_INSTANCE_URL" \
+            --alias targetOrg
+
+      - name: Display Org
+        run: |
+          sf org display --target-org targetOrg
 
       - name: Deploy to Salesforce
         run: |
           sf project deploy start \
+            --target-org targetOrg \
             --source-dir force-app \
-            --target-org "$SF_USERNAME" \
             --test-level NoTestRun
