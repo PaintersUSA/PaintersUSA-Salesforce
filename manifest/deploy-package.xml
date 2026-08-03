@@ -62,9 +62,9 @@
     <types><members>*</members><name>EmailTemplate</name></types>
 
     <!-- Entitlement -->
-    <types><members>*</members><name>EntitlementProcess</name></types>
-    <types><members>*</members><name>MilestoneType</name></types>
-
+    <!--<types><members>*</members><name>EntitlementProcess</name></types>
+    <types><members>*</members><name>MilestoneType</name></types>-->
+    
     <version>67.0</version>
 
 </Package>
