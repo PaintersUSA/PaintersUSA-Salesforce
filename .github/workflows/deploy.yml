@@ -15,7 +15,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Install Salesforce CLI (Official Binary)
+      - name: Install Salesforce CLI
         run: |
           wget https://developer.salesforce.com/media/salesforce-cli/sf/channels/stable/sf-linux-x64.tar.xz
           mkdir -p $HOME/sf
@@ -47,6 +47,7 @@ jobs:
             echo "SF_USERNAME=${{ secrets.UAT_SF_USERNAME }}" >> $GITHUB_ENV
             echo "SF_INSTANCE_URL=${{ secrets.UAT_SF_INSTANCE_URL }}" >> $GITHUB_ENV
             printf "%s" "${{ secrets.UAT_SF_JWT_KEY }}" > server.key
+
           else
             echo "Unsupported branch: ${GITHUB_REF_NAME}"
             exit 1
@@ -67,9 +68,9 @@ jobs:
         run: |
           sf org display --target-org targetOrg
 
-      - name: Deploy Source
-  run: |
-    sf project deploy start \
-      --target-org targetOrg \
-      --manifest manifest/package.xml \
-      --test-level NoTestRun
+      - name: Deploy Metadata
+        run: |
+          sf project deploy start \
+            --target-org targetOrg \
+            --manifest manifest/package.xml \
+            --test-level NoTestRun
