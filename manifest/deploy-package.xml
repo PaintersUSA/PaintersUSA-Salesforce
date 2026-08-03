@@ -24,8 +24,16 @@
         <members>Product2</members>
         <members>Pricebook2</members>
         <members>Quote</members>
-        <members>*__c</members>
-        <members>*__e</members>
+         <!-- Custom Objects -->
+    <members>SW_Account_Ownership__c</members>
+    <members>Estimating__c</members>
+    <members>SW_GP_Transaction__c</members>
+    <members>SW_Invoice_Transaction__c</members>
+    <members>Job_Sequence__c</members>
+    <members>SW_Project__c</members>
+
+    <!-- Platform Events -->
+    <members>Create_Bid_Board__e</members>
         <name>CustomObject</name>
     </types>
 
