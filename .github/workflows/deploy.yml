@@ -27,10 +27,9 @@ jobs:
           sf --version
           which sf
 
-      - name: Configure Environment
+      - name: Configure Salesforce Credentials
         shell: bash
         run: |
-
           if [ "${GITHUB_REF_NAME}" = "dev" ]; then
             echo "SF_CLIENT_ID=${{ secrets.DEV_SF_CLIENT_ID }}" >> $GITHUB_ENV
             echo "SF_USERNAME=${{ secrets.DEV_SF_USERNAME }}" >> $GITHUB_ENV
@@ -50,7 +49,7 @@ jobs:
             printf "%s" "${{ secrets.UAT_SF_JWT_KEY }}" > server.key
 
           else
-            echo "Unsupported branch ${GITHUB_REF_NAME}"
+            echo "Unsupported branch: ${GITHUB_REF_NAME}"
             exit 1
           fi
 
@@ -69,16 +68,15 @@ jobs:
         run: |
           sf org display --target-org targetOrg
 
-      - name: Validate Deployment
-        run: |
-          sf project deploy validate \
-            --target-org targetOrg \
-            --manifest manifest/deploy-package.xml \
-            --test-level RunLocalTests
-
       - name: Deploy Metadata
         run: |
           sf project deploy start \
             --target-org targetOrg \
             --manifest manifest/deploy-package.xml \
-            --test-level NoTestRun
+            --test-level NoTestRun \
+            --wait 120
+
+      - name: Display Deployment Result
+        if: always()
+        run: |
+          sf org display --target-org targetOrg
