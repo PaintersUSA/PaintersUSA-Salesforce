@@ -10,6 +10,7 @@
         <value>true</value>
     </exitCriteriaFilterItems>
     <milestones>
+        <isDisplayedOnLinkedEntity>false</isDisplayedOnLinkedEntity>
         <milestoneCriteriaFilterItems>
             <field>Case.Priority</field>
             <operation>equals</operation>
@@ -28,6 +29,7 @@
         <useCriteriaStartTime>false</useCriteriaStartTime>
     </milestones>
     <milestones>
+        <isDisplayedOnLinkedEntity>false</isDisplayedOnLinkedEntity>
         <milestoneCriteriaFilterItems>
             <field>Case.Priority</field>
             <operation>equals</operation>
@@ -38,6 +40,7 @@
         <useCriteriaStartTime>false</useCriteriaStartTime>
     </milestones>
     <milestones>
+        <isDisplayedOnLinkedEntity>false</isDisplayedOnLinkedEntity>
         <milestoneCriteriaFilterItems>
             <field>Case.Priority</field>
             <operation>notEqual</operation>
@@ -49,6 +52,7 @@
     </milestones>
     <milestones>
         <criteriaBooleanFilter>1 AND 2</criteriaBooleanFilter>
+        <isDisplayedOnLinkedEntity>false</isDisplayedOnLinkedEntity>
         <milestoneCriteriaFilterItems>
             <field>Case.Priority</field>
             <operation>equals</operation>
@@ -64,6 +68,7 @@
         <useCriteriaStartTime>false</useCriteriaStartTime>
     </milestones>
     <milestones>
+        <isDisplayedOnLinkedEntity>false</isDisplayedOnLinkedEntity>
         <milestoneCriteriaFilterItems>
             <field>Case.Priority</field>
             <operation>equals</operation>
@@ -74,6 +79,7 @@
         <useCriteriaStartTime>false</useCriteriaStartTime>
     </milestones>
     <milestones>
+        <isDisplayedOnLinkedEntity>false</isDisplayedOnLinkedEntity>
         <milestoneCriteriaFilterItems>
             <field>Case.Priority</field>
             <operation>equals</operation>
@@ -96,6 +102,7 @@
         <useCriteriaStartTime>false</useCriteriaStartTime>
     </milestones>
     <milestones>
+        <isDisplayedOnLinkedEntity>false</isDisplayedOnLinkedEntity>
         <milestoneCriteriaFilterItems>
             <field>Case.Priority</field>
             <operation>equals</operation>
@@ -118,6 +125,7 @@
         <useCriteriaStartTime>false</useCriteriaStartTime>
     </milestones>
     <milestones>
+        <isDisplayedOnLinkedEntity>false</isDisplayedOnLinkedEntity>
         <milestoneCriteriaFilterItems>
             <field>Case.Priority</field>
             <operation>notEqual</operation>

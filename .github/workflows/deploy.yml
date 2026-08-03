@@ -27,9 +27,10 @@ jobs:
           sf --version
           which sf
 
-      - name: Set Environment Variables
+      - name: Configure Environment
         shell: bash
         run: |
+
           if [ "${GITHUB_REF_NAME}" = "dev" ]; then
             echo "SF_CLIENT_ID=${{ secrets.DEV_SF_CLIENT_ID }}" >> $GITHUB_ENV
             echo "SF_USERNAME=${{ secrets.DEV_SF_USERNAME }}" >> $GITHUB_ENV
@@ -49,7 +50,7 @@ jobs:
             printf "%s" "${{ secrets.UAT_SF_JWT_KEY }}" > server.key
 
           else
-            echo "Unsupported branch: ${GITHUB_REF_NAME}"
+            echo "Unsupported branch ${GITHUB_REF_NAME}"
             exit 1
           fi
 
@@ -68,9 +69,16 @@ jobs:
         run: |
           sf org display --target-org targetOrg
 
+      - name: Validate Deployment
+        run: |
+          sf project deploy validate \
+            --target-org targetOrg \
+            --manifest manifest/deploy-package.xml \
+            --test-level NoTestRun
+
       - name: Deploy Metadata
         run: |
           sf project deploy start \
             --target-org targetOrg \
-            --manifest manifest/package.xml \
+            --manifest manifest/deploy-package.xml \
             --test-level NoTestRun

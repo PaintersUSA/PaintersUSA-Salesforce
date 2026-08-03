@@ -1768,6 +1768,7 @@
                 <booleanValue>false</booleanValue>
             </value>
         </filters>
+        <maxBatchSize>150</maxBatchSize>
         <object>Lead</object>
         <schedule>
             <dayOfMonthToRun>0</dayOfMonthToRun>
