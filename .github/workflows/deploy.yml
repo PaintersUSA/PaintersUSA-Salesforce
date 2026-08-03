@@ -74,7 +74,7 @@ jobs:
           sf project deploy validate \
             --target-org targetOrg \
             --manifest manifest/deploy-package.xml \
-            --test-level NoTestRun
+            --test-level RunLocalTests
 
       - name: Deploy Metadata
         run: |
