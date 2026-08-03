@@ -72,7 +72,7 @@ jobs:
         run: |
           sf project deploy start \
             --target-org targetOrg \
-            --manifest manifest/deploy-package.xml \
+            --source-dir force-app \
             --test-level NoTestRun \
             --wait 120
 
