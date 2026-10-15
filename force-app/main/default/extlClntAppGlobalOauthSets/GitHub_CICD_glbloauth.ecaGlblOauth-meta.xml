@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtlClntAppGlobalOauthSettings xmlns="http://soap.sforce.com/2006/04/metadata">
+    <callbackUrl>http://localhost:1717/OauthRedirect</callbackUrl>
+    <certificate>MIIC7zCCAdegAwIBAgITGsJLh23heA+Lnk1B4j9hUSLCjTANBgkqhkiG9w0BAQsF
+ADAYMRYwFAYDVQQDDA1TYWxlc2ZvcmNlSldUMB4XDTI2MDczMTA2MTMyN1oXDTM2
+MDcyODA2MTMyN1owGDEWMBQGA1UEAwwNU2FsZXNmb3JjZUpXVDCCASIwDQYJKoZI
+hvcNAQEBBQADggEPADCCAQoCggEBALAll0S3tuvcxAHDQy6I1hhERMk4wJpqlCLs
+m+N4S72B7sB0o2aTU2QZPD7IsIxaLxnqHWfiiAwHROU9sFVeiyCV71I5v/C0QYNe
+98ZMBx+To6Kykl9lOfAaZp6gnIXwH8sIxhxaIYYdve9Z0szIwDg6+OyTLmfDbwmt
+K3ujqe/VxPf5Z424Gg760dg8Xc3P4RKwi2+Sg08y40L3QP/dBE2jN7R4akCEqUY/
+PP+/LP4vTnXqd8Nj4t6FITMK5gOEnfbLGX5krN0b0G3sANSLEE6GFK6QvPyZWt8D
+Md0NABC4sEbjEuRrw0eG9LOxZQ2MK4vQYkuh9vxTegjYy6OyiVUCAwEAAaMyMDAw
+HQYDVR0OBBYEFDSjR+1d7cBuHJLTaBkYRx6F5XcUMA8GA1UdEwEB/wQFMAMBAf8w
+DQYJKoZIhvcNAQELBQADggEBAIlSBUMK/CHwFvPA8JZCEBqrOXapPyFUa754cwc3
+qy79lPuvXEiG4R0yQjflQk8de9iEx5Bw8vtvHY13WCiGfXD2Xm+OhE0ZWOLF1vOj
+ZkstxmgZYx/JLSpwIwIx/6/MQFzv62wpaSh2PsY7ON9U81e09+3W5Lyyno1oadGf
+0s1SAYLDTts0bxXJLptOJphqZ4A/LOHiGTwnmBzzy5o2ftW4jEaNCS6b0OPYI3t1
+W2Sa4u4/C1k0YQ5anEN6uoBJdZp3Tvzh7Sc1jjt/X6iFR5ynvpzts/Hi/2SrSLSH
+U5SRqsmI7/EoAtoR75z3MwP5F4++e+QRgaX4/2zsWgIHPW4=</certificate>
+    <consumerKey>3MVG9saTlUaBnpQn8xOLAtUVID7NdAihtTWZ.yJz0JWMFqVrOPml4Hh1..V7bG25S_8JcV4nIWpLAqN5Doxa2</consumerKey>
+    <externalClientApplication>GitHub_CICD</externalClientApplication>
+    <isClientCredentialsFlowEnabled>false</isClientCredentialsFlowEnabled>
+    <isCodeCredFlowEnabled>false</isCodeCredFlowEnabled>
+    <isCodeCredPostOnly>false</isCodeCredPostOnly>
+    <isConsumerSecretOptional>true</isConsumerSecretOptional>
+    <isDeviceFlowEnabled>false</isDeviceFlowEnabled>
+    <isIntrospectAllTokens>false</isIntrospectAllTokens>
+    <isNamedUserJwtEnabled>false</isNamedUserJwtEnabled>
+    <isPkceRequired>true</isPkceRequired>
+    <isRefreshTokenRotationEnabled>true</isRefreshTokenRotationEnabled>
+    <isSecretRequiredForRefreshToken>false</isSecretRequiredForRefreshToken>
+    <isSecretRequiredForTokenExchange>true</isSecretRequiredForTokenExchange>
+    <isTokenExchangeEnabled>false</isTokenExchangeEnabled>
+    <label>GitHub_CICD_glbloauth</label>
+    <shouldRotateConsumerKey>false</shouldRotateConsumerKey>
+    <shouldRotateConsumerSecret>false</shouldRotateConsumerSecret>
+</ExtlClntAppGlobalOauthSettings>

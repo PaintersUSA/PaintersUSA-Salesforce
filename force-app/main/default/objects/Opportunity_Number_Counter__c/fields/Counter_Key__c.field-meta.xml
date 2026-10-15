@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Counter_Key__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description>Unique key combining Sales Number and Year. Example: 11662026.</description>
+    <externalId>false</externalId>
+    <label>Counter Key</label>
+    <length>50</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

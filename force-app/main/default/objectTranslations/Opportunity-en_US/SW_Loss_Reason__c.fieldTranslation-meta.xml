@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Loss Reason --></label>
+    <name>SW_Loss_Reason__c</name>
+    <picklistValues>
+        <masterLabel>Business Status</masterLabel>
+        <translation><!-- Business Status --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contact Issues</masterLabel>
+        <translation><!-- Contact Issues --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Geographic / Market Alignment</masterLabel>
+        <translation><!-- Geographic / Market Alignment --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Junk</masterLabel>
+        <translation><!-- Junk --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lead Quality</masterLabel>
+        <translation><!-- Lead Quality --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Project Scope &amp; Fit</masterLabel>
+        <translation><!-- Project Scope &amp; Fit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Resource &amp; Capacity</masterLabel>
+        <translation><!-- Resource &amp; Capacity --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

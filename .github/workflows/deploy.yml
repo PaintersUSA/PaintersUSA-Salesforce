@@ -1,0 +1,82 @@
+name: Salesforce CI/CD
+
+on:
+  push:
+    branches:
+      - dev
+      - qa
+      - uat
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Install Salesforce CLI
+        run: |
+          wget https://developer.salesforce.com/media/salesforce-cli/sf/channels/stable/sf-linux-x64.tar.xz
+          mkdir -p $HOME/sf
+          tar xJf sf-linux-x64.tar.xz -C $HOME/sf --strip-components=1
+          echo "$HOME/sf/bin" >> $GITHUB_PATH
+
+      - name: Verify Salesforce CLI
+        run: |
+          sf --version
+          which sf
+
+      - name: Configure Salesforce Credentials
+        shell: bash
+        run: |
+          if [ "${GITHUB_REF_NAME}" = "dev" ]; then
+            echo "SF_CLIENT_ID=${{ secrets.DEV_SF_CLIENT_ID }}" >> $GITHUB_ENV
+            echo "SF_USERNAME=${{ secrets.DEV_SF_USERNAME }}" >> $GITHUB_ENV
+            echo "SF_INSTANCE_URL=${{ secrets.DEV_SF_INSTANCE_URL }}" >> $GITHUB_ENV
+            printf "%s" "${{ secrets.DEV_SF_JWT_KEY }}" > server.key
+
+          elif [ "${GITHUB_REF_NAME}" = "qa" ]; then
+            echo "SF_CLIENT_ID=${{ secrets.QA_SF_CLIENT_ID }}" >> $GITHUB_ENV
+            echo "SF_USERNAME=${{ secrets.QA_SF_USERNAME }}" >> $GITHUB_ENV
+            echo "SF_INSTANCE_URL=${{ secrets.QA_SF_INSTANCE_URL }}" >> $GITHUB_ENV
+            printf "%s" "${{ secrets.QA_SF_JWT_KEY }}" > server.key
+
+          elif [ "${GITHUB_REF_NAME}" = "uat" ]; then
+            echo "SF_CLIENT_ID=${{ secrets.UAT_SF_CLIENT_ID }}" >> $GITHUB_ENV
+            echo "SF_USERNAME=${{ secrets.UAT_SF_USERNAME }}" >> $GITHUB_ENV
+            echo "SF_INSTANCE_URL=${{ secrets.UAT_SF_INSTANCE_URL }}" >> $GITHUB_ENV
+            printf "%s" "${{ secrets.UAT_SF_JWT_KEY }}" > server.key
+
+          else
+            echo "Unsupported branch: ${GITHUB_REF_NAME}"
+            exit 1
+          fi
+
+          chmod 600 server.key
+
+      - name: Authenticate to Salesforce
+        run: |
+          sf org login jwt \
+            --client-id "$SF_CLIENT_ID" \
+            --jwt-key-file server.key \
+            --username "$SF_USERNAME" \
+            --instance-url "$SF_INSTANCE_URL" \
+            --alias targetOrg
+
+      - name: Verify Org Login
+        run: |
+          sf org display --target-org targetOrg
+
+      - name: Deploy Metadata
+        run: |
+          sf project deploy start \
+            --target-org targetOrg \
+            --source-dir force-app \
+            --test-level NoTestRun \
+            --wait 120
+
+      - name: Display Deployment Result
+        if: always()
+        run: |
+          sf org display --target-org targetOrg

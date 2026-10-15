@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Commission Type --></label>
+    <name>SW_Commission_Type__c</name>
+    <picklistValues>
+        <masterLabel>Cost Accurracy</masterLabel>
+        <translation><!-- Cost Accurracy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Large Project</masterLabel>
+        <translation><!-- Large Project --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New Account</masterLabel>
+        <translation><!-- New Account --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Transiton</masterLabel>
+        <translation><!-- Transiton --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

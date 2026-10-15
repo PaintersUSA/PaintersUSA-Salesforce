@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>67.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Clear_Due_Date</name>
+        <label>Clear Due Date</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Estimate_Due_Date__c</assignToReference>
+            <operator>Assign</operator>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Set_Excel_Due_Date</name>
+        <label>Set Excel Due Date</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Estimate_Due_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>ExcelDueDate</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Set_Procore_Due_Date</name>
+        <label>Set Procore Due Date</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Estimate_Due_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>ProcoreDueDate</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <name>Check_Values</name>
+        <label>Check Values</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Clear_Due_Date</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Procore</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Estimating_Tool__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Procore</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Procore_Due_Date</targetReference>
+            </connector>
+            <label>Procore</label>
+        </rules>
+        <rules>
+            <name>Excel</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Estimating_Tool__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Excel</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Excel_Due_Date</targetReference>
+            </connector>
+            <label>Excel</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>ExcelDueDate</name>
+        <dataType>Date</dataType>
+        <expression>$Flow.CurrentDate + 3</expression>
+    </formulas>
+    <formulas>
+        <name>ProcoreDueDate</name>
+        <dataType>Date</dataType>
+        <expression>$Flow.CurrentDate + 10</expression>
+    </formulas>
+    <interviewLabel>Auto Populate Due Date from Estimating Tool {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Auto Populate Due Date from Estimating Tool</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_Values</targetReference>
+        </connector>
+        <object>Opportunity</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+</Flow>

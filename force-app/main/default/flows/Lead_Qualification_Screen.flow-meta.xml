@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>66.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <customProperties>
+        <name>ScreenProgressIndicator</name>
+        <value>
+            <stringValue>{&quot;location&quot;:&quot;top&quot;,&quot;type&quot;:&quot;simple&quot;}</stringValue>
+        </value>
+    </customProperties>
+    <environments>Default</environments>
+    <interviewLabel>Lead Qualification Screen {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Lead Qualification Screen</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordUpdates>
+        <name>Update_Lead</name>
+        <label>Update Lead</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Description</field>
+            <value>
+                <elementReference>Description_Value</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Lead</object>
+    </recordUpdates>
+    <screens>
+        <name>Question_Screen</name>
+        <label>Question Screen</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Update_Lead</targetReference>
+        </connector>
+        <fields>
+            <name>Lead_Qualification_Question</name>
+            <fieldText>Lead Qualification Question</fieldText>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>Lead_Qualification_Question_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Can_you_describe_the_scope_of_work_or_issue_you_re_looking_to_address</name>
+                    <dataType>String</dataType>
+                    <fieldText>Can you describe the scope of work or issue you’re looking to address?</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                </fields>
+                <fields>
+                    <name>What_condition_is_the_area_in_right_now</name>
+                    <dataType>String</dataType>
+                    <fieldText>What condition is the area in right now?</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                </fields>
+                <fields>
+                    <name>Where_is_the_project_located_confirm_property_address</name>
+                    <dataType>String</dataType>
+                    <fieldText>Where is the project located? (confirm property address)</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                </fields>
+                <fields>
+                    <name>Is_this_project_already_budgeted</name>
+                    <dataType>String</dataType>
+                    <fieldText>Is this project already budgeted?</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                </fields>
+                <fields>
+                    <name>Do_you_have_your_calendar_ready_to_schedule_a_time_to_talk_with_our_project_spec</name>
+                    <dataType>String</dataType>
+                    <fieldText>Do you have your calendar ready to schedule a time to talk with our project specialist?</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>Lead_Qualification_Question_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>What_areas_are_involved_flooring_walls_ceilings_equipment_etc</name>
+                    <dataType>String</dataType>
+                    <fieldText>What areas are involved? (flooring, walls, ceilings, equipment, etc.)</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                </fields>
+                <fields>
+                    <name>Do_you_know_the_approximate_size_or_square_footage</name>
+                    <dataType>String</dataType>
+                    <fieldText>Do you know the approximate size or square footage?</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                </fields>
+                <fields>
+                    <name>When_are_you_looking_to_have_this_work_completed</name>
+                    <dataType>String</dataType>
+                    <fieldText>When are you looking to have this work completed?</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                </fields>
+                <fields>
+                    <name>Who_will_be_involved_in_approving_the_project</name>
+                    <dataType>String</dataType>
+                    <fieldText>Who will be involved in approving the project?</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithHeader</regionContainerType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <nextOrFinishButtonLabel>Submit</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Question_Screen</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>Description_Value</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>QUESTION 1. Can you describe the scope of work or issue you’re looking to address?
+RESPONSE 1. {!Can_you_describe_the_scope_of_work_or_issue_you_re_looking_to_address}
+
+QUESTION 2. What areas are involved? (flooring, walls, ceilings, equipment, etc.)
+RESPONSE 2. {!What_areas_are_involved_flooring_walls_ceilings_equipment_etc}
+
+QUESTION 3. What condition is the area in right now?
+RESPONSE 3. {!What_condition_is_the_area_in_right_now}
+
+QUESTION 4. Do you know the approximate size or square footage?
+RESPONSE 4. {!Do_you_know_the_approximate_size_or_square_footage}
+
+QUESTION 5. Where is the project located? (confirm property address)
+RESPONSE 5. {!Where_is_the_project_located_confirm_property_address}
+
+QUESTION 6. When are you looking to have this work completed?
+RESPONSE 6. {!When_are_you_looking_to_have_this_work_completed}
+
+QUESTION 7. Is this project already budgeted?
+RESPONSE 7. {!Is_this_project_already_budgeted}
+
+QUESTION 8. Who will be involved in approving the project?
+RESPONSE 8. {!Who_will_be_involved_in_approving_the_project}
+
+QUESTION 9. Do you have your calendar ready to schedule a time to talk with our project specialist?
+RESPONSE 9. {!Do_you_have_your_calendar_ready_to_schedule_a_time_to_talk_with_our_project_spec}</text>
+    </textTemplates>
+    <variables>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

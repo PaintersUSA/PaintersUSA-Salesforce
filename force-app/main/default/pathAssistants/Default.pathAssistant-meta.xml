@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Lead</entityName>
+    <fieldName>Status</fieldName>
+    <masterLabel>Default</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>SW_Deal_Qualification_Notes__c</fieldNames>
+        <info>&lt;ul&gt;&lt;li&gt;Create opportunity&lt;/li&gt;&lt;li&gt;Assign salesperson&lt;/li&gt;&lt;li&gt;Create the BID&lt;/li&gt;&lt;li&gt;Capture scope, budget, and timeline&lt;/li&gt;&lt;li&gt;Proceed with next steps immediately&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;Please fill Type of Work and Inside Sales Rep before moving the status to Converted.&lt;/span&gt;&lt;/p&gt;</info>
+        <picklistValueName>Converted</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Address</fieldNames>
+        <fieldNames>Industry</fieldNames>
+        <fieldNames>Website</fieldNames>
+        <info>&lt;ul&gt;&lt;li&gt;Move the lead to Working immediately after first contact attempt&lt;/li&gt;&lt;li&gt;Prepare and complete first outreach within 1 business day&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>New</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>SW_Type_of_Work__c</fieldNames>
+        <fieldNames>SW_Timeline__c</fieldNames>
+        <info>&lt;ul&gt;&lt;li&gt;Build relationship&lt;/li&gt;&lt;li&gt;Track timelines and future opportunities&lt;/li&gt;&lt;li&gt;Schedule follow-ups&lt;/li&gt;&lt;li&gt;Maintain periodic engagement&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Nurturing</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>SW_Unqualified_Reason__c</fieldNames>
+        <fieldNames>SW_Unqualified_Subcategory__c</fieldNames>
+        <fieldNames>SW_Unqualified_Reason_Notes__c</fieldNames>
+        <info>&lt;ul&gt;&lt;li&gt;Select correct disqualification reason&lt;/li&gt;&lt;li&gt;Add detailed notes&lt;/li&gt;&lt;li&gt;Ensure proper documentation&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Please fill Unqualified Reason and Unqualified Reason Notes before moving the status to Unqualified.&lt;/p&gt;</info>
+        <picklistValueName>Unqualified</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Address</fieldNames>
+        <fieldNames>Industry</fieldNames>
+        <fieldNames>Title</fieldNames>
+        <info>&lt;ul&gt;&lt;li&gt;Review lead details&lt;/li&gt;&lt;li&gt;Check for duplicates&lt;/li&gt;&lt;li&gt;Perform multiple outreach attempts&lt;/li&gt;&lt;li&gt;Log activities&lt;/li&gt;&lt;li&gt;Identify missing information&lt;/li&gt;&lt;li&gt;Maintain follow-up cadence&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Please fill Email, Phone, Address, Industry and Lead Source before moving the status to Working.&lt;/p&gt;</info>
+        <picklistValueName>Working</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>__MASTER__</recordTypeName>
+</PathAssistant>

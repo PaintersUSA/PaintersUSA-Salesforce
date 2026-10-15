@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Marketing Generated</fullName>
+        <default>false</default>
+        <label>Marketing Generated</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Outbound / Prospecting</fullName>
+        <default>false</default>
+        <label>Outbound / Prospecting</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Referral</fullName>
+        <default>false</default>
+        <label>Referral</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Rep Generated</fullName>
+        <default>false</default>
+        <label>Rep Generated</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Events &amp; Associations</fullName>
+        <default>false</default>
+        <label>Events &amp; Associations</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Inbound Direct</fullName>
+        <default>false</default>
+        <label>Inbound Direct</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Partner / Vendor</fullName>
+        <default>false</default>
+        <label>Partner / Vendor</label>
+    </standardValue>
+</StandardValueSet>

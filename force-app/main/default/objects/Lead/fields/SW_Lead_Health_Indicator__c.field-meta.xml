@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SW_Lead_Health_Indicator__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(
+    SW_Lead_Health_Status__c,
+    &quot;Healthy&quot;, IMAGE(&quot;/img/samples/light_green.gif&quot;, &quot;Healthy&quot;),
+    &quot;At Risk&quot;, IMAGE(&quot;/img/samples/light_yellow.gif&quot;, &quot;At Risk&quot;),
+    &quot;Stale&quot;, IMAGE(&quot;/img/samples/light_red.gif&quot;, &quot;Stale&quot;),
+    &quot;&quot;
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Lead Health Indicator</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

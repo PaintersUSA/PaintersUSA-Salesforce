@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SW_Nurturing_Required_Fields</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( $Permission.SW_Bypass_Validation_Rules  &lt;&gt; TRUE,
+  ISCHANGED( Status ),
+ ISPICKVAL(Status , &quot;Nurturing&quot;),
+ ISBLANK( TEXT( SW_Timeline__c ) )   )</errorConditionFormula>
+    <errorMessage>Please fill Timeline before moving the lead status to Nurturing.</errorMessage>
+</ValidationRule>

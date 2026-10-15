@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Transition --></label>
+    <name>SW_Transition__c</name>
+    <picklistValues>
+        <masterLabel>None</masterLabel>
+        <translation><!-- None --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pass Down</masterLabel>
+        <translation><!-- Pass Down --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pass Up</masterLabel>
+        <translation><!-- Pass Up --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>68.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Assign_GP_Amount</name>
+        <label>Assign GP Amount</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>projectRecord.Overall_Gross_Profit__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>calculatedGpAmount</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>ischanged</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Check_if_Monthly_Cost_is_null_or_not</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_project_id</name>
+        <label>Assign project id</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>projectRecord.Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.SW_Project__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Check_if_Invoice_Transaction_Created_or_Updated</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Total_Cost</name>
+        <label>Assign Total Cost</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>projectRecord.SW_Total_Cost__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>calculatedTotalCost</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>ischanged</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Check_if_Monthly_Revenue_is_null_or_not</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Total_Revenue</name>
+        <label>Assign Total Revenue</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>projectRecord.SW_Total_Revenue__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>calculatedTotalRevenue</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>ischanged</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>check_if_isChanged_is_true_or_not</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Copy_1_of_Assign_GP_Amount</name>
+        <label>Copy 1 of Assign GP Amount</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>projectRecord.Overall_Gross_Profit__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>calculatedGpAmount</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>ischanged</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Copy_1_of_Check_if_Monthly_Cost_is_null_or_not</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Copy_1_of_Assign_Total_Cost</name>
+        <label>Copy 1 of Assign Total Cost</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>projectRecord.SW_Total_Cost__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>calculatedTotalCost</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>ischanged</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Copy_1_of_Check_if_Monthly_Revenue_is_null_or_not</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Copy_1_of_Assign_Total_Revenue</name>
+        <label>Copy 1 of Assign Total Revenue</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>projectRecord.SW_Total_Revenue__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>calculatedTotalRevenue</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>ischanged</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Copy_1_of_check_if_isChanged_is_true_or_not</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Check_if_GP_Amount_is_null_or_not</name>
+        <label>Check if GP Amount is null or not</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Check_if_Monthly_Cost_is_null_or_not</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>GP_Amount_is_not_null</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.SW_GP_Amount__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_GP_Amount</targetReference>
+            </connector>
+            <label>GP Amount is not null</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_if_Invoice_Transaction_Created_or_Updated</name>
+        <label>Check if Invoice Transaction Created or Updated?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Copy_1_of_Check_if_GP_Amount_is_null_or_not</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Invoice_Transaction_Created</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>isNew</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_if_GP_Amount_is_null_or_not</targetReference>
+            </connector>
+            <label>Invoice Transaction Created</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>check_if_isChanged_is_true_or_not</name>
+        <label>check if isChanged is true or not</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>isChanged_is_true</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ischanged</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Project_Record</targetReference>
+            </connector>
+            <label>isChanged is true</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_if_Monthly_Cost_is_null_or_not</name>
+        <label>Check if Monthly Cost is null or not</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Check_if_Monthly_Revenue_is_null_or_not</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Monthly_Cost_is_not_null</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Monthly_Cost__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Total_Cost</targetReference>
+            </connector>
+            <label>Monthly Cost is not null</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_if_Monthly_Revenue_is_null_or_not</name>
+        <label>Check if Monthly Revenue is null or not</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>check_if_isChanged_is_true_or_not</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Monthly_Revenue_is_not_null</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Monthly_Revenue__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Total_Revenue</targetReference>
+            </connector>
+            <label>Monthly Revenue is not null</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Copy_1_of_Check_if_GP_Amount_is_null_or_not</name>
+        <label>Copy 1 of Check if GP Amount is null or not</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Copy_1_of_Check_if_Monthly_Cost_is_null_or_not</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Copy_1_of_GP_Amount_is_not_null</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.SW_GP_Amount__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_1_of_Assign_GP_Amount</targetReference>
+            </connector>
+            <label>Copy 1 of GP Amount is not null</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Copy_1_of_check_if_isChanged_is_true_or_not</name>
+        <label>Copy 1 of check if isChanged is true or not</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Copy_1_of_isChanged_is_true</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ischanged</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_1_of_Update_Project_Record</targetReference>
+            </connector>
+            <label>Copy 1 of isChanged is true</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Copy_1_of_Check_if_Monthly_Cost_is_null_or_not</name>
+        <label>Copy 1 of Check if Monthly Cost is null or not</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Copy_1_of_Check_if_Monthly_Revenue_is_null_or_not</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Copy_1_of_Monthly_Cost_is_not_null</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Monthly_Cost__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_1_of_Assign_Total_Cost</targetReference>
+            </connector>
+            <label>Copy 1 of Monthly Cost is not null</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Copy_1_of_Check_if_Monthly_Revenue_is_null_or_not</name>
+        <label>Copy 1 of Check if Monthly Revenue is null or not</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Copy_1_of_check_if_isChanged_is_true_or_not</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Copy_1_of_Monthly_Revenue_is_not_null</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Monthly_Revenue__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_1_of_Assign_Total_Revenue</targetReference>
+            </connector>
+            <label>Copy 1 of Monthly Revenue is not null</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>calculatedGpAmount</name>
+        <dataType>Currency</dataType>
+        <expression>IF(
+    ISBLANK({!$Record.SW_Project__r.Overall_Gross_Profit__c}),
+    0,
+    {!$Record.SW_Project__r.SW_Actual_Gross_Profit__c}
+)
+-
+IF(
+    ISBLANK({!$Record__Prior.SW_Project__r.SW_Monthly_Gross_Profit__c}),
+    0,
+    {!$Record__Prior.SW_Project__r.SW_Monthly_Gross_Profit__c}
+)
++
+IF(
+    ISBLANK({!$Record.SW_GP_Amount__c}),
+    0,
+    {!$Record.SW_GP_Amount__c}
+)</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <name>calculatedTotalCost</name>
+        <dataType>Currency</dataType>
+        <expression>IF(
+    ISBLANK({!$Record.SW_Project__r.SW_Total_Cost__c}),
+    0,
+    {!$Record.SW_Project__r.SW_Total_Cost__c}
+)
+-
+IF(
+    ISBLANK({!$Record__Prior.Monthly_Cost__c}),
+    0,
+    {!$Record__Prior.Monthly_Cost__c}
+)
++
+IF(
+    ISBLANK({!$Record.Monthly_Cost__c}),
+    0,
+    {!$Record.Monthly_Cost__c}
+)</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <name>calculatedTotalRevenue</name>
+        <dataType>Currency</dataType>
+        <expression>IF(
+    ISBLANK({!$Record.SW_Project__r.SW_Total_Revenue__c}),
+    0,
+    {!$Record.SW_Project__r.SW_Total_Revenue__c}
+)
+-
+IF(
+    ISBLANK({!$Record__Prior.Monthly_Revenue__c}),
+    0,
+    {!$Record__Prior.Monthly_Revenue__c}
+)
++
+IF(
+    ISBLANK({!$Record.Monthly_Revenue__c}),
+    0,
+    {!$Record.Monthly_Revenue__c}
+)</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <name>isNew</name>
+        <dataType>Boolean</dataType>
+        <expression>ISNEW()</expression>
+    </formulas>
+    <interviewLabel>Invoice Transaction Create and Update(After Flow) {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Invoice Transaction Create and Update(After Flow)</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Copy_1_of_Update_Project_Record</name>
+        <label>Copy 1 of Update Project Record</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputReference>projectRecord</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Project_Record</name>
+        <label>Update Project Record</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputReference>projectRecord</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Assign_project_id</targetReference>
+        </connector>
+        <object>SW_Invoice_Transaction__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>ischanged</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <booleanValue>false</booleanValue>
+        </value>
+    </variables>
+    <variables>
+        <name>projectRecord</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>SW_Project__c</objectType>
+    </variables>
+</Flow>

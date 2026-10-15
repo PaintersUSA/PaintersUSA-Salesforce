@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SW_Unqualified_Reason__c</fullName>
+    <label>Unqualified Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Contact Issues</fullName>
+                <default>false</default>
+                <label>Contact Issues</label>
+            </value>
+            <value>
+                <fullName>Junk Leads</fullName>
+                <default>false</default>
+                <label>Junk Leads</label>
+            </value>
+            <value>
+                <fullName>Business Status</fullName>
+                <default>false</default>
+                <label>Business Status</label>
+            </value>
+            <value>
+                <fullName>Resource &amp; Capacity</fullName>
+                <default>false</default>
+                <label>Resource &amp; Capacity</label>
+            </value>
+            <value>
+                <fullName>Project Scope &amp; Fit</fullName>
+                <default>false</default>
+                <label>Project Scope &amp; Fit</label>
+            </value>
+            <value>
+                <fullName>Geographic / Market Alignment</fullName>
+                <default>false</default>
+                <label>Geographic / Market Alignment</label>
+            </value>
+            <value>
+                <fullName>Lead Quality</fullName>
+                <default>false</default>
+                <label>Lead Quality</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

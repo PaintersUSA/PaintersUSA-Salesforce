@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SW_LeadMobile_10Digit_Validation</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    NOT($Permission.SW_Bypass_Validation_Rules),
+    OR(
+        AND(
+            NOT(ISBLANK(MobilePhone)),
+            NOT(
+                REGEX(
+                    MobilePhone,
+                    &quot;^[0-9]{10}$&quot;
+                )
+            )
+        ),
+        AND(
+            NOT(ISBLANK(Phone)),
+            NOT(
+                REGEX(
+                    Phone,
+                    &quot;^[0-9]{10}$&quot;
+                )
+            )
+        )
+    )
+)</errorConditionFormula>
+    <errorMessage>Mobile must be a 10-digit number (numbers only)</errorMessage>
+</ValidationRule>

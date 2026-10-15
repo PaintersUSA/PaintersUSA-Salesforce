@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SW_Unqualified_Subcategory__c</fullName>
+    <label>Unqualified Subcategory</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>SW_Unqualified_Reason__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Unable to reach contact</fullName>
+                <default>false</default>
+                <label>Unable to reach contact</label>
+            </value>
+            <value>
+                <fullName>Opted out</fullName>
+                <default>false</default>
+                <label>Opted out</label>
+            </value>
+            <value>
+                <fullName>Duplicate lead</fullName>
+                <default>false</default>
+                <label>Duplicate lead</label>
+            </value>
+            <value>
+                <fullName>Out of business</fullName>
+                <default>false</default>
+                <label>Out of business</label>
+            </value>
+            <value>
+                <fullName>No longer with company</fullName>
+                <default>false</default>
+                <label>No longer with company</label>
+            </value>
+            <value>
+                <fullName>Too small / not viable</fullName>
+                <default>false</default>
+                <label>Too small / not viable</label>
+            </value>
+            <value>
+                <fullName>Residential project</fullName>
+                <default>false</default>
+                <label>Residential project</label>
+            </value>
+            <value>
+                <fullName>Union labor required</fullName>
+                <default>false</default>
+                <label>Union labor required</label>
+            </value>
+            <value>
+                <fullName>Leased building / no authority</fullName>
+                <default>false</default>
+                <label>Leased building / no authority</label>
+            </value>
+            <value>
+                <fullName>Outside target market</fullName>
+                <default>false</default>
+                <label>Outside target market</label>
+            </value>
+            <value>
+                <fullName>Too far / out of service area</fullName>
+                <default>false</default>
+                <label>Too far / out of service area</label>
+            </value>
+            <value>
+                <fullName>Junk / Fake Lead</fullName>
+                <default>false</default>
+                <label>Junk / Fake Lead</label>
+            </value>
+            <value>
+                <fullName>Invalid / Incomplete Information</fullName>
+                <default>false</default>
+                <label>Invalid / Incomplete Information</label>
+            </value>
+            <value>
+                <fullName>Out of our Capabilities</fullName>
+                <default>false</default>
+                <label>Out of our Capabilities</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Resource &amp; Capacity</controllingFieldValue>
+            <valueName>Out of our Capabilities</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Project Scope &amp; Fit</controllingFieldValue>
+            <valueName>Too small / not viable</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Project Scope &amp; Fit</controllingFieldValue>
+            <valueName>Residential project</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Project Scope &amp; Fit</controllingFieldValue>
+            <valueName>Union labor required</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Project Scope &amp; Fit</controllingFieldValue>
+            <valueName>Leased building / no authority</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Geographic / Market Alignment</controllingFieldValue>
+            <valueName>Outside target market</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Geographic / Market Alignment</controllingFieldValue>
+            <valueName>Too far / out of service area</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lead Quality</controllingFieldValue>
+            <valueName>Invalid / Incomplete Information</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contact Issues</controllingFieldValue>
+            <valueName>Unable to reach contact</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contact Issues</controllingFieldValue>
+            <valueName>Opted out</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contact Issues</controllingFieldValue>
+            <valueName>Duplicate lead</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Junk Leads</controllingFieldValue>
+            <valueName>Junk / Fake Lead</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Business Status</controllingFieldValue>
+            <valueName>Out of business</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Business Status</controllingFieldValue>
+            <valueName>No longer with company</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

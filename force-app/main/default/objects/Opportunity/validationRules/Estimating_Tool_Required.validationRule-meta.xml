@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Estimating_Tool_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    ISPICKVAL(StageName, &quot;Needs Analysis&quot;),
+    ISBLANK(TEXT(Estimating_Tool__c))
+)</errorConditionFormula>
+    <errorMessage>Estimating Tool is required before moving to Need Analysis stage.</errorMessage>
+</ValidationRule>
