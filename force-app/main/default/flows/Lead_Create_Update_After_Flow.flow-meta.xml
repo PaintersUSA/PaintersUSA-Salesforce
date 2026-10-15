@@ -101,7 +101,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Update_Opprotunity</targetReference>
+            <targetReference>Get_Campaign_Member</targetReference>
         </connector>
         <inputAssignments>
             <field>AccountAccessLevel</field>
@@ -212,7 +212,7 @@
         <inputAssignments>
             <field>TeamMemberRole</field>
             <value>
-                <stringValue>Inside Sales Rep</stringValue>
+                <stringValue>Lead Development Representative</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -259,18 +259,62 @@
         <object>OpportunityTeamMember</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
+    <recordLookups>
+        <name>Get_Campaign_Member</name>
+        <label>Get Campaign Member</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Update_Opprotunity</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>LeadId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>HasResponded</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>CampaignMember</object>
+        <sortField>FirstRespondedDate</sortField>
+        <sortOrder>Desc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
     <recordUpdates>
         <name>Update_Opprotunity</name>
         <label>Update Opprotunity</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.ConvertedOpportunityId</elementReference>
+            </value>
+        </filters>
         <inputAssignments>
-            <field>SW_Primary_Acquisition_Source__c</field>
+            <field>CampaignId</field>
+            <value>
+                <elementReference>Get_Campaign_Member.CampaignId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Primary_Acquisition_Source__c</field>
             <value>
                 <elementReference>$Record.SW_Primary_Acquisition_Source__c</elementReference>
             </value>
         </inputAssignments>
-        <inputReference>$Record</inputReference>
+        <object>Opportunity</object>
     </recordUpdates>
     <start>
         <locationX>0</locationX>
@@ -283,4 +327,27 @@
         <triggerType>RecordAfterSave</triggerType>
     </start>
     <status>Active</status>
+    <variables>
+        <name>campaignInfluenceRecordVariable</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>CampaignInfluence</objectType>
+    </variables>
+    <variables>
+        <name>campaignRecordList</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>CampaignInfluence</objectType>
+    </variables>
+    <variables>
+        <name>varLastTouchCampaignId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
 </Flow>

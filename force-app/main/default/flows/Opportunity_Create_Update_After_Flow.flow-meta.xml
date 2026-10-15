@@ -1,6 +1,162 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
+        <name>Calculate_Excel_Bussiness_Days</name>
+        <label>Calculate Excel Bussiness Days</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>AddBusinessDays</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>Copy_3_of_Update_Due_Date</targetReference>
+        </connector>
+        <flowTransactionModel>Automatic</flowTransactionModel>
+        <inputParameters>
+            <name>businessDays</name>
+            <value>
+                <inputConfiguratorMode>Resource</inputConfiguratorMode>
+                <numberValue>3.0</numberValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>businessHoursId</name>
+            <value>
+                <elementReference>Copy_1_of_Get_Painters_Business_Hours.Id</elementReference>
+                <inputConfiguratorMode>Resource</inputConfiguratorMode>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>startDate</name>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+                <inputConfiguratorMode>Resource</inputConfiguratorMode>
+            </value>
+        </inputParameters>
+        <nameSegment>AddBusinessDays</nameSegment>
+        <offset>0</offset>
+        <outputParameters>
+            <assignToReference>dueDate</assignToReference>
+            <name>resultDate</name>
+        </outputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Calculate_Procore_Bussines_Days</name>
+        <label>Calculate Procore Bussines Days</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>AddBusinessDays</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>Copy_2_of_Update_Due_Date</targetReference>
+        </connector>
+        <flowTransactionModel>Automatic</flowTransactionModel>
+        <inputParameters>
+            <name>businessDays</name>
+            <value>
+                <inputConfiguratorMode>Resource</inputConfiguratorMode>
+                <numberValue>10.0</numberValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>businessHoursId</name>
+            <value>
+                <elementReference>Get_Painters_Business_Hours.Id</elementReference>
+                <inputConfiguratorMode>Resource</inputConfiguratorMode>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>startDate</name>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+                <inputConfiguratorMode>Resource</inputConfiguratorMode>
+            </value>
+        </inputParameters>
+        <nameSegment>AddBusinessDays</nameSegment>
+        <offset>0</offset>
+        <outputParameters>
+            <assignToReference>dueDate</assignToReference>
+            <name>resultDate</name>
+        </outputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Copy_1_of_Calculate_Excel_Bussiness_Days</name>
+        <label>Copy 1 of Calculate Excel Bussiness Days</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>AddBusinessDays</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>Copy_1_of_Update_Due_Date</targetReference>
+        </connector>
+        <flowTransactionModel>Automatic</flowTransactionModel>
+        <inputParameters>
+            <name>businessDays</name>
+            <value>
+                <inputConfiguratorMode>Resource</inputConfiguratorMode>
+                <numberValue>3.0</numberValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>businessHoursId</name>
+            <value>
+                <elementReference>Copy_1_of_Copy_1_of_Get_Painters_Business_Hours.Id</elementReference>
+                <inputConfiguratorMode>Resource</inputConfiguratorMode>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>startDate</name>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+                <inputConfiguratorMode>Resource</inputConfiguratorMode>
+            </value>
+        </inputParameters>
+        <nameSegment>AddBusinessDays</nameSegment>
+        <offset>0</offset>
+        <outputParameters>
+            <assignToReference>dueDate</assignToReference>
+            <name>resultDate</name>
+        </outputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Copy_1_of_Calculate_Procore_Bussines_Days</name>
+        <label>Copy 1 of Calculate Procore Bussines Days</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>AddBusinessDays</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>Update_Due_Date</targetReference>
+        </connector>
+        <flowTransactionModel>Automatic</flowTransactionModel>
+        <inputParameters>
+            <name>businessDays</name>
+            <value>
+                <inputConfiguratorMode>Resource</inputConfiguratorMode>
+                <numberValue>10.0</numberValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>businessHoursId</name>
+            <value>
+                <elementReference>Copy_2_of_Get_Painters_Business_Hours.Id</elementReference>
+                <inputConfiguratorMode>Resource</inputConfiguratorMode>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>startDate</name>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+                <inputConfiguratorMode>Resource</inputConfiguratorMode>
+            </value>
+        </inputParameters>
+        <nameSegment>AddBusinessDays</nameSegment>
+        <offset>0</offset>
+        <outputParameters>
+            <assignToReference>dueDate</assignToReference>
+            <name>resultDate</name>
+        </outputParameters>
+    </actionCalls>
+    <actionCalls>
         <name>send_Custom_Notification_to_Team_Member</name>
         <label>send Custom Notification to Team Member</label>
         <locationX>0</locationX>
@@ -135,10 +291,38 @@
         </customErrorMessages>
     </customErrors>
     <decisions>
+        <name>Check_estimating</name>
+        <label>Check estimating</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Create_Platform_Event_for_Project_Creation</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>If_does_not_exist</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_estimating_record.Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_1_of_Copy_2_of_Create_Estimating_Record</targetReference>
+            </connector>
+            <label>If does not exist</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>Check_Estimating_Tool</name>
         <label>Check Estimating Tool</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Copy_1_of_Check_estimating</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>If_Procore</name>
@@ -151,22 +335,22 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Create_Platform_Event_for_Project_Creation</targetReference>
+                <targetReference>Check_estimating</targetReference>
             </connector>
             <label>If Procore</label>
         </rules>
     </decisions>
     <decisions>
-        <name>Check_estimating_tool1</name>
-        <label>Check estimating tool</label>
+        <name>Check_Estimating_Tool3</name>
+        <label>Check Estimating Tool</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>Update_Estimating_to_Accepted</targetReference>
+            <targetReference>Check_if_Project_is_there_or_not</targetReference>
         </defaultConnector>
-        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <defaultConnectorLabel>Procore</defaultConnectorLabel>
         <rules>
-            <name>If_excel</name>
+            <name>Excel</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <leftValueReference>$Record.Estimating_Tool__c</leftValueReference>
@@ -176,9 +360,46 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Create_Project_Record</targetReference>
+                <targetReference>Copy_1_of_Create_Platform_Event_for_Project_Creation</targetReference>
             </connector>
-            <label>If excel</label>
+            <label>Excel</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_Estimating_Tools</name>
+        <label>Check Estimating Tools</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Estimating_Tool_is_Procore</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Estimating_Tool__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Procore</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Painters_Business_Hours</targetReference>
+            </connector>
+            <label>Estimating Tool is Procore</label>
+        </rules>
+        <rules>
+            <name>Estimating_Tool_is_Excel</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Estimating_Tool__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Excel</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_1_of_Get_Painters_Business_Hours</targetReference>
+            </connector>
+            <label>Estimating Tool is Excel</label>
         </rules>
     </decisions>
     <decisions>
@@ -232,6 +453,21 @@
             </connector>
             <label>Closed Loss Reason notes is Changed</label>
         </rules>
+        <rules>
+            <name>Estimating_Tool_is_Changed</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Estimating_Tool__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_1_of_Check_Estimating_Tools</targetReference>
+            </connector>
+            <label>Estimating Tool is Changed</label>
+        </rules>
     </decisions>
     <decisions>
         <name>Check_if_Bid_Event_is_Null_or_not</name>
@@ -259,6 +495,28 @@
         </rules>
     </decisions>
     <decisions>
+        <name>Check_if_Project_is_there_or_not</name>
+        <label>Check if Project is there or not?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Project_does_not_Exists</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>get_Related_Project</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Estimating</targetReference>
+            </connector>
+            <label>Project does not Exists</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>Check_Stage_Value</name>
         <label>Check Stage Value</label>
         <locationX>0</locationX>
@@ -275,7 +533,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Get_Estimating</targetReference>
+                <targetReference>get_Related_Project</targetReference>
             </connector>
             <label>Closed Won</label>
         </rules>
@@ -290,7 +548,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Create_Quote_Record</targetReference>
+                <targetReference>Get_estimating_record</targetReference>
             </connector>
             <label>Needs Analysis</label>
         </rules>
@@ -330,6 +588,65 @@
                 <targetReference>send_Custom_Notification_to_Team_Member</targetReference>
             </connector>
             <label>UserList is not null</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Copy_1_of_Check_estimating</name>
+        <label>Copy 1 of Check estimating</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Copy_1_of_If_does_not_exist</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_estimating_record.Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_2_of_Create_Estimating_Record</targetReference>
+            </connector>
+            <label>Copy 1 of If does not exist</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Copy_1_of_Check_Estimating_Tools</name>
+        <label>Copy 1 of Check Estimating Tools</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Copy_1_of_Estimating_Tool_is_Procore</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Estimating_Tool__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Procore</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_2_of_Get_Painters_Business_Hours</targetReference>
+            </connector>
+            <label>Copy 1 of Estimating Tool is Procore</label>
+        </rules>
+        <rules>
+            <name>Copy_1_of_Estimating_Tool_is_Excel</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Estimating_Tool__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Excel</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_1_of_Copy_1_of_Get_Painters_Business_Hours</targetReference>
+            </connector>
+            <label>Copy 1 of Estimating Tool is Excel</label>
         </rules>
     </decisions>
     <decisions>
@@ -384,6 +701,11 @@
         <name>accOwnershipName</name>
         <dataType>String</dataType>
         <expression>{!Get_Account.Name} &amp; &apos;Ownership&apos;</expression>
+    </formulas>
+    <formulas>
+        <name>frmJobNumber</name>
+        <dataType>String</dataType>
+        <expression>TEXT(YEAR({!$Flow.CurrentDate})) &amp; &quot;-&quot; &amp; {!$Record.Owner.Alias} &amp; &quot;-&quot; &amp; {!$Record.SW_Sequence_Number__c}</expression>
     </formulas>
     <formulas>
         <name>isNew</name>
@@ -447,12 +769,35 @@
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
     <recordCreates>
+        <name>Copy_1_of_Copy_2_of_Create_Estimating_Record</name>
+        <label>Copy 1 of Copy 2 of Create Estimating Record</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Create_Platform_Event_for_Project_Creation</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Estimate_Stage__c</field>
+            <value>
+                <stringValue>Under Review</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Opportunity__c</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Estimating__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
         <name>Copy_1_of_Create_Platform_Event_for_Project_Creation</name>
         <label>Copy 1 of Create Platform Event for Project Creation</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Update_Estimating_to_Accepted</targetReference>
+            <targetReference>Check_if_Project_is_there_or_not</targetReference>
         </connector>
         <inputAssignments>
             <field>Account_Name__c</field>
@@ -464,6 +809,12 @@
             <field>Estimating_Tool__c</field>
             <value>
                 <elementReference>$Record.Estimating_Tool__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>External_Id__c</field>
+            <value>
+                <elementReference>$Record.SW_External_Id__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -530,10 +881,33 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordCreates>
+        <name>Copy_2_of_Create_Estimating_Record</name>
+        <label>Copy 2 of Create Estimating Record</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>Estimate_Stage__c</field>
+            <value>
+                <stringValue>Under Review</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Opportunity__c</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Estimating__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
         <name>Create_account_ownership</name>
         <label>Create account ownership</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_Estimating_Tools</targetReference>
+        </connector>
         <inputAssignments>
             <field>Is_Owner_Transferred__c</field>
             <value>
@@ -600,6 +974,12 @@
             <field>Estimating_Tool__c</field>
             <value>
                 <elementReference>$Record.Estimating_Tool__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>External_Id__c</field>
+            <value>
+                <elementReference>$Record.SW_External_Id__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -671,12 +1051,18 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Copy_1_of_Create_Platform_Event_for_Project_Creation</targetReference>
+            <targetReference>Update_Estimating_to_Accepted</targetReference>
         </connector>
         <inputAssignments>
             <field>Name</field>
             <value>
                 <elementReference>$Record.Name</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>$Record.OwnerId</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -736,41 +1122,69 @@
         <object>SW_Project__c</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
-    <recordCreates>
-        <name>Create_Quote_Record</name>
-        <label>Create Quote Record</label>
+    <recordLookups>
+        <name>Copy_1_of_Copy_1_of_Get_Painters_Business_Hours</name>
+        <label>Copy 1 of Copy 1 of Get Painters Business Hours</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Check_Estimating_Tool</targetReference>
+            <targetReference>Copy_1_of_Calculate_Excel_Bussiness_Days</targetReference>
         </connector>
-        <inputAssignments>
-            <field>Description</field>
-            <value>
-                <stringValue>This is a test quote.</stringValue>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
+        <filterLogic>and</filterLogic>
+        <filters>
             <field>Name</field>
+            <operator>EqualTo</operator>
             <value>
-                <stringValue>Test Quote</stringValue>
+                <stringValue>Painters Business Hours</stringValue>
             </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>OpportunityId</field>
-            <value>
-                <elementReference>$Record.Id</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Status</field>
-            <value>
-                <stringValue>Draft</stringValue>
-            </value>
-        </inputAssignments>
-        <object>Quote</object>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>BusinessHours</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
-    </recordCreates>
+    </recordLookups>
+    <recordLookups>
+        <name>Copy_1_of_Get_Painters_Business_Hours</name>
+        <label>Copy 1 of Get Painters Business Hours</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Calculate_Excel_Bussiness_Days</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Painters Business Hours</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>BusinessHours</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Copy_2_of_Get_Painters_Business_Hours</name>
+        <label>Copy 2 of Get Painters Business Hours</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Copy_1_of_Calculate_Procore_Bussines_Days</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Painters Business Hours</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>BusinessHours</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
     <recordLookups>
         <name>Get_Account</name>
         <label>Get Account</label>
@@ -869,7 +1283,28 @@
         <locationY>0</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Check_estimating_tool1</targetReference>
+            <targetReference>Create_Project_Record</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Opportunity__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Estimating__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_estimating_record</name>
+        <label>Get estimating record</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Check_Estimating_Tool</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -925,6 +1360,100 @@
         <object>OpportunityTeamMember</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
+    <recordLookups>
+        <name>Get_Painters_Business_Hours</name>
+        <label>Get Painters Business Hours</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Calculate_Procore_Bussines_Days</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Painters Business Hours</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>BusinessHours</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>get_Related_Project</name>
+        <label>get Related Project</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Check_Estimating_Tool3</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>SW_Opportunity__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>SW_Project__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Copy_1_of_Update_Due_Date</name>
+        <label>Copy 1 of Update Due Date</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>Estimate_Due_Date__c</field>
+            <value>
+                <elementReference>dueDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Copy_2_of_Update_Due_Date</name>
+        <label>Copy 2 of Update Due Date</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>Estimate_Due_Date__c</field>
+            <value>
+                <elementReference>dueDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Copy_3_of_Update_Due_Date</name>
+        <label>Copy 3 of Update Due Date</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>Estimate_Due_Date__c</field>
+            <value>
+                <elementReference>dueDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Due_Date</name>
+        <label>Update Due Date</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>Estimate_Due_Date__c</field>
+            <value>
+                <elementReference>dueDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
     <recordUpdates>
         <name>Update_Estimating_to_Accepted</name>
         <label>Update Estimating to Accepted</label>
@@ -941,7 +1470,7 @@
         <inputAssignments>
             <field>Estimate_Stage__c</field>
             <value>
-                <stringValue>Accepted</stringValue>
+                <stringValue>ACCEPTED</stringValue>
             </value>
         </inputAssignments>
         <object>Estimating__c</object>
@@ -962,7 +1491,7 @@
         <inputAssignments>
             <field>Estimate_Stage__c</field>
             <value>
-                <stringValue>Lost</stringValue>
+                <stringValue>LOST</stringValue>
             </value>
         </inputAssignments>
         <object>Estimating__c</object>
@@ -978,6 +1507,13 @@
         <triggerType>RecordAfterSave</triggerType>
     </start>
     <status>Active</status>
+    <variables>
+        <name>dueDate</name>
+        <dataType>Date</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
     <variables>
         <name>teamIdList</name>
         <dataType>String</dataType>

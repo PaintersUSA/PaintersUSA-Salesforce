@@ -8,7 +8,11 @@
     ISPICKVAL(Status, &quot;Converted&quot;),
     OR(
         ISBLANK(Email),
-        ISBLANK(Phone),
+        AND(
+            ISBLANK(Phone),
+            ISBLANK(MobilePhone)
+        ),
+        ISBLANK(SW_Primary_Acquisition_Source__c),
         NOT(
             OR(
                 INCLUDES(SW_Type_of_Work__c, &quot;Blasting and Coating&quot;),
@@ -43,5 +47,5 @@
         )
     )
 )</errorConditionFormula>
-    <errorMessage>Cannot convert this Lead. Please provide the Email, Phone, and Type of Work before proceeding.</errorMessage>
+    <errorMessage>Email, Phone, Primary Acquisition Source and Type of Work must be filled before converting the lead.</errorMessage>
 </ValidationRule>

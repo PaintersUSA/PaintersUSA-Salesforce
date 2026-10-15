@@ -6,7 +6,7 @@
     <trackFeedHistory>false</trackFeedHistory>
     <type>Picklist</type>
     <valueSet>
-        <controllingField>SW_Industry_Category__c</controllingField>
+        <controllingField>Industry</controllingField>
         <restricted>true</restricted>
         <valueSetDefinition>
             <sorted>false</sorted>
@@ -216,66 +216,6 @@
             <valueName>Semiconductor / Fab</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Petrochemical</controllingFieldValue>
-            <valueName>Mining and Quarrying</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Petrochemical</controllingFieldValue>
-            <valueName>Oil and Gas</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Petrochemical</controllingFieldValue>
-            <valueName>Renewable Energy</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Government / Military</controllingFieldValue>
-            <valueName>Government and Public Administration</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Government / Military</controllingFieldValue>
-            <valueName>Municipal</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>EV / Battery</controllingFieldValue>
-            <valueName>EV / Battery</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Theme Parks</controllingFieldValue>
-            <valueName>Media and Entertainment</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Theme Parks</controllingFieldValue>
-            <valueName>Recreational</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Theme Parks</controllingFieldValue>
-            <valueName>Sports and Recreation</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Pharmaceutical</controllingFieldValue>
-            <valueName>Laboratory</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Pharmaceutical</controllingFieldValue>
-            <valueName>Other</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Pharmaceutical</controllingFieldValue>
-            <valueName>Pharmaceuticals</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Pharmaceutical</controllingFieldValue>
-            <valueName>Science and Research</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Healthcare</controllingFieldValue>
-            <valueName>Healthcare</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Education &amp; Civic</controllingFieldValue>
-            <valueName>Education</valueName>
-        </valueSettings>
-        <valueSettings>
             <controllingFieldValue>Advanced Manufacturing</controllingFieldValue>
             <valueName>Automotive</valueName>
         </valueSettings>
@@ -290,6 +230,18 @@
         <valueSettings>
             <controllingFieldValue>Advanced Manufacturing</controllingFieldValue>
             <valueName>Transportation and Logistics</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Theme Parks</controllingFieldValue>
+            <valueName>Media and Entertainment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Theme Parks</controllingFieldValue>
+            <valueName>Recreational</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Theme Parks</controllingFieldValue>
+            <valueName>Sports and Recreation</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Commercial Real Estate &amp; Property</controllingFieldValue>
@@ -340,20 +292,12 @@
             <valueName>Retail</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Food and Beverage</controllingFieldValue>
-            <valueName>Food &amp; Beverage</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Food and Beverage</controllingFieldValue>
-            <valueName>Food Processing</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Food and Beverage</controllingFieldValue>
-            <valueName>Food Service</valueName>
-        </valueSettings>
-        <valueSettings>
             <controllingFieldValue>Water / Waste Water</controllingFieldValue>
             <valueName>Water / Waste Water</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Data Center</controllingFieldValue>
+            <valueName>Data Center</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Agriculture</controllingFieldValue>
@@ -368,8 +312,64 @@
             <valueName>Fertilizer &amp; Chemical</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Data Center</controllingFieldValue>
-            <valueName>Data Center</valueName>
+            <controllingFieldValue>Education &amp; Civic</controllingFieldValue>
+            <valueName>Education</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EV / Battery</controllingFieldValue>
+            <valueName>EV / Battery</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Food and Beverage</controllingFieldValue>
+            <valueName>Food &amp; Beverage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Food and Beverage</controllingFieldValue>
+            <valueName>Food Processing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Food and Beverage</controllingFieldValue>
+            <valueName>Food Service</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Government / Military</controllingFieldValue>
+            <valueName>Government and Public Administration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Government / Military</controllingFieldValue>
+            <valueName>Municipal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Healthcare</controllingFieldValue>
+            <valueName>Healthcare</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Petrochemical</controllingFieldValue>
+            <valueName>Mining and Quarrying</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Petrochemical</controllingFieldValue>
+            <valueName>Oil and Gas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Petrochemical</controllingFieldValue>
+            <valueName>Renewable Energy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pharmaceutical</controllingFieldValue>
+            <valueName>Laboratory</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pharmaceutical</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pharmaceutical</controllingFieldValue>
+            <valueName>Pharmaceuticals</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pharmaceutical</controllingFieldValue>
+            <valueName>Science and Research</valueName>
         </valueSettings>
     </valueSet>
 </CustomField>

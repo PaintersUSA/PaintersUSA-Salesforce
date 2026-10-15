@@ -10,11 +10,6 @@
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
-                <fullName>Data Management</fullName>
-                <default>false</default>
-                <label>Data Management</label>
-            </value>
-            <value>
                 <fullName>Blasting and Coating</fullName>
                 <default>false</default>
                 <label>Blasting and Coating</label>
@@ -153,6 +148,24 @@
                 <fullName>Warranty - New Construction Interior</fullName>
                 <default>false</default>
                 <label>Warranty - New Construction Interior</label>
+            </value>
+            <value>
+                <fullName>Blasting Dry</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Blasting Dry</label>
+            </value>
+            <value>
+                <fullName>Commercial Interior Repaint</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Commercial Interior Repaint</label>
+            </value>
+            <value>
+                <fullName>Data Management</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Data Management</label>
             </value>
         </valueSetDefinition>
     </valueSet>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SW_Description_of_Work_Required</fullName>
+    <active>true</active>
+    <description>Allows Description of Work to be Pending only during the Qualification stage. Prevents users from saving Opportunities in any other stage when Description of Work is blank or Pending.</description>
+    <errorConditionFormula>AND(
+    NOT($Permission.SW_Bypass_Validation_Rules),
+    NOT(ISPICKVAL(StageName, &quot;Qualification&quot;)),
+    OR(
+        ISBLANK(SW_Description_of_Work__c),
+        UPPER(TRIM(SW_Description_of_Work__c)) = &quot;PENDING&quot;
+    )
+)</errorConditionFormula>
+    <errorDisplayField>SW_Description_of_Work__c</errorDisplayField>
+    <errorMessage>Enter a valid Description of Work before moving beyond Qualification. &quot;Pending&quot; may only be used during the Qualification stage.</errorMessage>
+</ValidationRule>

@@ -64,6 +64,18 @@
                 <default>false</default>
                 <label>FIND CATEGORY</label>
             </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Telemarketing</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Telemarketing</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>

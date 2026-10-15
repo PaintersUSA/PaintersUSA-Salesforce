@@ -57,15 +57,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>SW_Form_Source__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>SW_Industry_Category__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>SW_Industry_Sub_Category__c</field>
+                <field>SW_Region__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -97,10 +89,6 @@
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>SW_Primary_Acquisition_Source__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>SW_Form_Data__c</field>
             </layoutItems>
         </layoutColumns>
         <style>OneColumn</style>

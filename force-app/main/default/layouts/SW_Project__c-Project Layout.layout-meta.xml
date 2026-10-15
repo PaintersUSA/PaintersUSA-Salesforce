@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Layout xmlns="http://soap.sforce.com/2006/04/metadata">
-    <excludeButtons>OpenSlackRecordChannel</excludeButtons>
     <excludeButtons>Submit</excludeButtons>
     <layoutSections>
         <customLabel>false</customLabel>
@@ -77,8 +76,16 @@
                 <field>SW_Total_Hours__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>SW_Overall_Invoice_GP__c</field>
+                <behavior>Edit</behavior>
+                <field>Monthly_Cost__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Monthly_Revenue__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Overall_Gross_Profit__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -234,6 +241,10 @@
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
+        <fields>SW_Commission_Type__c</fields>
+        <fields>SW_Paid_Amount__c</fields>
+        <fields>SW_Sales_Rep__c</fields>
+        <fields>SW_GP__c</fields>
         <relatedList>SW_GP_Transaction__c.SW_Project__c</relatedList>
     </relatedLists>
     <relatedLists>

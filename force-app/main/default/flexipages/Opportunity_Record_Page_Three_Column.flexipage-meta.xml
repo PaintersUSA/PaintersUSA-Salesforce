@@ -132,8 +132,8 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.SW_External_Id__c</fieldItem>
-                <identifier>RecordSW_External_Id__cField</identifier>
+                <fieldItem>Record.SW_Workspace_URL__c</fieldItem>
+                <identifier>RecordSW_Workspace_URL_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -143,7 +143,7 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.SW_LOCATIONID__c</fieldItem>
-                <identifier>RecordSW_LOCATIONID__cField</identifier>
+                <identifier>RecordSW_LOCATIONID_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -162,8 +162,28 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Work_Type__c</fieldItem>
-                <identifier>RecordWork_Type_cField</identifier>
+                <fieldItem>Record.SW_Industry_Category__c</fieldItem>
+                <identifier>RecordIndustry_Category__cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.SW_Industry_Sub_Category__c</fieldItem>
+                <identifier>RecordIndustry_Sub_Category__cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Loss_category__c</fieldItem>
+                <identifier>RecordLoss_category__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-0bf00085-5166-4d4f-b879-4b39e129b4df</name>
@@ -216,18 +236,8 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.CampaignId</fieldItem>
-                <identifier>RecordCampaignIdField2</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Agreement_Type__c</fieldItem>
-                <identifier>RecordAgreement_Type_cField</identifier>
+                <fieldItem>Record.SW_External_Id__c</fieldItem>
+                <identifier>RecordSW_External_Id__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -238,16 +248,6 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.SW_Is_Legacy__c</fieldItem>
                 <identifier>RecordSW_Is_Legacy__cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.SW_Workspace_URL__c</fieldItem>
-                <identifier>RecordSW_Workspace_URL__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-c1bf04b3-e41d-42b6-afd5-da44cf0b7526</name>
@@ -360,10 +360,10 @@
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>required</value>
+                    <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.ForecastCategoryName</fieldItem>
-                <identifier>RecordForecastCategoryNameField</identifier>
+                <fieldItem>Record.SW_ROI_Analysis_Completed__c</fieldItem>
+                <identifier>RecordROI_Analysis_Completed_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-29ea7cf8-7eed-40a0-ab7e-8b9a31eaa158</name>
@@ -406,8 +406,8 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.SW_Region__c</fieldItem>
-                <identifier>RecordSW_Region_cField</identifier>
+                <fieldItem>Record.Agreement_Type__c</fieldItem>
+                <identifier>RecordAgreement_Type_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -416,8 +416,8 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.SW_ROI_Analysis_Completed__c</fieldItem>
-                <identifier>RecordROI_Analysis_Completed_cField</identifier>
+                <fieldItem>Record.SW_Region__c</fieldItem>
+                <identifier>RecordSW_Region_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-a990e01e-bdef-44e3-8ba5-ae99a7761b37</name>
@@ -468,6 +468,16 @@
                 <identifier>RecordDescriptionField</identifier>
             </fieldInstance>
         </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.SW_Budget_Confirmed__c</fieldItem>
+                <identifier>RecordBudget_Confirmed_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
         <name>Facet-adb941c8-ebc8-414f-9fe9-4850a64725de</name>
         <type>Facet</type>
     </flexiPageRegions>
@@ -488,8 +498,8 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.SW_Budget_Confirmed__c</fieldItem>
-                <identifier>RecordBudget_Confirmed_cField</identifier>
+                <fieldItem>Record.Primary_Acquisition_Source__c</fieldItem>
+                <identifier>RecordPrimary_Acquisition_Source_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-6a3ef7ee-d188-4b8e-b610-ba90a93abfb8</name>

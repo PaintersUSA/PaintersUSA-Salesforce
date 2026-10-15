@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>67.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <description>Changes the triggering Opportunity Stage to Accepted when required Opportunity or Estimating information is missing. Because the flow runs before save, the Accepted value is saved as part of the original transaction without a separate record update.</description>
+        <name>Set_Stage_to_Accepted</name>
+        <label>Set Stage to Accepted</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.StageName</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Accepted</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <description>Determines whether the Get Records element found at least one related Estimating record containing Revenue Amount, Gross Profit Dollars, and Total Hours.</description>
+        <name>Was_a_Complete_Estimating_Record_Found</name>
+        <label>Was a Complete Estimating Record Found?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Set_Stage_to_Accepted</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No - Estimating Requirements Missing</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Estimating_Requirements_Complete</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Complete_Related_Estimating_Record.Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Yes - Estimating Requirements Complete</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Confirms that this transaction represents a new attempt to enter Closed Won. Prevents the flow from rechecking and potentially reopening an Opportunity during unrelated edits after the Opportunity has already been successfully closed.</description>
+        <name>Was_Stage_Changed_to_Closed_Won</name>
+        <label>Was Stage Changed to Closed Won?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>No Action Required</defaultConnectorLabel>
+        <rules>
+            <name>Yes_New_Closed_Won_Attempt</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Closed Won</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.StageName</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Closed Won</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Complete_Related_Estimating_Record</targetReference>
+            </connector>
+            <label>Yes - New Closed Won Attempt</label>
+        </rules>
+    </decisions>
+    <description>Evaluates required Opportunity and related Estimating information when an Opportunity is changed to Closed Won. If any required information is missing, the flow changes Stage back to Accepted before the record is saved. The flow does not block the save or display an error.</description>
+    <environments>Default</environments>
+    <interviewLabel>Opportunity - Control Closed Won Requirements {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Opportunity - Control Closed Won Requirements V2</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Retrieves the first Estimating record related to the Opportunity where Revenue Amount, Gross Profit Dollars, and Total Hours are all populated. Finding a record confirms both that an Estimating record exists and that at least one related Estimating record is complete.</description>
+        <name>Get_Complete_Related_Estimating_Record</name>
+        <label>Get Complete Related Estimating Record</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Was_a_Complete_Estimating_Record_Found</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Opportunity__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Revenue_Amount__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Gross_Profit_Dollars__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Total_Hours__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Estimating__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Was_Stage_Changed_to_Closed_Won</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>StageName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Closed Won</stringValue>
+            </value>
+        </filters>
+        <object>Opportunity</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>67.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Set_Next_Sequence</name>
+        <label>Set Next Sequence</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>Get_Counter_Record_Again.Last_Sequence_Issued__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>NextSequence</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Counter_Sequence</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <description>Determines whether a counter record already exists for the Opportunity Owner&apos;s Sales Number and current year.</description>
+        <name>Counter_Exists</name>
+        <label>Counter Exists?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Create_Counter_Record</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Counter Missing</defaultConnectorLabel>
+        <rules>
+            <name>Exists</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Opportunity_Counter.Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Counter_Record_Again</targetReference>
+            </connector>
+            <label>Exists</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Determines whether the Opportunity Owner has a Sales Number. Opportunity Numbers are only generated for users with a valid Sales Number.</description>
+        <name>Has_Sales_Number</name>
+        <label>Has Sales Number?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>No Sales Number</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Opportunity_Owner.Sales_Number__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Opportunity_Counter</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>Automatically generates a unique Opportunity Number (SW_Job_Number__c) for Opportunities when the Opportunity Number is blank and the Opportunity Owner has a Sales Number. The number is built using the format YY + Sales Number + Sequence Number. The flow maintains annual sequencing per salesperson using the Opportunity Number Counter object, prevents overwriting existing values, supports owner reassignment, and resets numbering each calendar year.</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>CounterKey</name>
+        <dataType>String</dataType>
+        <expression>{!Get_Opportunity_Owner.Sales_Number__c} &amp;
+TEXT({!CurrentYear})</expression>
+    </formulas>
+    <formulas>
+        <description>Returns the current calendar year for Opportunity Number sequencing.</description>
+        <name>CurrentYear</name>
+        <dataType>Number</dataType>
+        <expression>YEAR(TODAY())</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>FormattedSequence</name>
+        <dataType>String</dataType>
+        <expression>RIGHT(
+&quot;0000&quot; &amp;
+TEXT({!NextSequence}),
+4
+)</expression>
+    </formulas>
+    <formulas>
+        <description>Calculates the next sequence number for the Opportunity Number Counter.</description>
+        <name>NextSequence</name>
+        <dataType>Number</dataType>
+        <expression>{!Get_Counter_Record_Again.Last_Sequence_Issued__c} + 1</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <description>Builds the final Opportunity Number using YY + Sales Number + Sequence Number.</description>
+        <name>OpportunityNumber</name>
+        <dataType>String</dataType>
+        <expression>{!Year2Digit}
+&amp;
+{!Get_Opportunity_Owner.Sales_Number__c}
+&amp;
+&quot;-&quot;
+&amp;
+{!FormattedSequence}</expression>
+    </formulas>
+    <formulas>
+        <name>Year2Digit</name>
+        <dataType>String</dataType>
+        <expression>RIGHT(
+TEXT({!CurrentYear}),
+2
+)</expression>
+    </formulas>
+    <interviewLabel>Opportunity Number Generation {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Opportunity Number Generation</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <description>Creates a new Opportunity Number Counter record for the Opportunity Owner&apos;s Sales Number and the current year.</description>
+        <name>Create_Counter_Record</name>
+        <label>Create Counter Record</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Counter_Record_Again</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Counter_Key__c</field>
+            <value>
+                <elementReference>CounterKey</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Last_Sequence_Issued__c</field>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <elementReference>CounterKey</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Sales_Number__c</field>
+            <value>
+                <elementReference>Get_Opportunity_Counter.Sales_Number__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Year__c</field>
+            <value>
+                <elementReference>CurrentYear</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Opportunity_Number_Counter__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordLookups>
+        <description>Retrieves the current counter record after confirming it exists or creating it.</description>
+        <name>Get_Counter_Record_Again</name>
+        <label>Get Counter Record Again</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Set_Next_Sequence</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Counter_Key__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>CounterKey</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Opportunity_Number_Counter__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Retrieves the Opportunity Number Counter record for the Opportunity Owner&apos;s Sales Number and the current year.</description>
+        <name>Get_Opportunity_Counter</name>
+        <label>Get Opportunity Counter</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Counter_Exists</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Counter_Key__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>CounterKey</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Opportunity_Number_Counter__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Retrieves the Opportunity Owner User record to determine whether a Sales Number exists and to use it when generating the Opportunity Number.</description>
+        <name>Get_Opportunity_Owner</name>
+        <label>Get Opportunity Owner</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Has_Sales_Number</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.OwnerId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>User</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <description>Updates the counter record with the next sequence number.</description>
+        <name>Update_Counter_Sequence</name>
+        <label>Update Counter Sequence</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Opportunity_Number</targetReference>
+        </connector>
+        <inputReference>Get_Counter_Record_Again</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Updates SW_Job_Number__c using the generated Opportunity Number format YY + Sales Number + Sequence Number.</description>
+        <name>Update_Opportunity_Number</name>
+        <label>Update Opportunity Number</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>SW_Job_Number__c</field>
+            <value>
+                <elementReference>OpportunityNumber</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Opportunity_Owner</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>SW_Job_Number__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>Opportunity</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

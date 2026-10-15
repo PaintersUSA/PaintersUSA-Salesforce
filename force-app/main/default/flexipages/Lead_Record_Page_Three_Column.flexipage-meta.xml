@@ -132,8 +132,8 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.SW_Commission_Rate__c</fieldItem>
-                <identifier>RecordSW_Commission_Rate_cField</identifier>
+                <fieldItem>Record.SW_Form_Source__c</fieldItem>
+                <identifier>RecordSW_Form_Source__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -158,14 +158,42 @@
         </itemInstances>
         <itemInstances>
             <fieldInstance>
-                <fieldItem>Record.SW_Industry_Category__c</fieldItem>
-                <identifier>RecordSW_Industry_Category__cField</identifier>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.SW_Visited_Pages__c</fieldItem>
+                <identifier>RecordSW_Visited_Pages__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
             <fieldInstance>
-                <fieldItem>Record.SW_Industry_Sub_Category__c</fieldItem>
-                <identifier>RecordSW_Industry_Sub_Category__cField</identifier>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.SW_Form_Referral_Details__c</fieldItem>
+                <identifier>RecordSW_Form_Referral_Details__cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.SW_Form_Reason_for_Inquiry__c</fieldItem>
+                <identifier>RecordSW_Form_Reason_for_Inquiry__cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.SW_Form_Project_Scope__c</fieldItem>
+                <identifier>RecordSW_Form_Project_Scope__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-ecce77d6-7f61-44f0-bc65-8a3551341899</name>
@@ -218,6 +246,16 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
+                <fieldItem>Record.SW_Commission_Rate__c</fieldItem>
+                <identifier>RecordSW_Commission_Rate_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
                 <fieldItem>Record.SW_Is_Legacy__c</fieldItem>
                 <identifier>RecordSW_Is_Legacy__cField</identifier>
                 <visibilityRule>
@@ -235,8 +273,8 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.SW_Form_Source__c</fieldItem>
-                <identifier>RecordSW_Form_Source_cField</identifier>
+                <fieldItem>Record.SW_Form_Data__c</fieldItem>
+                <identifier>RecordSW_Form_Data__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -245,8 +283,8 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.SW_Form_Data__c</fieldItem>
-                <identifier>RecordSW_Form_Data__cField</identifier>
+                <fieldItem>Record.SW_Region__c</fieldItem>
+                <identifier>RecordSW_Region__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-ea3f3cc5-44e3-4c97-a41a-25be99d7088d</name>
@@ -568,6 +606,78 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
+                <fieldItem>Record.SW_Visited_Pages__c</fieldItem>
+                <identifier>RecordSW_Visited_Pages_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.SW_Form_Reason_for_Inquiry__c</fieldItem>
+                <identifier>RecordSW_Form_Reason_for_Inquiry_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <name>Facet-47359676-4312-42ce-8b55-8f7fb4f2152d</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.SW_Form_Referral_Details__c</fieldItem>
+                <identifier>RecordSW_Form_Referral_Details_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.SW_Form_Project_Scope__c</fieldItem>
+                <identifier>RecordSW_Form_Project_Scope_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <name>Facet-8416c59e-8dfe-47dc-aea9-be83fb663f9c</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>body</name>
+                    <value>Facet-47359676-4312-42ce-8b55-8f7fb4f2152d</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:column</componentName>
+                <identifier>flexipage_column8</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>body</name>
+                    <value>Facet-8416c59e-8dfe-47dc-aea9-be83fb663f9c</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:column</componentName>
+                <identifier>flexipage_column9</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>Facet-633db671-56b9-4828-9ef5-408bf97ea4f4</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
                 <fieldItem>Record.SW_Unqualified_Reason__c</fieldItem>
                 <identifier>RecordSW_Unqualified_Reason_cField</identifier>
             </fieldInstance>
@@ -742,7 +852,7 @@
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>
-                    <value>@@@SFDCAddress_InformationSFDC@@@</value>
+                    <value>Address</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:fieldSection</componentName>
                 <identifier>flexipage_fieldSection6</identifier>
@@ -764,6 +874,24 @@
                 </componentInstanceProperties>
                 <componentName>flexipage:fieldSection</componentName>
                 <identifier>flexipage_fieldSection2</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>columns</name>
+                    <value>Facet-633db671-56b9-4828-9ef5-408bf97ea4f4</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>horizontalAlignment</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>label</name>
+                    <value>Marketing Information</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:fieldSection</componentName>
+                <identifier>flexipage_fieldSection5</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>

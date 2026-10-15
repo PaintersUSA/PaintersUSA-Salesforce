@@ -15,12 +15,12 @@
         <translation><!-- Between Phase --></translation>
     </picklistValues>
     <picklistValues>
-        <masterLabel>Bidding</masterLabel>
-        <translation><!-- Bidding --></translation>
-    </picklistValues>
-    <picklistValues>
         <masterLabel>Course of Construction</masterLabel>
         <translation><!-- Course of Construction --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Initiation</masterLabel>
+        <translation><!-- Initiation --></translation>
     </picklistValues>
     <picklistValues>
         <masterLabel>Post-Construction</masterLabel>
@@ -29,9 +29,5 @@
     <picklistValues>
         <masterLabel>Pre-Construction</masterLabel>
         <translation><!-- Pre-Construction --></translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Warranty</masterLabel>
-        <translation><!-- Warranty --></translation>
     </picklistValues>
 </CustomFieldTranslation>

@@ -11,6 +11,21 @@
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
+                <fullName>Pre-Construction</fullName>
+                <default>false</default>
+                <label>Pre-Construction</label>
+            </value>
+            <value>
+                <fullName>Course of Construction</fullName>
+                <default>false</default>
+                <label>Course of Construction</label>
+            </value>
+            <value>
+                <fullName>Post-Construction</fullName>
+                <default>false</default>
+                <label>Post-Construction</label>
+            </value>
+            <value>
                 <fullName>Awarded Not Scheduled</fullName>
                 <default>false</default>
                 <label>Awarded Not Scheduled</label>
@@ -26,28 +41,26 @@
                 <label>Between Phase</label>
             </value>
             <value>
+                <fullName>Initiation</fullName>
+                <default>false</default>
+                <label>Initiation</label>
+            </value>
+            <value>
+                <fullName>Between Phases</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Between Phases</label>
+            </value>
+            <value>
                 <fullName>Bidding</fullName>
                 <default>false</default>
+                <isActive>false</isActive>
                 <label>Bidding</label>
-            </value>
-            <value>
-                <fullName>Course of Construction</fullName>
-                <default>false</default>
-                <label>Course of Construction</label>
-            </value>
-            <value>
-                <fullName>Post-Construction</fullName>
-                <default>false</default>
-                <label>Post-Construction</label>
-            </value>
-            <value>
-                <fullName>Pre-Construction</fullName>
-                <default>false</default>
-                <label>Pre-Construction</label>
             </value>
             <value>
                 <fullName>Warranty</fullName>
                 <default>false</default>
+                <isActive>false</isActive>
                 <label>Warranty</label>
             </value>
         </valueSetDefinition>

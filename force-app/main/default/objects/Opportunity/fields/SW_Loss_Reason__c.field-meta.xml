@@ -9,29 +9,39 @@
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
-                <fullName>Lost to Competitor</fullName>
+                <fullName>Contact Issues</fullName>
                 <default>false</default>
-                <label>Lost to Competitor</label>
+                <label>Contact Issues</label>
             </value>
             <value>
-                <fullName>No Budget / Lost Funding</fullName>
+                <fullName>Junk</fullName>
                 <default>false</default>
-                <label>No Budget / Lost Funding</label>
+                <label>Junk</label>
             </value>
             <value>
-                <fullName>No Decision / Non-Responsive</fullName>
+                <fullName>Lead Quality</fullName>
                 <default>false</default>
-                <label>No Decision / Non-Responsive</label>
+                <label>Lead Quality</label>
             </value>
             <value>
-                <fullName>Price</fullName>
+                <fullName>Business Status</fullName>
                 <default>false</default>
-                <label>Price</label>
+                <label>Business Status</label>
             </value>
             <value>
-                <fullName>Other</fullName>
+                <fullName>Resource &amp; Capacity</fullName>
                 <default>false</default>
-                <label>Other</label>
+                <label>Resource &amp; Capacity</label>
+            </value>
+            <value>
+                <fullName>Project Scope &amp; Fit</fullName>
+                <default>false</default>
+                <label>Project Scope &amp; Fit</label>
+            </value>
+            <value>
+                <fullName>Geographic / Market Alignment</fullName>
+                <default>false</default>
+                <label>Geographic / Market Alignment</label>
             </value>
         </valueSetDefinition>
     </valueSet>

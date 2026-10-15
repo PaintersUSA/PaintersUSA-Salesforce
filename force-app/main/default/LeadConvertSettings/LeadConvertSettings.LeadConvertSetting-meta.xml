@@ -12,24 +12,32 @@
             <outputField>SW_Commission_Rate__c</outputField>
         </mappingFields>
         <mappingFields>
-            <inputField>SW_Primary_Acquisition_Source__c</inputField>
-            <outputField>SW_Acquisition_Source__c</outputField>
+            <inputField>SW_Industry_Sub_Category__c</inputField>
+            <outputField>SW_Industry_Sub_Category__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>SW_Region__c</inputField>
+            <outputField>SW_Region__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>SW_Type_of_Work__c</inputField>
+            <outputField>SW_Type_of_Work__c</outputField>
         </mappingFields>
         <outputObject>Account</outputObject>
     </objectMapping>
     <objectMapping>
         <inputObject>Lead</inputObject>
         <mappingFields>
+            <inputField>SW_Industry_Sub_Category__c</inputField>
+            <outputField>SW_Industry_Sub_Category__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>SW_Region__c</inputField>
+            <outputField>SW_Region__c</outputField>
+        </mappingFields>
+        <mappingFields>
             <inputField>SW_Type_of_Work__c</inputField>
             <outputField>SW_Type_of_Work__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>SW_Unqualified_Reason__c</inputField>
-            <outputField>SW_Loss_Reason__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>SW_Unqualified_Reason_Notes__c</inputField>
-            <outputField>SW_Loss_Reason_Notes__c</outputField>
         </mappingFields>
         <outputObject>Opportunity</outputObject>
     </objectMapping>

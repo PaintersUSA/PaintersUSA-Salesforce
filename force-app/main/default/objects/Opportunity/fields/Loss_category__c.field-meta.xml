@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Loss_category__c</fullName>
+    <label>Loss category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>SW_Loss_Reason__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Unable To Reach Contact</fullName>
+                <default>false</default>
+                <label>Unable To Reach Contact</label>
+            </value>
+            <value>
+                <fullName>Opted Out</fullName>
+                <default>false</default>
+                <label>Opted Out</label>
+            </value>
+            <value>
+                <fullName>Duplicate lead</fullName>
+                <default>false</default>
+                <label>Duplicate lead</label>
+            </value>
+            <value>
+                <fullName>Junk / Fake Lead</fullName>
+                <default>false</default>
+                <label>Junk / Fake Lead</label>
+            </value>
+            <value>
+                <fullName>Invalid / Incomplete Information</fullName>
+                <default>false</default>
+                <label>Invalid / Incomplete Information</label>
+            </value>
+            <value>
+                <fullName>Out Of Business</fullName>
+                <default>false</default>
+                <label>Out Of Business</label>
+            </value>
+            <value>
+                <fullName>No Longer With Company</fullName>
+                <default>false</default>
+                <label>No Longer With Company</label>
+            </value>
+            <value>
+                <fullName>Out Of Our Capabilities</fullName>
+                <default>false</default>
+                <label>Out Of Our Capabilities</label>
+            </value>
+            <value>
+                <fullName>Too Small / Not Viable</fullName>
+                <default>false</default>
+                <label>Too Small / Not Viable</label>
+            </value>
+            <value>
+                <fullName>Residential Project</fullName>
+                <default>false</default>
+                <label>Residential Project</label>
+            </value>
+            <value>
+                <fullName>Union Labor Required</fullName>
+                <default>false</default>
+                <label>Union Labor Required</label>
+            </value>
+            <value>
+                <fullName>Leased Building / No Authority</fullName>
+                <default>false</default>
+                <label>Leased Building / No Authority</label>
+            </value>
+            <value>
+                <fullName>Outside Target Market</fullName>
+                <default>false</default>
+                <label>Outside Target Market</label>
+            </value>
+            <value>
+                <fullName>Too Far / Out Of Service Area</fullName>
+                <default>false</default>
+                <label>Too Far / Out Of Service Area</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Contact Issues</controllingFieldValue>
+            <valueName>Unable To Reach Contact</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contact Issues</controllingFieldValue>
+            <valueName>Opted Out</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contact Issues</controllingFieldValue>
+            <valueName>Duplicate lead</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Junk</controllingFieldValue>
+            <valueName>Junk / Fake Lead</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lead Quality</controllingFieldValue>
+            <valueName>Invalid / Incomplete Information</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Business Status</controllingFieldValue>
+            <valueName>Out Of Business</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Business Status</controllingFieldValue>
+            <valueName>No Longer With Company</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Resource &amp; Capacity</controllingFieldValue>
+            <valueName>Out Of Our Capabilities</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Project Scope &amp; Fit</controllingFieldValue>
+            <valueName>Too Small / Not Viable</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Project Scope &amp; Fit</controllingFieldValue>
+            <valueName>Residential Project</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Project Scope &amp; Fit</controllingFieldValue>
+            <valueName>Union Labor Required</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Project Scope &amp; Fit</controllingFieldValue>
+            <valueName>Leased Building / No Authority</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Geographic / Market Alignment</controllingFieldValue>
+            <valueName>Outside Target Market</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Geographic / Market Alignment</controllingFieldValue>
+            <valueName>Too Far / Out Of Service Area</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

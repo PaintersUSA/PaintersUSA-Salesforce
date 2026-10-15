@@ -5,6 +5,11 @@
     <fieldName>StageName</fieldName>
     <masterLabel>Default</masterLabel>
     <pathAssistantSteps>
+        <fieldNames>Agreement_Type__c</fieldNames>
+        <fieldNames>SW_PO_Number__c</fieldNames>
+        <picklistValueName>Accepted</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
         <fieldNames>SW_Loss_Reason__c</fieldNames>
         <fieldNames>SW_Loss_Reason_Notes__c</fieldNames>
         <info>&lt;ul&gt;&lt;li&gt;Capture reason and notes&lt;/li&gt;&lt;/ul&gt;</info>

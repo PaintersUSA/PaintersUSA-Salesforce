@@ -337,54 +337,6 @@
         <offset>0</offset>
     </actionCalls>
     <actionCalls>
-        <name>send_alert_notification_Unqualified</name>
-        <label>send alert notification(Unqualified)</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <actionName>customNotificationAction</actionName>
-        <actionType>customNotificationAction</actionType>
-        <connector>
-            <targetReference>Create_Follow_up_Task_Unqualified</targetReference>
-        </connector>
-        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
-        <inputParameters>
-            <name>customNotifTypeId</name>
-            <value>
-                <elementReference>Get_Custom_Notification_Unqualified.Id</elementReference>
-                <inputConfiguratorMode>Resource</inputConfiguratorMode>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>recipientIds</name>
-            <value>
-                <elementReference>notificationUsers</elementReference>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>title</name>
-            <value>
-                <inputConfiguratorMode>Custom</inputConfiguratorMode>
-                <stringValue>Lead SLA Breach Notification</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>body</name>
-            <value>
-                <inputConfiguratorMode>Custom</inputConfiguratorMode>
-                <stringValue>Lead has become Stale due to no meaningful activity within SLA timeline.</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>targetId</name>
-            <value>
-                <elementReference>$Record.Id</elementReference>
-                <inputConfiguratorMode>Resource</inputConfiguratorMode>
-            </value>
-        </inputParameters>
-        <nameSegment>customNotificationAction</nameSegment>
-        <offset>0</offset>
-    </actionCalls>
-    <actionCalls>
         <name>send_alert_notification_Working</name>
         <label>send alert notification(Working)</label>
         <locationX>0</locationX>
@@ -595,22 +547,6 @@
         </connector>
     </assignments>
     <assignments>
-        <name>Assign_user_to_notification_user_list_Unqualified</name>
-        <label>Assign user to notification user list(Unqualified)</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <assignmentItems>
-            <assignToReference>notificationUsers</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <elementReference>$Record.OwnerId</elementReference>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>send_alert_notification_Unqualified</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
         <name>Assign_user_to_notification_user_list_Working</name>
         <label>Assign user to notification user list(Working)</label>
         <locationX>0</locationX>
@@ -692,21 +628,6 @@
                 <targetReference>Check_Timeline_Nurtuting</targetReference>
             </connector>
             <label>Nurturing</label>
-        </rules>
-        <rules>
-            <name>Unqualified</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.Status</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Unqualified</stringValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Check_Unqualified_Status_Day_Count</targetReference>
-            </connector>
-            <label>Unqualified</label>
         </rules>
     </decisions>
     <decisions>
@@ -880,28 +801,6 @@
                 <targetReference>Check_Nurturing_Status_Day_Count_Planning</targetReference>
             </connector>
             <label>Planning</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <name>Check_Unqualified_Status_Day_Count</name>
-        <label>Check Unqualified Status Day Count</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <defaultConnector>
-            <targetReference>Update_Lead_Health_Status_to_Stale_Unqualified</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>More than 2 Days</defaultConnectorLabel>
-        <rules>
-            <name>Less_than_equal_to_2_Day_Unqualified</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>frmDaysSinceLastActivity</leftValueReference>
-                <operator>LessThanOrEqualTo</operator>
-                <rightValue>
-                    <numberValue>2.0</numberValue>
-                </rightValue>
-            </conditions>
-            <label>Less than equal to 2 Day Unqualified</label>
         </rules>
     </decisions>
     <decisions>
@@ -1174,56 +1073,6 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordCreates>
-        <name>Create_Follow_up_Task_Unqualified</name>
-        <label>Create Follow up Task(Unqualified)</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <inputAssignments>
-            <field>ActivityDate</field>
-            <value>
-                <elementReference>$Flow.CurrentDateTime</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Description</field>
-            <value>
-                <stringValue>Lead has become Stale due to no meaningful activity within SLA timeline. Immediate follow-up is required.</stringValue>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>OwnerId</field>
-            <value>
-                <elementReference>$Record.OwnerId</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Priority</field>
-            <value>
-                <stringValue>High</stringValue>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Status</field>
-            <value>
-                <stringValue>Open</stringValue>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Subject</field>
-            <value>
-                <stringValue>Lead SLA Breached – Follow-up Required(Unqualified)</stringValue>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>WhoId</field>
-            <value>
-                <elementReference>$Record.Id</elementReference>
-            </value>
-        </inputAssignments>
-        <object>Task</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </recordCreates>
-    <recordCreates>
         <name>Create_Follow_up_Task_Working</name>
         <label>Create Follow up Task(Working)</label>
         <locationX>0</locationX>
@@ -1428,27 +1277,6 @@
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Assign_user_to_notification_user_list_Nurturing_Planning</targetReference>
-        </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>DeveloperName</field>
-            <operator>EqualTo</operator>
-            <value>
-                <stringValue>Sales_Notification</stringValue>
-            </value>
-        </filters>
-        <getFirstRecordOnly>true</getFirstRecordOnly>
-        <object>CustomNotificationType</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </recordLookups>
-    <recordLookups>
-        <name>Get_Custom_Notification_Unqualified</name>
-        <label>Get Custom Notification(Unqualified)</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
-        <connector>
-            <targetReference>Assign_user_to_notification_user_list_Unqualified</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -1688,36 +1516,6 @@
         <object>Lead</object>
     </recordUpdates>
     <recordUpdates>
-        <name>Update_Lead_Health_Status_to_Stale_Unqualified</name>
-        <label>Update Lead Health Status to Stale(Unqualified)</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <connector>
-            <targetReference>Get_Custom_Notification_Unqualified</targetReference>
-        </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>Id</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>$Record.Id</elementReference>
-            </value>
-        </filters>
-        <inputAssignments>
-            <field>SW_Lead_Health_Status__c</field>
-            <value>
-                <stringValue>Stale</stringValue>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>SW_SLA_Breached_Notified__c</field>
-            <value>
-                <booleanValue>true</booleanValue>
-            </value>
-        </inputAssignments>
-        <object>Lead</object>
-    </recordUpdates>
-    <recordUpdates>
         <name>Update_Lead_Health_Status_to_Stale_Working</name>
         <label>Update Lead Health Status to Stale(Working)</label>
         <locationX>0</locationX>
@@ -1768,7 +1566,6 @@
                 <booleanValue>false</booleanValue>
             </value>
         </filters>
-        <maxBatchSize>150</maxBatchSize>
         <object>Lead</object>
         <schedule>
             <dayOfMonthToRun>0</dayOfMonthToRun>

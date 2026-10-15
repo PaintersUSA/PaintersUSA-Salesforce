@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Loss category --></label>
+    <name>Loss_category__c</name>
+    <picklistValues>
+        <masterLabel>Duplicate lead</masterLabel>
+        <translation><!-- Duplicate lead --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Invalid / Incomplete Information</masterLabel>
+        <translation><!-- Invalid / Incomplete Information --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Junk / Fake Lead</masterLabel>
+        <translation><!-- Junk / Fake Lead --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Leased Building / No Authority</masterLabel>
+        <translation><!-- Leased Building / No Authority --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Longer With Company</masterLabel>
+        <translation><!-- No Longer With Company --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Opted Out</masterLabel>
+        <translation><!-- Opted Out --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Out Of Business</masterLabel>
+        <translation><!-- Out Of Business --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Out Of Our Capabilities</masterLabel>
+        <translation><!-- Out Of Our Capabilities --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Outside Target Market</masterLabel>
+        <translation><!-- Outside Target Market --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Residential Project</masterLabel>
+        <translation><!-- Residential Project --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Too Far / Out Of Service Area</masterLabel>
+        <translation><!-- Too Far / Out Of Service Area --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Too Small / Not Viable</masterLabel>
+        <translation><!-- Too Small / Not Viable --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unable To Reach Contact</masterLabel>
+        <translation><!-- Unable To Reach Contact --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Union Labor Required</masterLabel>
+        <translation><!-- Union Labor Required --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

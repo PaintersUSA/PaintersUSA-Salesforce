@@ -32,15 +32,19 @@
         <name>SW_Closed_Lost_Required_Fields</name>
     </validationRules>
     <validationRules>
-        <errorMessage><!-- Operations Contact, Contract Type, PO Number and Business Type are required before moving to Closed Won. --></errorMessage>
+        <errorMessage><!-- Operations Contact, PO Number and Agreement Type are required before moving to Closed Won. And Procore Id is required if Estimating Tool is Procore. --></errorMessage>
         <name>SW_Closed_Won_Stage_Required_Fields</name>
     </validationRules>
     <validationRules>
-        <errorMessage><!-- Close Date, Work Type, Type of Work, Job Site Address, and Forecast Category are required before moving to Needs Analysis. --></errorMessage>
+        <errorMessage><!-- Enter a valid Description of Work before moving beyond Qualification. &quot;Pending&quot; may only be used during the Qualification stage. --></errorMessage>
+        <name>SW_Description_of_Work_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Close Date, Type of Work, Job Site Address, and Forecast Category are required before moving to Needs Analysis. --></errorMessage>
         <name>SW_Needs_Analysis_Stage_Required_Fields</name>
     </validationRules>
     <validationRules>
-        <errorMessage><!-- Job Number, Amount, Forecast Category, Close Date, and Type of Work are required before moving to Negotiation. --></errorMessage>
+        <errorMessage><!-- Opportunity Number, Amount, Forecast Category, Close Date, and Type of Work are required before moving to Negotiation. --></errorMessage>
         <name>SW_Negotiation_Stage_Required_Fields</name>
     </validationRules>
     <validationRules>

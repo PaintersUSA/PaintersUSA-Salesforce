@@ -3,12 +3,15 @@
     <fullName>SW_Working_Required_Fields</fullName>
     <active>true</active>
     <errorConditionFormula>AND(
-				$Permission.SW_Bypass_Validation_Rules &lt;&gt; TRUE,
-    ISCHANGED( Status ),
+    $Permission.SW_Bypass_Validation_Rules &lt;&gt; TRUE,
+    ISCHANGED(Status),
     ISPICKVAL(Status, &quot;Working&quot;),
     OR(
         ISBLANK(Email),
-        ISBLANK(Phone),
+        AND(
+            ISBLANK(Phone),
+            ISBLANK(MobilePhone)
+        ),
         ISBLANK(Street),
         ISBLANK(City),
         ISBLANK(State),

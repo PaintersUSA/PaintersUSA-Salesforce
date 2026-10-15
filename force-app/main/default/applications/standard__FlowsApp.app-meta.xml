@@ -19,6 +19,7 @@
     <tabs>SW_Account_Ownership__c</tabs>
     <tabs>SW_GP_Transaction__c</tabs>
     <tabs>SW_Invoice_Transaction__c</tabs>
+    <tabs>standard-Tags</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>FlowsApp_UtilityBar</utilityBar>
 </CustomApplication>

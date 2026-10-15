@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Number__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description>Unique identifier assigned to sales team members for Opportunity Job Number generation. Used by automation to generate Job Numbers in the format YY + Sales Number + Sequence (example: 26015001). Sales Numbers should be unique and assigned only to eligible sales personnel.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter the salesperson&apos;s assigned Sales Number. This number is used by automated Opportunity Job Number generation. Leave blank for non-sales users.</inlineHelpText>
+    <label>Sales Number</label>
+    <length>5</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

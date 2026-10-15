@@ -43,7 +43,7 @@
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NWC000006Gw1O</field>
-            <label>Job Number</label>
+            <label>Opportunity Number</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NWC000007G3CX</field>
@@ -150,12 +150,20 @@
             <label>Job Site Address (State/Province)</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NWC000007ybwn</field>
+            <label>Industry Category</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.TYPE</field>
             <label>Business Type</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>0BCWC0000003lk1</field>
             <label>Job Site Address (Country/Territory)</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NWC000007ybwm</field>
+            <label>Loss Reason</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.CREATED_DATE</field>
@@ -166,8 +174,16 @@
             <label>Last Modified Date</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NWC000007ybwp</field>
+            <label>Industry Sub-Category</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.LEAD_SOURCE</field>
             <label>Lead Source</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NWC000007ybwo</field>
+            <label>Loss category</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
@@ -184,6 +200,10 @@
         <forecastingObjectListLabelMappings>
             <field>00NWC000007L3Wj</field>
             <label>LOCATIONID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NWC000008OA4t</field>
+            <label>Procore Id</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NWC000007KF6v</field>
@@ -277,6 +297,10 @@
             <field>00Na500001hARsC</field>
             <label>Loss Reason</label>
         </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NWC000008CRav</field>
+            <label>Primary Acquisition Source</label>
+        </forecastingObjectListLabelMappings>
         <forecastingObjectListSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
             <field>ACCOUNT.NAME</field>
@@ -321,8 +345,9 @@
             <field>00NWC000007AyRt</field>
             <field>00NWC000007AxAr</field>
             <field>00NWC000007G3CX</field>
+            <field>00NWC000007ybwn</field>
+            <field>00NWC000007ybwp</field>
             <field>00NWC000007G3CY</field>
-            <field>00NWC000006Gw1O</field>
             <field>00NWC000006H1kD</field>
             <field>0BCWC0000003ljy</field>
             <field>0BCWC0000003lk1</field>
@@ -330,12 +355,17 @@
             <field>0BCWC0000003ljx</field>
             <field>0BCWC0000003ljz</field>
             <field>00NWC000007L3Wj</field>
+            <field>00NWC000007ybwo</field>
             <field>00Na500001hARsC</field>
+            <field>00NWC000007ybwm</field>
             <field>00NWC000006H34T</field>
             <field>00NWC000007AzB3</field>
             <field>00NWC000006H21x</field>
+            <field>00NWC000006Gw1O</field>
             <field>00NWC000006GwBd</field>
             <field>00NWC000006sJAH</field>
+            <field>00NWC000008CRav</field>
+            <field>00NWC000008OA4t</field>
             <field>00NWC000006H1yj</field>
             <field>00NWC000006Kpm5</field>
             <field>00Na500001hARsB</field>
@@ -395,7 +425,7 @@
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NWC000006Gw1O</field>
-            <label>Job Number</label>
+            <label>Opportunity Number</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NWC000007G3CX</field>
@@ -502,12 +532,20 @@
             <label>Job Site Address (State/Province)</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NWC000007ybwn</field>
+            <label>Industry Category</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.TYPE</field>
             <label>Business Type</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>0BCWC0000003lk1</field>
             <label>Job Site Address (Country/Territory)</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NWC000007ybwm</field>
+            <label>Loss Reason</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.CREATED_DATE</field>
@@ -518,8 +556,16 @@
             <label>Last Modified Date</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NWC000007ybwp</field>
+            <label>Industry Sub-Category</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.LEAD_SOURCE</field>
             <label>Lead Source</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NWC000007ybwo</field>
+            <label>Loss category</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
@@ -536,6 +582,10 @@
         <forecastingObjectListLabelMappings>
             <field>00NWC000007L3Wj</field>
             <label>LOCATIONID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NWC000008OA4t</field>
+            <label>Procore Id</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NWC000007KF6v</field>
@@ -629,6 +679,10 @@
             <field>00Na500001hARsC</field>
             <label>Loss Reason</label>
         </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NWC000008CRav</field>
+            <label>Primary Acquisition Source</label>
+        </forecastingObjectListLabelMappings>
         <forecastingObjectListSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
             <field>ACCOUNT.NAME</field>
@@ -673,8 +727,9 @@
             <field>00NWC000007AyRt</field>
             <field>00NWC000007AxAr</field>
             <field>00NWC000007G3CX</field>
+            <field>00NWC000007ybwn</field>
+            <field>00NWC000007ybwp</field>
             <field>00NWC000007G3CY</field>
-            <field>00NWC000006Gw1O</field>
             <field>00NWC000006H1kD</field>
             <field>0BCWC0000003ljy</field>
             <field>0BCWC0000003lk1</field>
@@ -682,12 +737,17 @@
             <field>0BCWC0000003ljx</field>
             <field>0BCWC0000003ljz</field>
             <field>00NWC000007L3Wj</field>
+            <field>00NWC000007ybwo</field>
             <field>00Na500001hARsC</field>
+            <field>00NWC000007ybwm</field>
             <field>00NWC000006H34T</field>
             <field>00NWC000007AzB3</field>
             <field>00NWC000006H21x</field>
+            <field>00NWC000006Gw1O</field>
             <field>00NWC000006GwBd</field>
             <field>00NWC000006sJAH</field>
+            <field>00NWC000008CRav</field>
+            <field>00NWC000008OA4t</field>
             <field>00NWC000006H1yj</field>
             <field>00NWC000006Kpm5</field>
             <field>00Na500001hARsB</field>
@@ -747,7 +807,7 @@
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NWC000006Gw1O</field>
-            <label>Job Number</label>
+            <label>Opportunity Number</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NWC000007G3CX</field>
@@ -854,12 +914,20 @@
             <label>Job Site Address (State/Province)</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NWC000007ybwn</field>
+            <label>Industry Category</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.TYPE</field>
             <label>Business Type</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>0BCWC0000003lk1</field>
             <label>Job Site Address (Country/Territory)</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NWC000007ybwm</field>
+            <label>Loss Reason</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.CREATED_DATE</field>
@@ -870,8 +938,16 @@
             <label>Last Modified Date</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NWC000007ybwp</field>
+            <label>Industry Sub-Category</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.LEAD_SOURCE</field>
             <label>Lead Source</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NWC000007ybwo</field>
+            <label>Loss category</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
@@ -888,6 +964,10 @@
         <forecastingObjectListLabelMappings>
             <field>00NWC000007L3Wj</field>
             <label>LOCATIONID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NWC000008OA4t</field>
+            <label>Procore Id</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NWC000007KF6v</field>
@@ -981,6 +1061,10 @@
             <field>00Na500001hARsC</field>
             <label>Loss Reason</label>
         </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NWC000008CRav</field>
+            <label>Primary Acquisition Source</label>
+        </forecastingObjectListLabelMappings>
         <forecastingObjectListSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
             <field>ACCOUNT.NAME</field>
@@ -1025,8 +1109,9 @@
             <field>00NWC000007AyRt</field>
             <field>00NWC000007AxAr</field>
             <field>00NWC000007G3CX</field>
+            <field>00NWC000007ybwn</field>
+            <field>00NWC000007ybwp</field>
             <field>00NWC000007G3CY</field>
-            <field>00NWC000006Gw1O</field>
             <field>00NWC000006H1kD</field>
             <field>0BCWC0000003ljy</field>
             <field>0BCWC0000003lk1</field>
@@ -1034,12 +1119,17 @@
             <field>0BCWC0000003ljx</field>
             <field>0BCWC0000003ljz</field>
             <field>00NWC000007L3Wj</field>
+            <field>00NWC000007ybwo</field>
             <field>00Na500001hARsC</field>
+            <field>00NWC000007ybwm</field>
             <field>00NWC000006H34T</field>
             <field>00NWC000007AzB3</field>
             <field>00NWC000006H21x</field>
+            <field>00NWC000006Gw1O</field>
             <field>00NWC000006GwBd</field>
             <field>00NWC000006sJAH</field>
+            <field>00NWC000008CRav</field>
+            <field>00NWC000008OA4t</field>
             <field>00NWC000006H1yj</field>
             <field>00NWC000006Kpm5</field>
             <field>00Na500001hARsB</field>
@@ -1099,7 +1189,7 @@
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NWC000006Gw1O</field>
-            <label>Job Number</label>
+            <label>Opportunity Number</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NWC000007G3CX</field>
@@ -1210,12 +1300,20 @@
             <label>Job Site Address (State/Province)</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NWC000007ybwn</field>
+            <label>Industry Category</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.TYPE</field>
             <label>Business Type</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>0BCWC0000003lk1</field>
             <label>Job Site Address (Country/Territory)</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NWC000007ybwm</field>
+            <label>Loss Reason</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.CREATED_DATE</field>
@@ -1226,8 +1324,16 @@
             <label>Last Modified Date</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NWC000007ybwp</field>
+            <label>Industry Sub-Category</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.LEAD_SOURCE</field>
             <label>Lead Source</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NWC000007ybwo</field>
+            <label>Loss category</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
@@ -1244,6 +1350,10 @@
         <forecastingObjectListLabelMappings>
             <field>00NWC000007L3Wj</field>
             <label>LOCATIONID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NWC000008OA4t</field>
+            <label>Procore Id</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NWC000007KF6v</field>
@@ -1337,6 +1447,10 @@
             <field>00Na500001hARsC</field>
             <label>Loss Reason</label>
         </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NWC000008CRav</field>
+            <label>Primary Acquisition Source</label>
+        </forecastingObjectListLabelMappings>
         <forecastingObjectListSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
             <field>ACCOUNT.NAME</field>
@@ -1382,8 +1496,9 @@
             <field>00NWC000007AyRt</field>
             <field>00NWC000007AxAr</field>
             <field>00NWC000007G3CX</field>
+            <field>00NWC000007ybwn</field>
+            <field>00NWC000007ybwp</field>
             <field>00NWC000007G3CY</field>
-            <field>00NWC000006Gw1O</field>
             <field>00NWC000006H1kD</field>
             <field>0BCWC0000003ljy</field>
             <field>0BCWC0000003lk1</field>
@@ -1391,12 +1506,17 @@
             <field>0BCWC0000003ljx</field>
             <field>0BCWC0000003ljz</field>
             <field>00NWC000007L3Wj</field>
+            <field>00NWC000007ybwo</field>
             <field>00Na500001hARsC</field>
+            <field>00NWC000007ybwm</field>
             <field>00NWC000006H34T</field>
             <field>00NWC000007AzB3</field>
             <field>00NWC000006H21x</field>
+            <field>00NWC000006Gw1O</field>
             <field>00NWC000006GwBd</field>
             <field>00NWC000006sJAH</field>
+            <field>00NWC000008CRav</field>
+            <field>00NWC000008OA4t</field>
             <field>00NWC000006H1yj</field>
             <field>00NWC000006Kpm5</field>
             <field>00Na500001hARsB</field>
@@ -1456,7 +1576,7 @@
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NWC000006Gw1O</field>
-            <label>Job Number</label>
+            <label>Opportunity Number</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NWC000007G3CX</field>
@@ -1563,12 +1683,20 @@
             <label>Job Site Address (State/Province)</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NWC000007ybwn</field>
+            <label>Industry Category</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.TYPE</field>
             <label>Business Type</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>0BCWC0000003lk1</field>
             <label>Job Site Address (Country/Territory)</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NWC000007ybwm</field>
+            <label>Loss Reason</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.CREATED_DATE</field>
@@ -1579,8 +1707,16 @@
             <label>Last Modified Date</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NWC000007ybwp</field>
+            <label>Industry Sub-Category</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.LEAD_SOURCE</field>
             <label>Lead Source</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NWC000007ybwo</field>
+            <label>Loss category</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
@@ -1597,6 +1733,10 @@
         <forecastingObjectListLabelMappings>
             <field>00NWC000007L3Wj</field>
             <label>LOCATIONID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NWC000008OA4t</field>
+            <label>Procore Id</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NWC000007KF6v</field>
@@ -1690,6 +1830,10 @@
             <field>00Na500001hARsC</field>
             <label>Loss Reason</label>
         </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NWC000008CRav</field>
+            <label>Primary Acquisition Source</label>
+        </forecastingObjectListLabelMappings>
         <forecastingObjectListSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
             <field>ACCOUNT.NAME</field>
@@ -1734,8 +1878,9 @@
             <field>00NWC000007AyRt</field>
             <field>00NWC000007AxAr</field>
             <field>00NWC000007G3CX</field>
+            <field>00NWC000007ybwn</field>
+            <field>00NWC000007ybwp</field>
             <field>00NWC000007G3CY</field>
-            <field>00NWC000006Gw1O</field>
             <field>00NWC000006H1kD</field>
             <field>0BCWC0000003ljy</field>
             <field>0BCWC0000003lk1</field>
@@ -1743,12 +1888,17 @@
             <field>0BCWC0000003ljx</field>
             <field>0BCWC0000003ljz</field>
             <field>00NWC000007L3Wj</field>
+            <field>00NWC000007ybwo</field>
             <field>00Na500001hARsC</field>
+            <field>00NWC000007ybwm</field>
             <field>00NWC000006H34T</field>
             <field>00NWC000007AzB3</field>
             <field>00NWC000006H21x</field>
+            <field>00NWC000006Gw1O</field>
             <field>00NWC000006GwBd</field>
             <field>00NWC000006sJAH</field>
+            <field>00NWC000008CRav</field>
+            <field>00NWC000008OA4t</field>
             <field>00NWC000006H1yj</field>
             <field>00NWC000006Kpm5</field>
             <field>00Na500001hARsB</field>
@@ -1808,7 +1958,7 @@
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NWC000006Gw1O</field>
-            <label>Job Number</label>
+            <label>Opportunity Number</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NWC000007G3CX</field>
@@ -1919,12 +2069,20 @@
             <label>Job Site Address (State/Province)</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NWC000007ybwn</field>
+            <label>Industry Category</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.TYPE</field>
             <label>Business Type</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>0BCWC0000003lk1</field>
             <label>Job Site Address (Country/Territory)</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NWC000007ybwm</field>
+            <label>Loss Reason</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.CREATED_DATE</field>
@@ -1935,8 +2093,16 @@
             <label>Last Modified Date</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NWC000007ybwp</field>
+            <label>Industry Sub-Category</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.LEAD_SOURCE</field>
             <label>Lead Source</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NWC000007ybwo</field>
+            <label>Loss category</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
@@ -1953,6 +2119,10 @@
         <forecastingObjectListLabelMappings>
             <field>00NWC000007L3Wj</field>
             <label>LOCATIONID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NWC000008OA4t</field>
+            <label>Procore Id</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NWC000007KF6v</field>
@@ -2046,6 +2216,10 @@
             <field>00Na500001hARsC</field>
             <label>Loss Reason</label>
         </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NWC000008CRav</field>
+            <label>Primary Acquisition Source</label>
+        </forecastingObjectListLabelMappings>
         <forecastingObjectListSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
             <field>ACCOUNT.NAME</field>
@@ -2091,8 +2265,9 @@
             <field>00NWC000007AyRt</field>
             <field>00NWC000007AxAr</field>
             <field>00NWC000007G3CX</field>
+            <field>00NWC000007ybwn</field>
+            <field>00NWC000007ybwp</field>
             <field>00NWC000007G3CY</field>
-            <field>00NWC000006Gw1O</field>
             <field>00NWC000006H1kD</field>
             <field>0BCWC0000003ljy</field>
             <field>0BCWC0000003lk1</field>
@@ -2100,12 +2275,17 @@
             <field>0BCWC0000003ljx</field>
             <field>0BCWC0000003ljz</field>
             <field>00NWC000007L3Wj</field>
+            <field>00NWC000007ybwo</field>
             <field>00Na500001hARsC</field>
+            <field>00NWC000007ybwm</field>
             <field>00NWC000006H34T</field>
             <field>00NWC000007AzB3</field>
             <field>00NWC000006H21x</field>
+            <field>00NWC000006Gw1O</field>
             <field>00NWC000006GwBd</field>
             <field>00NWC000006sJAH</field>
+            <field>00NWC000008CRav</field>
+            <field>00NWC000008OA4t</field>
             <field>00NWC000006H1yj</field>
             <field>00NWC000006Kpm5</field>
             <field>00Na500001hARsB</field>
@@ -2165,7 +2345,7 @@
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NWC000006Gw1O</field>
-            <label>Job Number</label>
+            <label>Opportunity Number</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NWC000007G3CX</field>
@@ -2272,12 +2452,20 @@
             <label>Job Site Address (State/Province)</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NWC000007ybwn</field>
+            <label>Industry Category</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.TYPE</field>
             <label>Business Type</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>0BCWC0000003lk1</field>
             <label>Job Site Address (Country/Territory)</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NWC000007ybwm</field>
+            <label>Loss Reason</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.CREATED_DATE</field>
@@ -2288,8 +2476,16 @@
             <label>Last Modified Date</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NWC000007ybwp</field>
+            <label>Industry Sub-Category</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.LEAD_SOURCE</field>
             <label>Lead Source</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NWC000007ybwo</field>
+            <label>Loss category</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
@@ -2306,6 +2502,10 @@
         <forecastingObjectListLabelMappings>
             <field>00NWC000007L3Wj</field>
             <label>LOCATIONID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NWC000008OA4t</field>
+            <label>Procore Id</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NWC000007KF6v</field>
@@ -2399,6 +2599,10 @@
             <field>00Na500001hARsC</field>
             <label>Loss Reason</label>
         </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NWC000008CRav</field>
+            <label>Primary Acquisition Source</label>
+        </forecastingObjectListLabelMappings>
         <forecastingObjectListSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
             <field>ACCOUNT.NAME</field>
@@ -2443,8 +2647,9 @@
             <field>00NWC000007AyRt</field>
             <field>00NWC000007AxAr</field>
             <field>00NWC000007G3CX</field>
+            <field>00NWC000007ybwn</field>
+            <field>00NWC000007ybwp</field>
             <field>00NWC000007G3CY</field>
-            <field>00NWC000006Gw1O</field>
             <field>00NWC000006H1kD</field>
             <field>0BCWC0000003ljy</field>
             <field>0BCWC0000003lk1</field>
@@ -2452,12 +2657,17 @@
             <field>0BCWC0000003ljx</field>
             <field>0BCWC0000003ljz</field>
             <field>00NWC000007L3Wj</field>
+            <field>00NWC000007ybwo</field>
             <field>00Na500001hARsC</field>
+            <field>00NWC000007ybwm</field>
             <field>00NWC000006H34T</field>
             <field>00NWC000007AzB3</field>
             <field>00NWC000006H21x</field>
+            <field>00NWC000006Gw1O</field>
             <field>00NWC000006GwBd</field>
             <field>00NWC000006sJAH</field>
+            <field>00NWC000008CRav</field>
+            <field>00NWC000008OA4t</field>
             <field>00NWC000006H1yj</field>
             <field>00NWC000006Kpm5</field>
             <field>00Na500001hARsB</field>
@@ -2517,7 +2727,7 @@
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NWC000006Gw1O</field>
-            <label>Job Number</label>
+            <label>Opportunity Number</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NWC000007G3CX</field>
@@ -2628,12 +2838,20 @@
             <label>Job Site Address (State/Province)</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NWC000007ybwn</field>
+            <label>Industry Category</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.TYPE</field>
             <label>Business Type</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>0BCWC0000003lk1</field>
             <label>Job Site Address (Country/Territory)</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NWC000007ybwm</field>
+            <label>Loss Reason</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.CREATED_DATE</field>
@@ -2644,8 +2862,16 @@
             <label>Last Modified Date</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NWC000007ybwp</field>
+            <label>Industry Sub-Category</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.LEAD_SOURCE</field>
             <label>Lead Source</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NWC000007ybwo</field>
+            <label>Loss category</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
@@ -2662,6 +2888,10 @@
         <forecastingObjectListLabelMappings>
             <field>00NWC000007L3Wj</field>
             <label>LOCATIONID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NWC000008OA4t</field>
+            <label>Procore Id</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NWC000007KF6v</field>
@@ -2755,6 +2985,10 @@
             <field>00Na500001hARsC</field>
             <label>Loss Reason</label>
         </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NWC000008CRav</field>
+            <label>Primary Acquisition Source</label>
+        </forecastingObjectListLabelMappings>
         <forecastingObjectListSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
             <field>ACCOUNT.NAME</field>
@@ -2800,8 +3034,9 @@
             <field>00NWC000007AyRt</field>
             <field>00NWC000007AxAr</field>
             <field>00NWC000007G3CX</field>
+            <field>00NWC000007ybwn</field>
+            <field>00NWC000007ybwp</field>
             <field>00NWC000007G3CY</field>
-            <field>00NWC000006Gw1O</field>
             <field>00NWC000006H1kD</field>
             <field>0BCWC0000003ljy</field>
             <field>0BCWC0000003lk1</field>
@@ -2809,12 +3044,17 @@
             <field>0BCWC0000003ljx</field>
             <field>0BCWC0000003ljz</field>
             <field>00NWC000007L3Wj</field>
+            <field>00NWC000007ybwo</field>
             <field>00Na500001hARsC</field>
+            <field>00NWC000007ybwm</field>
             <field>00NWC000006H34T</field>
             <field>00NWC000007AzB3</field>
             <field>00NWC000006H21x</field>
+            <field>00NWC000006Gw1O</field>
             <field>00NWC000006GwBd</field>
             <field>00NWC000006sJAH</field>
+            <field>00NWC000008CRav</field>
+            <field>00NWC000008OA4t</field>
             <field>00NWC000006H1yj</field>
             <field>00NWC000006Kpm5</field>
             <field>00Na500001hARsB</field>
@@ -2874,7 +3114,7 @@
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NWC000006Gw1O</field>
-            <label>Job Number</label>
+            <label>Opportunity Number</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NWC000007G3CX</field>
@@ -2981,12 +3221,20 @@
             <label>Job Site Address (State/Province)</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NWC000007ybwn</field>
+            <label>Industry Category</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.TYPE</field>
             <label>Business Type</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>0BCWC0000003lk1</field>
             <label>Job Site Address (Country/Territory)</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NWC000007ybwm</field>
+            <label>Loss Reason</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.CREATED_DATE</field>
@@ -2997,8 +3245,16 @@
             <label>Last Modified Date</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NWC000007ybwp</field>
+            <label>Industry Sub-Category</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.LEAD_SOURCE</field>
             <label>Lead Source</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NWC000007ybwo</field>
+            <label>Loss category</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
@@ -3015,6 +3271,10 @@
         <forecastingObjectListLabelMappings>
             <field>00NWC000007L3Wj</field>
             <label>LOCATIONID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NWC000008OA4t</field>
+            <label>Procore Id</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NWC000007KF6v</field>
@@ -3108,6 +3368,10 @@
             <field>00Na500001hARsC</field>
             <label>Loss Reason</label>
         </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NWC000008CRav</field>
+            <label>Primary Acquisition Source</label>
+        </forecastingObjectListLabelMappings>
         <forecastingObjectListSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
             <field>ACCOUNT.NAME</field>
@@ -3152,8 +3416,9 @@
             <field>00NWC000007AyRt</field>
             <field>00NWC000007AxAr</field>
             <field>00NWC000007G3CX</field>
+            <field>00NWC000007ybwn</field>
+            <field>00NWC000007ybwp</field>
             <field>00NWC000007G3CY</field>
-            <field>00NWC000006Gw1O</field>
             <field>00NWC000006H1kD</field>
             <field>0BCWC0000003ljy</field>
             <field>0BCWC0000003lk1</field>
@@ -3161,12 +3426,17 @@
             <field>0BCWC0000003ljx</field>
             <field>0BCWC0000003ljz</field>
             <field>00NWC000007L3Wj</field>
+            <field>00NWC000007ybwo</field>
             <field>00Na500001hARsC</field>
+            <field>00NWC000007ybwm</field>
             <field>00NWC000006H34T</field>
             <field>00NWC000007AzB3</field>
             <field>00NWC000006H21x</field>
+            <field>00NWC000006Gw1O</field>
             <field>00NWC000006GwBd</field>
             <field>00NWC000006sJAH</field>
+            <field>00NWC000008CRav</field>
+            <field>00NWC000008OA4t</field>
             <field>00NWC000006H1yj</field>
             <field>00NWC000006Kpm5</field>
             <field>00Na500001hARsB</field>
@@ -3226,7 +3496,7 @@
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NWC000006Gw1O</field>
-            <label>Job Number</label>
+            <label>Opportunity Number</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NWC000007G3CX</field>
@@ -3337,12 +3607,20 @@
             <label>Job Site Address (State/Province)</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NWC000007ybwn</field>
+            <label>Industry Category</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.TYPE</field>
             <label>Business Type</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>0BCWC0000003lk1</field>
             <label>Job Site Address (Country/Territory)</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NWC000007ybwm</field>
+            <label>Loss Reason</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.CREATED_DATE</field>
@@ -3353,8 +3631,16 @@
             <label>Last Modified Date</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NWC000007ybwp</field>
+            <label>Industry Sub-Category</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.LEAD_SOURCE</field>
             <label>Lead Source</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NWC000007ybwo</field>
+            <label>Loss category</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
@@ -3371,6 +3657,10 @@
         <forecastingObjectListLabelMappings>
             <field>00NWC000007L3Wj</field>
             <label>LOCATIONID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NWC000008OA4t</field>
+            <label>Procore Id</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NWC000007KF6v</field>
@@ -3464,6 +3754,10 @@
             <field>00Na500001hARsC</field>
             <label>Loss Reason</label>
         </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NWC000008CRav</field>
+            <label>Primary Acquisition Source</label>
+        </forecastingObjectListLabelMappings>
         <forecastingObjectListSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
             <field>ACCOUNT.NAME</field>
@@ -3509,8 +3803,9 @@
             <field>00NWC000007AyRt</field>
             <field>00NWC000007AxAr</field>
             <field>00NWC000007G3CX</field>
+            <field>00NWC000007ybwn</field>
+            <field>00NWC000007ybwp</field>
             <field>00NWC000007G3CY</field>
-            <field>00NWC000006Gw1O</field>
             <field>00NWC000006H1kD</field>
             <field>0BCWC0000003ljy</field>
             <field>0BCWC0000003lk1</field>
@@ -3518,12 +3813,17 @@
             <field>0BCWC0000003ljx</field>
             <field>0BCWC0000003ljz</field>
             <field>00NWC000007L3Wj</field>
+            <field>00NWC000007ybwo</field>
             <field>00Na500001hARsC</field>
+            <field>00NWC000007ybwm</field>
             <field>00NWC000006H34T</field>
             <field>00NWC000007AzB3</field>
             <field>00NWC000006H21x</field>
+            <field>00NWC000006Gw1O</field>
             <field>00NWC000006GwBd</field>
             <field>00NWC000006sJAH</field>
+            <field>00NWC000008CRav</field>
+            <field>00NWC000008OA4t</field>
             <field>00NWC000006H1yj</field>
             <field>00NWC000006Kpm5</field>
             <field>00Na500001hARsB</field>
@@ -3583,7 +3883,7 @@
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NWC000006Gw1O</field>
-            <label>Job Number</label>
+            <label>Opportunity Number</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NWC000007G3CX</field>
@@ -3690,12 +3990,20 @@
             <label>Job Site Address (State/Province)</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NWC000007ybwn</field>
+            <label>Industry Category</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.TYPE</field>
             <label>Business Type</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>0BCWC0000003lk1</field>
             <label>Job Site Address (Country/Territory)</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NWC000007ybwm</field>
+            <label>Loss Reason</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.CREATED_DATE</field>
@@ -3706,8 +4014,16 @@
             <label>Last Modified Date</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NWC000007ybwp</field>
+            <label>Industry Sub-Category</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.LEAD_SOURCE</field>
             <label>Lead Source</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NWC000007ybwo</field>
+            <label>Loss category</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
@@ -3724,6 +4040,10 @@
         <forecastingObjectListLabelMappings>
             <field>00NWC000007L3Wj</field>
             <label>LOCATIONID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NWC000008OA4t</field>
+            <label>Procore Id</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NWC000007KF6v</field>
@@ -3817,6 +4137,10 @@
             <field>00Na500001hARsC</field>
             <label>Loss Reason</label>
         </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NWC000008CRav</field>
+            <label>Primary Acquisition Source</label>
+        </forecastingObjectListLabelMappings>
         <forecastingObjectListSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
             <field>ACCOUNT.NAME</field>
@@ -3861,8 +4185,9 @@
             <field>00NWC000007AyRt</field>
             <field>00NWC000007AxAr</field>
             <field>00NWC000007G3CX</field>
+            <field>00NWC000007ybwn</field>
+            <field>00NWC000007ybwp</field>
             <field>00NWC000007G3CY</field>
-            <field>00NWC000006Gw1O</field>
             <field>00NWC000006H1kD</field>
             <field>0BCWC0000003ljy</field>
             <field>0BCWC0000003lk1</field>
@@ -3870,12 +4195,17 @@
             <field>0BCWC0000003ljx</field>
             <field>0BCWC0000003ljz</field>
             <field>00NWC000007L3Wj</field>
+            <field>00NWC000007ybwo</field>
             <field>00Na500001hARsC</field>
+            <field>00NWC000007ybwm</field>
             <field>00NWC000006H34T</field>
             <field>00NWC000007AzB3</field>
             <field>00NWC000006H21x</field>
+            <field>00NWC000006Gw1O</field>
             <field>00NWC000006GwBd</field>
             <field>00NWC000006sJAH</field>
+            <field>00NWC000008CRav</field>
+            <field>00NWC000008OA4t</field>
             <field>00NWC000006H1yj</field>
             <field>00NWC000006Kpm5</field>
             <field>00Na500001hARsB</field>
@@ -3935,7 +4265,7 @@
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NWC000006Gw1O</field>
-            <label>Job Number</label>
+            <label>Opportunity Number</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NWC000007G3CX</field>
@@ -4046,12 +4376,20 @@
             <label>Job Site Address (State/Province)</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NWC000007ybwn</field>
+            <label>Industry Category</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.TYPE</field>
             <label>Business Type</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>0BCWC0000003lk1</field>
             <label>Job Site Address (Country/Territory)</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NWC000007ybwm</field>
+            <label>Loss Reason</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.CREATED_DATE</field>
@@ -4062,8 +4400,16 @@
             <label>Last Modified Date</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NWC000007ybwp</field>
+            <label>Industry Sub-Category</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.LEAD_SOURCE</field>
             <label>Lead Source</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NWC000007ybwo</field>
+            <label>Loss category</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
@@ -4080,6 +4426,10 @@
         <forecastingObjectListLabelMappings>
             <field>00NWC000007L3Wj</field>
             <label>LOCATIONID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NWC000008OA4t</field>
+            <label>Procore Id</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NWC000007KF6v</field>
@@ -4173,6 +4523,10 @@
             <field>00Na500001hARsC</field>
             <label>Loss Reason</label>
         </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NWC000008CRav</field>
+            <label>Primary Acquisition Source</label>
+        </forecastingObjectListLabelMappings>
         <forecastingObjectListSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
             <field>ACCOUNT.NAME</field>
@@ -4218,8 +4572,9 @@
             <field>00NWC000007AyRt</field>
             <field>00NWC000007AxAr</field>
             <field>00NWC000007G3CX</field>
+            <field>00NWC000007ybwn</field>
+            <field>00NWC000007ybwp</field>
             <field>00NWC000007G3CY</field>
-            <field>00NWC000006Gw1O</field>
             <field>00NWC000006H1kD</field>
             <field>0BCWC0000003ljy</field>
             <field>0BCWC0000003lk1</field>
@@ -4227,12 +4582,17 @@
             <field>0BCWC0000003ljx</field>
             <field>0BCWC0000003ljz</field>
             <field>00NWC000007L3Wj</field>
+            <field>00NWC000007ybwo</field>
             <field>00Na500001hARsC</field>
+            <field>00NWC000007ybwm</field>
             <field>00NWC000006H34T</field>
             <field>00NWC000007AzB3</field>
             <field>00NWC000006H21x</field>
+            <field>00NWC000006Gw1O</field>
             <field>00NWC000006GwBd</field>
             <field>00NWC000006sJAH</field>
+            <field>00NWC000008CRav</field>
+            <field>00NWC000008OA4t</field>
             <field>00NWC000006H1yj</field>
             <field>00NWC000006Kpm5</field>
             <field>00Na500001hARsB</field>
@@ -4292,7 +4652,7 @@
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NWC000006Gw1O</field>
-            <label>Job Number</label>
+            <label>Opportunity Number</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NWC000007G3CX</field>
@@ -4399,12 +4759,20 @@
             <label>Job Site Address (State/Province)</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NWC000007ybwn</field>
+            <label>Industry Category</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.TYPE</field>
             <label>Business Type</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>0BCWC0000003lk1</field>
             <label>Job Site Address (Country/Territory)</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NWC000007ybwm</field>
+            <label>Loss Reason</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.CREATED_DATE</field>
@@ -4415,8 +4783,16 @@
             <label>Last Modified Date</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NWC000007ybwp</field>
+            <label>Industry Sub-Category</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.LEAD_SOURCE</field>
             <label>Lead Source</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NWC000007ybwo</field>
+            <label>Loss category</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
@@ -4433,6 +4809,10 @@
         <forecastingObjectListLabelMappings>
             <field>00NWC000007L3Wj</field>
             <label>LOCATIONID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NWC000008OA4t</field>
+            <label>Procore Id</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NWC000007KF6v</field>
@@ -4526,6 +4906,10 @@
             <field>00Na500001hARsC</field>
             <label>Loss Reason</label>
         </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NWC000008CRav</field>
+            <label>Primary Acquisition Source</label>
+        </forecastingObjectListLabelMappings>
         <forecastingObjectListSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
             <field>ACCOUNT.NAME</field>
@@ -4570,8 +4954,9 @@
             <field>00NWC000007AyRt</field>
             <field>00NWC000007AxAr</field>
             <field>00NWC000007G3CX</field>
+            <field>00NWC000007ybwn</field>
+            <field>00NWC000007ybwp</field>
             <field>00NWC000007G3CY</field>
-            <field>00NWC000006Gw1O</field>
             <field>00NWC000006H1kD</field>
             <field>0BCWC0000003ljy</field>
             <field>0BCWC0000003lk1</field>
@@ -4579,12 +4964,17 @@
             <field>0BCWC0000003ljx</field>
             <field>0BCWC0000003ljz</field>
             <field>00NWC000007L3Wj</field>
+            <field>00NWC000007ybwo</field>
             <field>00Na500001hARsC</field>
+            <field>00NWC000007ybwm</field>
             <field>00NWC000006H34T</field>
             <field>00NWC000007AzB3</field>
             <field>00NWC000006H21x</field>
+            <field>00NWC000006Gw1O</field>
             <field>00NWC000006GwBd</field>
             <field>00NWC000006sJAH</field>
+            <field>00NWC000008CRav</field>
+            <field>00NWC000008OA4t</field>
             <field>00NWC000006H1yj</field>
             <field>00NWC000006Kpm5</field>
             <field>00Na500001hARsB</field>

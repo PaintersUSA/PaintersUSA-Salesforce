@@ -15,6 +15,10 @@
         <translation><!-- Bidding --></translation>
     </picklistValues>
     <picklistValues>
+        <masterLabel>Delayed</masterLabel>
+        <translation><!-- Delayed --></translation>
+    </picklistValues>
+    <picklistValues>
         <masterLabel>Lost</masterLabel>
         <translation><!-- Lost --></translation>
     </picklistValues>

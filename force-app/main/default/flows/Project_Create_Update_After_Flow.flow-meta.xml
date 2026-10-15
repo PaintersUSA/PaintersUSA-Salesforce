@@ -190,7 +190,7 @@
             <assignToReference>gpRecordOne.SW_Sales_Rep__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Get_account_ownership.SW_Previous_Sales_Rep__c</elementReference>
+                <elementReference>Get_account_ownership.SW_Sales_Rep__c</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
@@ -235,7 +235,7 @@
             <assignToReference>commissionTypeVar</assignToReference>
             <operator>Add</operator>
             <value>
-                <stringValue>;Transition;</stringValue>
+                <stringValue>Transition;</stringValue>
             </value>
         </assignmentItems>
         <connector>
@@ -295,7 +295,7 @@
             <assignToReference>gpRecordOne.SW_Sales_Rep__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Get_account_ownership.SW_Previous_Sales_Rep__c</elementReference>
+                <elementReference>Get_account_ownership.SW_Sales_Rep__c</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
@@ -340,7 +340,7 @@
             <assignToReference>commissionTypeVar</assignToReference>
             <operator>Add</operator>
             <value>
-                <stringValue>;Transition;</stringValue>
+                <stringValue>Transition;</stringValue>
             </value>
         </assignmentItems>
         <connector>
@@ -360,7 +360,7 @@
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Check_counter</targetReference>
+            <targetReference>Update_Commission_status</targetReference>
         </connector>
     </assignments>
     <assignments>
@@ -622,7 +622,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Create_Invoice_Transaction</targetReference>
+                <targetReference>Get_Invoice_Transaction_Record</targetReference>
             </connector>
             <label>Monthly gross profit is changed</label>
         </rules>
@@ -674,7 +674,7 @@
             </conditions>
             <connector>
                 <isGoTo>true</isGoTo>
-                <targetReference>Get_gp_transaction_record</targetReference>
+                <targetReference>Get_Invoice_Transaction_Record</targetReference>
             </connector>
             <label>Monthly Gross is chnged</label>
         </rules>
@@ -928,7 +928,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Copy_1_of_Copy_1_of_Copy_3_of_Assign_commission_type_value</targetReference>
+                <targetReference>Check_counter</targetReference>
             </connector>
             <label>If same</label>
         </rules>
@@ -1191,27 +1191,32 @@
             <label>Inserted</label>
         </rules>
     </decisions>
+    <decisions>
+        <name>Is_Invoice_Transaction_Record_null_or_not</name>
+        <label>Is Invoice Transaction Record null or not?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Create_Invoice_Transaction</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Invoice_Transaction_Record_is_not_Null</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Invoice_Transaction_Record</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Invoice_Transaction</targetReference>
+            </connector>
+            <label>Invoice Transaction Record is not Null</label>
+        </rules>
+    </decisions>
     <environments>Default</environments>
-    <formulas>
-        <name>CurrentQuarter</name>
-        <dataType>String</dataType>
-        <expression>CASE(
-    MONTH({!$Record.Last_Invoice_Date__c}),
-    1, &quot;Q1&quot;,
-    2, &quot;Q1&quot;,
-    3, &quot;Q1&quot;,
-    4, &quot;Q2&quot;,
-    5, &quot;Q2&quot;,
-    6, &quot;Q2&quot;,
-    7, &quot;Q3&quot;,
-    8, &quot;Q3&quot;,
-    9, &quot;Q3&quot;,
-    10, &quot;Q4&quot;,
-    11, &quot;Q4&quot;,
-    12, &quot;Q4&quot;,
-    &quot;&quot;
-)</expression>
-    </formulas>
     <formulas>
         <name>doesNotContainNewAccount</name>
         <dataType>Boolean</dataType>
@@ -1271,6 +1276,15 @@ MONTH(ADDMONTHS({!$Record.SW_First_Invoice_Date__c},1)),
 )</expression>
     </formulas>
     <formulas>
+        <name>frmLastInvoiceMonthStart</name>
+        <dataType>Date</dataType>
+        <expression>DATE(
+    YEAR({!$Record.Last_Invoice_Date__c}),
+    MONTH({!$Record.Last_Invoice_Date__c}),
+    1
+)</expression>
+    </formulas>
+    <formulas>
         <name>frmNumberOfTransitionRecords</name>
         <dataType>Number</dataType>
         <expression>{!Get_pass_up_custom_metadata.SW_Value__c}-{!frmCalculateMonths}</expression>
@@ -1304,18 +1318,6 @@ MONTH(ADDMONTHS({!$Record.SW_First_Invoice_Date__c},1)),
         <name>isNew</name>
         <dataType>Boolean</dataType>
         <expression>ISNEW()</expression>
-    </formulas>
-    <formulas>
-        <name>NextQuarterStartDate</name>
-        <dataType>Date</dataType>
-        <expression>CASE(
-    CurrentQuarter,
-    &quot;Q1&quot;, DATE(YEAR($Flow.CurrentDate), 4, 1),
-    &quot;Q2&quot;, DATE(YEAR($Flow.CurrentDate), 7, 1),
-    &quot;Q3&quot;, DATE(YEAR($Flow.CurrentDate), 10, 1),
-    &quot;Q4&quot;, DATE(YEAR($Flow.CurrentDate) + 1, 1, 1),
-    NULL
-)</expression>
     </formulas>
     <interviewLabel>Project Create &amp; Update (After Flow) {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Project Create &amp; Update (After Flow)</label>
@@ -1401,7 +1403,7 @@ MONTH(ADDMONTHS({!$Record.SW_First_Invoice_Date__c},1)),
         <inputAssignments>
             <field>SW_Calender_Month__c</field>
             <value>
-                <elementReference>NextQuarterStartDate</elementReference>
+                <elementReference>$Flow.CurrentDate</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1458,7 +1460,7 @@ MONTH(ADDMONTHS({!$Record.SW_First_Invoice_Date__c},1)),
         <inputAssignments>
             <field>SW_Calender_Month__c</field>
             <value>
-                <elementReference>NextQuarterStartDate</elementReference>
+                <elementReference>$Flow.CurrentDate</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1500,7 +1502,7 @@ MONTH(ADDMONTHS({!$Record.SW_First_Invoice_Date__c},1)),
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Update_Commission_status</targetReference>
+            <targetReference>Copy_1_of_Copy_1_of_Copy_3_of_Assign_commission_type_value</targetReference>
         </connector>
         <inputReference>gpRecordCollection</inputReference>
     </recordCreates>
@@ -1512,6 +1514,24 @@ MONTH(ADDMONTHS({!$Record.SW_First_Invoice_Date__c},1)),
         <connector>
             <targetReference>Get_gp_transaction_record</targetReference>
         </connector>
+        <inputAssignments>
+            <field>Monthly_Cost__c</field>
+            <value>
+                <elementReference>$Record.Monthly_Cost__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Monthly_Revenue__c</field>
+            <value>
+                <elementReference>$Record.Monthly_Revenue__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>SW_Calendar_Month__c</field>
+            <value>
+                <elementReference>frmLastInvoiceMonthStart</elementReference>
+            </value>
+        </inputAssignments>
         <inputAssignments>
             <field>SW_GP_Amount__c</field>
             <value>
@@ -1694,6 +1714,34 @@ MONTH(ADDMONTHS({!$Record.SW_First_Invoice_Date__c},1)),
         </filters>
         <getFirstRecordOnly>false</getFirstRecordOnly>
         <object>SW_GP_Transaction__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Invoice_Transaction_Record</name>
+        <label>Get Invoice Transaction Record</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Is_Invoice_Transaction_Record_null_or_not</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>SW_Calendar_Month__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>frmLastInvoiceMonthStart</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>SW_Project__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>SW_Invoice_Transaction__c</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordLookups>
@@ -1889,13 +1937,6 @@ MONTH(ADDMONTHS({!$Record.SW_First_Invoice_Date__c},1)),
                 <elementReference>Get_Account.Id</elementReference>
             </value>
         </filters>
-        <filters>
-            <field>SW_Opportunity__c</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>$Record.SW_Opportunity__c</elementReference>
-            </value>
-        </filters>
         <inputAssignments>
             <field>SW_Project__c</field>
             <value>
@@ -1949,6 +1990,55 @@ MONTH(ADDMONTHS({!$Record.SW_First_Invoice_Date__c},1)),
         <locationX>0</locationX>
         <locationY>0</locationY>
         <inputReference>gpRecordCollection</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Invoice_Transaction</name>
+        <label>Update Invoice Transaction</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_gp_transaction_record</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>SW_Project__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>SW_Calendar_Month__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>frmLastInvoiceMonthStart</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Monthly_Cost__c</field>
+            <value>
+                <elementReference>$Record.Monthly_Cost__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Monthly_Revenue__c</field>
+            <value>
+                <elementReference>$Record.Monthly_Revenue__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>SW_GP_Amount__c</field>
+            <value>
+                <elementReference>$Record.SW_Monthly_Gross_Profit__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>SW_Invoice_Date__c</field>
+            <value>
+                <elementReference>$Record.Last_Invoice_Date__c</elementReference>
+            </value>
+        </inputAssignments>
+        <object>SW_Invoice_Transaction__c</object>
     </recordUpdates>
     <recordUpdates>
         <name>Update_last_invoice_date_in_account</name>

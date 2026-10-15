@@ -15,6 +15,11 @@
                 <label>Illinois</label>
             </value>
             <value>
+                <fullName>Industrial</fullName>
+                <default>false</default>
+                <label>Industrial</label>
+            </value>
+            <value>
                 <fullName>Texas</fullName>
                 <default>false</default>
                 <label>Texas</label>
@@ -23,11 +28,6 @@
                 <fullName>Wisconsin</fullName>
                 <default>false</default>
                 <label>Wisconsin</label>
-            </value>
-            <value>
-                <fullName>Industrial</fullName>
-                <default>false</default>
-                <label>Industrial</label>
             </value>
         </valueSetDefinition>
     </valueSet>
